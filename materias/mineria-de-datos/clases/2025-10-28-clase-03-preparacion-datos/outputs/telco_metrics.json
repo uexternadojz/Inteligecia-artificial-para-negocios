@@ -1,0 +1,149 @@
+{
+  "global": [
+    {
+      "metric": "Clientes",
+      "value": 7043
+    },
+    {
+      "metric": "Tasa de churn (%)",
+      "value": 26.54
+    },
+    {
+      "metric": "Tenure mediana (meses)",
+      "value": 29.0
+    },
+    {
+      "metric": "MonthlyCharges promedio (USD)",
+      "value": 64.76
+    },
+    {
+      "metric": "TotalCharges promedio (USD)",
+      "value": 2279.73
+    }
+  ],
+  "contract": [
+    {
+      "Contract": "Month-to-month",
+      "clientes": 3875,
+      "churn_rate": 42.70967741935484
+    },
+    {
+      "Contract": "One year",
+      "clientes": 1473,
+      "churn_rate": 11.269517990495586
+    },
+    {
+      "Contract": "Two year",
+      "clientes": 1695,
+      "churn_rate": 2.831858407079646
+    }
+  ],
+  "payment": [
+    {
+      "PaymentMethod": "Electronic check",
+      "clientes": 2365,
+      "churn_rate": 45.28541226215645
+    },
+    {
+      "PaymentMethod": "Mailed check",
+      "clientes": 1612,
+      "churn_rate": 19.106699751861044
+    },
+    {
+      "PaymentMethod": "Bank transfer (automatic)",
+      "clientes": 1544,
+      "churn_rate": 16.709844559585495
+    },
+    {
+      "PaymentMethod": "Credit card (automatic)",
+      "clientes": 1522,
+      "churn_rate": 15.243101182654403
+    }
+  ],
+  "tenure_group": [
+    {
+      "TenureGroup": "0-6 m",
+      "clientes": 1371,
+      "churn_rate": 54.26695842450766
+    },
+    {
+      "TenureGroup": "6-12 m",
+      "clientes": 698,
+      "churn_rate": 36.53295128939828
+    },
+    {
+      "TenureGroup": "12-24 m",
+      "clientes": 1047,
+      "churn_rate": 29.512893982808023
+    },
+    {
+      "TenureGroup": "24-48 m",
+      "clientes": 1624,
+      "churn_rate": 20.874384236453203
+    },
+    {
+      "TenureGroup": "48+ m",
+      "clientes": 2303,
+      "churn_rate": 9.639600521059489
+    }
+  ],
+  "monthly_segment": [
+    {
+      "MonthlySegment": "0-30",
+      "clientes": 1653,
+      "churn_rate": 9.800362976406534
+    },
+    {
+      "MonthlySegment": "30-60",
+      "clientes": 1254,
+      "churn_rate": 26.076555023923444
+    },
+    {
+      "MonthlySegment": "60-90",
+      "clientes": 2392,
+      "churn_rate": 33.73745819397993
+    },
+    {
+      "MonthlySegment": "90-120",
+      "clientes": 1744,
+      "churn_rate": 32.85550458715596
+    }
+  ],
+  "services_count": [
+    {
+      "ServicesCount": 1,
+      "clientes": 966,
+      "churn_rate": 45.75569358178054
+    },
+    {
+      "ServicesCount": 2,
+      "clientes": 1033,
+      "churn_rate": 35.81800580832527
+    },
+    {
+      "ServicesCount": 3,
+      "clientes": 1118,
+      "churn_rate": 27.370304114490164
+    },
+    {
+      "ServicesCount": 4,
+      "clientes": 852,
+      "churn_rate": 22.300469483568076
+    },
+    {
+      "ServicesCount": 0,
+      "clientes": 2219,
+      "churn_rate": 21.406038756196484
+    },
+    {
+      "ServicesCount": 5,
+      "clientes": 571,
+      "churn_rate": 12.43432574430823
+    },
+    {
+      "ServicesCount": 6,
+      "clientes": 284,
+      "churn_rate": 5.28169014084507
+    }
+  ]
+}

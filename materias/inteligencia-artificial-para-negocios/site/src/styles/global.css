@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-[#050509] text-slate-100 antialiased;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 20% 20%, rgba(237, 32, 36, 0.12), transparent 55%),
+      radial-gradient(circle at 80% 10%, rgba(0, 188, 212, 0.1), transparent 45%),
+      radial-gradient(circle at 50% 100%, rgba(237, 32, 36, 0.08), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-red-500 text-white;
+  }
+}
+
+@layer utilities {
+  .font-rajdhani {
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-mono-orbital {
+    font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+  }
+
+  .glow-orbital {
+    box-shadow: 0 0 45px rgba(237, 32, 36, 0.35), 0 0 120px rgba(0, 188, 212, 0.15);
+  }
+
+  .panel-orbital {
+    background: linear-gradient(135deg, rgba(17, 17, 24, 0.92), rgba(28, 28, 46, 0.68));
+    border: 1px solid rgba(237, 32, 36, 0.3);
+    backdrop-filter: blur(18px);
+  }
+
+  .hud-outline {
+    border-image: linear-gradient(120deg, rgba(237, 32, 36, 0.8), rgba(0, 188, 212, 0.7)) 1;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .orbital-fade {
+    background: linear-gradient(180deg, rgba(5, 5, 9, 0) 0%, rgba(5, 5, 9, 0.82) 65%, rgba(5, 5, 9, 1) 100%);
+  }
+}
+
+@keyframes spinRecord {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@layer components {
+  .hero-orbit {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+    isolation: isolate;
+  }
+
+  .hero-orbit__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(115%) contrast(110%);
+    z-index: -3;
+  }
+
+  .hero-orbit__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5, 5, 9, 0.35) 0%, rgba(5, 5, 9, 0.75) 60%, rgba(5, 5, 9, 0.92) 100%);
+    z-index: -2;
+  }
+
+  .hero-orbit__halo {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 18% 25%, rgba(237, 32, 36, 0.5), transparent 55%),
+      radial-gradient(circle at 82% 18%, rgba(0, 188, 212, 0.4), transparent 60%);
+    mix-blend-mode: screen;
+    z-index: -1;
+  }
+
+  .hero-orbit__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: min(1280px, 92vw);
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+    gap: clamp(2rem, 6vw, 4rem);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    .hero-orbit__content {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      align-items: center;
+    }
+    .hero-orbit__alliances {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .hero-orbit__alliances {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: clamp(1rem, 2.5vw, 2rem);
+  }
+
+  .hero-orbit__alliances-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(5, 5, 12, 0.5);
+    backdrop-filter: blur(12px);
+  }
+
+  .hero-orbit__alliances-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.65);
+  }
+
+  .hero-orbit__alliances-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .hero-orbit__alliances-logos img {
+    height: 26px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  .hero-orbit__alliances-divider {
+    display: block;
+    width: 1px;
+    height: 26px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.08));
+  }
+
+  .hero-orbit__alliances-orbital {
+    font-size: 0.85rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-orbit__title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-orbit__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.95rem 1.95rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    backdrop-filter: blur(6px);
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  }
+
+  .hero-orbit__cta--primary {
+    background: linear-gradient(135deg, rgba(237, 32, 36, 0.92), rgba(237, 72, 76, 0.72));
+    color: white;
+    box-shadow: 0 18px 45px rgba(237, 32, 36, 0.38);
+  }
+
+  .hero-orbit__cta--primary:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 24px 55px rgba(237, 32, 36, 0.45);
+  }
+
+  .hero-orbit__cta--secondary {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .hero-orbit__cta--secondary:hover {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
+  }
+
+  .hero-orbit__hud {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(6, 6, 14, 0.55);
+    padding: clamp(1.75rem, 3.5vw, 2.5rem);
+    backdrop-filter: blur(18px);
+    min-height: 320px;
+  }
+
+  .page-container {
+    width: min(1180px, 92vw);
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .vinyl-rail {
+    display: flex;
+    gap: 1.75rem;
+    overflow-x: auto;
+    padding-bottom: 1.25rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .vinyl-rail::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .vinyl-rail::-webkit-scrollbar-thumb {
+    background: rgba(237, 32, 36, 0.4);
+    border-radius: 999px;
+  }
+
+  .vinyl-card {
+    position: relative;
+    flex: 0 0 clamp(280px, 60vw, 360px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(160deg, rgba(13, 13, 27, 0.9), rgba(9, 9, 18, 0.78));
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    scroll-snap-align: start;
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    overflow: hidden;
+  }
+
+  .vinyl-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(237, 32, 36, 0.45);
+    box-shadow: 0 40px 110px rgba(237, 32, 36, 0.25);
+  }
+
+  .vinyl-card__media {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+  }
+
+  .vinyl-card__sleeve {
+    position: relative;
+    width: clamp(180px, 45vw, 240px);
+    aspect-ratio: 1/1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+  }
+
+  .vinyl-card__sleeve img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 320ms ease;
+  }
+
+  .vinyl-card:hover .vinyl-card__sleeve img {
+    transform: scale(1.05);
+  }
+
+  .vinyl-card__mood {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    background: linear-gradient(180deg, rgba(5, 5, 9, 0) 0%, rgba(5, 5, 9, 0.92) 100%);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .vinyl-card__record {
+    position: absolute;
+    right: -35%;
+    width: clamp(160px, 36vw, 220px);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(10, 10, 14, 0.95) 45%, rgba(48, 48, 72, 0.85) 80%, rgba(17, 17, 40, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: grid;
+    place-items: center;
+    transform: translateX(-65%) rotate(-6deg);
+    transition: transform 300ms ease;
+    box-shadow: 0 0 45px rgba(237, 32, 36, 0.3);
+  }
+
+  .vinyl-card__grooves {
+    position: absolute;
+    inset: 14%;
+    border-radius: 50%;
+    border: 2px solid rgba(237, 32, 36, 0.12);
+    box-shadow: inset 0 0 0 8px rgba(237, 32, 36, 0.08), inset 0 0 0 16px rgba(0, 188, 212, 0.08);
+  }
+
+  .vinyl-card__label {
+    position: relative;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(237, 32, 36, 0.95), rgba(237, 62, 66, 0.85));
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.92);
+    gap: 0.15rem;
+    padding: 0.5rem;
+  }
+
+  .vinyl-card:hover .vinyl-card__record {
+    transform: translateX(-20%) rotate(12deg);
+    animation: spinRecord 9s linear infinite;
+  }
+
+  .vinyl-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .vinyl-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .vinyl-card__badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .vinyl-card__status {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+  }
+
+  .vinyl-card__status--published {
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(34, 197, 94, 0.15);
+    color: rgba(134, 239, 172, 0.9);
+  }
+
+  .vinyl-card__status--upcoming {
+    border-color: rgba(0, 188, 212, 0.25);
+    background: rgba(0, 188, 212, 0.12);
+    color: rgba(165, 243, 252, 0.9);
+  }
+
+  .vinyl-card__status--draft {
+    border-color: rgba(148, 163, 184, 0.3);
+    background: rgba(148, 163, 184, 0.12);
+    color: rgba(203, 213, 225, 0.85);
+  }
+
+  .vinyl-card__title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .vinyl-card__synopsis {
+    font-size: 0.95rem;
+    color: rgba(226, 232, 240, 0.75);
+    line-height: 1.55;
+  }
+
+  .vinyl-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(148, 163, 184, 0.8);
+  }
+
+  .vinyl-card__tags li::before {
+    content: "\2022";
+    margin-right: 0.65rem;
+    opacity: 0.4;
+  }
+
+  .vinyl-card__tags li:first-child::before {
+    content: "";
+    margin: 0;
+  }
+
+  .vinyl-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .vinyl-card__trigger {
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(237, 32, 36, 0.6);
+    background: linear-gradient(135deg, rgba(237, 32, 36, 0.28), rgba(237, 32, 36, 0.12));
+    color: rgba(255, 210, 210, 0.95);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .vinyl-card__trigger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(237, 32, 36, 0.35);
+  }
+
+  .vinyl-card__trigger--ghost {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(226, 232, 240, 0.8);
+  }
+
+  .vinyl-card__trigger--ghost:hover {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+  }
+
+  .vinyl-modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: transparent;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+
+  .vinyl-modal::backdrop {
+    background: rgba(5, 5, 12, 0.78);
+  }
+
+  .vinyl-modal--visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .vinyl-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(237, 32, 36, 0.35), transparent 70%);
+    filter: blur(60px);
+    opacity: 0.8;
+  }
+
+  .vinyl-modal__panel {
+    position: relative;
+    width: min(900px, 94vw);
+    max-height: 80vh;
+    display: grid;
+    gap: 1.5rem;
+    background: linear-gradient(165deg, rgba(9, 9, 18, 0.98), rgba(14, 14, 36, 0.92));
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    overflow-y: auto;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+    transform: translateY(24px);
+    opacity: 0;
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+
+  .vinyl-modal--visible .vinyl-modal__panel {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .vinyl-modal__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .vinyl-modal__close {
+    align-self: flex-end;
+    padding: 0.45rem 1.2rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(226, 232, 240, 0.8);
+    background: rgba(255, 255, 255, 0.04);
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .vinyl-modal__close:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .vinyl-modal__content {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .vinyl-modal__hero {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .vinyl-modal__hero img {
+    width: 100%;
+    height: clamp(200px, 38vh, 300px);
+    object-fit: cover;
+    filter: saturation(120%) brightness(0.92);
+  }
+
+  .vinyl-modal__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(150deg, rgba(5, 5, 14, 0.1), rgba(5, 5, 14, 0.92));
+  }
+
+  .vinyl-modal__section h4 {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.75rem;
+  }
+
+  .vinyl-modal__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .vinyl-modal__chips span {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.85);
+  }
+
+  .vinyl-modal__section ul {
+    display: grid;
+    gap: 0.65rem;
+    padding-left: 1.1rem;
+    list-style: disc;
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 0.9rem;
+  }
+
+  .vinyl-modal__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .vinyl-modal__buttons a {
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(237, 32, 36, 0.55);
+    background: rgba(237, 32, 36, 0.18);
+    color: rgba(255, 210, 210, 0.95);
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .vinyl-modal__buttons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 45px rgba(237, 32, 36, 0.38);
+  }
+
+  .vinyl-modal__placeholder {
+    font-size: 0.75rem;
+    color: rgba(148, 163, 184, 0.75);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .professor-orbit {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3rem);
+    align-items: center;
+    border-radius: 2.5rem;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    background: linear-gradient(145deg, rgba(9, 9, 18, 0.92), rgba(14, 14, 28, 0.85));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
+  @media (min-width: 960px) {
+    .professor-orbit {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    }
+  }
+
+  .professor-orbit__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .professor-orbit__frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 320px;
+    aspect-ratio: 1/1;
+    background: radial-gradient(circle, rgba(237, 32, 36, 0.2), rgba(5, 5, 10, 0.9));
+  }
+
+  .professor-orbit__frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(110%) contrast(105%);
+  }
+
+  .professor-orbit__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(237, 32, 36, 0.4), transparent 70%);
+    mix-blend-mode: screen;
+  }
+
+  .professor-orbit__content {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .professor-orbit__eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.65);
+  }
+
+  .professor-orbit__name {
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(2rem, 4.6vw, 2.8rem);
+    color: white;
+  }
+
+  .professor-orbit__title {
+    font-size: 0.95rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.75);
+  }
+
+  .professor-orbit__role {
+    font-size: 0.8rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(125, 211, 252, 0.85);
+  }
+
+  .professor-orbit__summary {
+    font-size: 1rem;
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.6;
+  }
+
+  .professor-orbit__bullets {
+    display: grid;
+    gap: 0.65rem;
+    padding-left: 1.1rem;
+    color: rgba(203, 213, 225, 0.85);
+    font-size: 0.95rem;
+  }
+
+  .professor-orbit__links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .professor-orbit__links a {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(226, 232, 240, 0.85);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .professor-orbit__links a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.45);
+    color: white;
+  }
+
+  @media (min-width: 1024px) {
+    .vinyl-rail {
+      flex-wrap: wrap;
+      overflow-x: visible;
+    }
+    .vinyl-card {
+      flex: 1 1 calc(33.333% - 1.75rem);
+      min-width: 0;
+    }
+    .vinyl-card__record {
+      right: -30%;
+    }
+  }
+}

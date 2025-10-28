@@ -1,0 +1,34 @@
+---
+import { professor } from "../data/professor";
+---
+
+<section class="professor-orbit" id="profesor">
+  <div class="professor-orbit__media">
+    <div class="professor-orbit__frame">
+      <img src={professor.photo} alt={`Foto de ${professor.name}`} loading="lazy" />
+      <div class="professor-orbit__glow" />
+    </div>
+  </div>
+
+  <div class="professor-orbit__content">
+    <span class="professor-orbit__eyebrow">Profesor</span>
+    <h2 class="professor-orbit__name">{professor.name}</h2>
+    <p class="professor-orbit__title">{professor.title}</p>
+    <p class="professor-orbit__role">{professor.role}</p>
+    <p class="professor-orbit__summary">{professor.summary}</p>
+
+    <ul class="professor-orbit__bullets">
+      {professor.bullets.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+
+    <div class="professor-orbit__links">
+      {professor.links.map((link) => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

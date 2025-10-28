@@ -1,0 +1,336 @@
+
+================================================================================
+             REPORTE DE ENTENDIMIENTO DE NEGOCIO - CATÁLOGO NETFLIX             
+================================================================================
+
+Fecha de generación: 2025-10-27 12:27:38
+Total de registros analizados: 8,807
+
+================================================================================
+                              1. RESUMEN EJECUTIVO                              
+================================================================================
+
+
+El catálogo de Netflix ha sido analizado exhaustivamente, revelando insights clave
+sobre su composición, estrategia de contenido y tendencias de negocio. Este reporte
+presenta hallazgos accionables para la toma de decisiones estratégicas.
+    
+
+================================================================================
+                          2. COMPOSICIÓN DEL CATÁLOGO                           
+================================================================================
+
+
+2.1 Distribución de Contenido
+-----------------------------
+Total de títulos: 8,807
+
+  • Movie          :  6,131 títulos (69.62%)
+  • TV Show        :  2,676 títulos (30.38%)
+
+INSIGHT CLAVE:
+  → El catálogo está dominado por PELÍCULAS (69.6%)
+  → Las series representan solo el 30.4% del contenido
+  → Ratio Películas:Series = 2.29:1
+
+================================================================================
+                       3. ANÁLISIS TEMPORAL Y TENDENCIAS                        
+================================================================================
+
+
+3.1 Años de Lanzamiento
+-----------------------
+  • Rango de años: 1925 - 2021
+  • Año promedio: 2014.2
+  • Mediana: 2017
+
+  • Contenido post-2015 (moderno): 6,216 (70.6%)
+  • Contenido pre-2000 (clásico): 525 (6.0%)
+
+INSIGHT CLAVE:
+  → Netflix prioriza contenido MODERNO: 70.6% es de la última década
+  → El contenido clásico representa solo el 6.0%
+
+3.2 Adición a Netflix
+---------------------
+  • Primera adición: 2008-01-01 00:00:00
+  • Última adición: 2021-09-25 00:00:00
+
+  Top 5 años con más adiciones:
+    2019: 1,999 títulos
+    2020: 1,878 títulos
+    2018: 1,625 títulos
+    2021: 1,498 títulos
+    2017: 1,164 títulos
+
+  • Tiempo promedio hasta Netflix: 4.7 años
+    - Películas: 5.7 años
+    - Series: 2.2 años
+
+================================================================================
+                           4. DISTRIBUCIÓN GEOGRÁFICA                           
+================================================================================
+
+
+4.1 Top Países Productores
+--------------------------
+Total de países únicos: 127
+
+Top 15 países:
+   1. United States                 : 3,689 (41.89%)
+   2. India                         : 1,046 (11.88%)
+   3. United Kingdom                :   804 ( 9.13%)
+   4. Canada                        :   445 ( 5.05%)
+   5. France                        :   393 ( 4.46%)
+   6. Japan                         :   318 ( 3.61%)
+   7. Spain                         :   232 ( 2.63%)
+   8. South Korea                   :   231 ( 2.62%)
+   9. Germany                       :   226 ( 2.57%)
+  10. Mexico                        :   169 ( 1.92%)
+  11. China                         :   162 ( 1.84%)
+  12. Australia                     :   160 ( 1.82%)
+  13. Egypt                         :   117 ( 1.33%)
+  14. Turkey                        :   113 ( 1.28%)
+  15. Hong Kong                     :   105 ( 1.19%)
+
+INSIGHT CLAVE:
+  → Estados Unidos DOMINA con 41.9% del catálogo
+  → India es el segundo productor con fuerte presencia de Bollywood
+  → Contenido internacional diverso de 127 países
+
+================================================================================
+                     5. CLASIFICACIÓN Y AUDIENCIA OBJETIVO                      
+================================================================================
+
+
+5.1 Top Ratings
+---------------
+   1. TV-MA     : 3,207 (36.41%)
+   2. TV-14     : 2,160 (24.53%)
+   3. TV-PG     :   863 ( 9.80%)
+   4. R         :   799 ( 9.07%)
+   5. PG-13     :   490 ( 5.56%)
+   6. TV-Y7     :   334 ( 3.79%)
+   7. TV-Y      :   307 ( 3.49%)
+   8. PG        :   287 ( 3.26%)
+   9. TV-G      :   220 ( 2.50%)
+  10. NR        :    80 ( 0.91%)
+
+INSIGHT CLAVE:
+  → Contenido ADULTO (TV-MA, R): 45.5% del catálogo
+  → Contenido FAMILIAR (G, PG, TV-Y): 13.5%
+  → Enfoque claro en audiencias maduras y adolescentes
+
+================================================================================
+                             6. ANÁLISIS DE GÉNEROS                             
+================================================================================
+
+
+6.1 Top Géneros
+---------------
+Total de géneros únicos: 42
+
+Top 20 géneros:
+   1. International Movies                         : 2,752 (31.25%)
+   2. Dramas                                       : 2,427 (27.56%)
+   3. Comedies                                     : 1,674 (19.01%)
+   4. International TV Shows                       : 1,351 (15.34%)
+   5. Documentaries                                :   869 ( 9.87%)
+   6. Action & Adventure                           :   859 ( 9.75%)
+   7. TV Dramas                                    :   763 ( 8.66%)
+   8. Independent Movies                           :   756 ( 8.58%)
+   9. Children & Family Movies                     :   641 ( 7.28%)
+  10. Romantic Movies                              :   616 ( 6.99%)
+  11. TV Comedies                                  :   581 ( 6.60%)
+  12. Thrillers                                    :   577 ( 6.55%)
+  13. Crime TV Shows                               :   470 ( 5.34%)
+  14. Kids' TV                                     :   451 ( 5.12%)
+  15. Docuseries                                   :   395 ( 4.49%)
+  16. Music & Musicals                             :   375 ( 4.26%)
+  17. Romantic TV Shows                            :   370 ( 4.20%)
+  18. Horror Movies                                :   357 ( 4.05%)
+  19. Stand-Up Comedy                              :   343 ( 3.89%)
+  20. Reality TV                                   :   255 ( 2.90%)
+
+INSIGHT CLAVE:
+  → Dramas internacionales lideran el catálogo
+  → Fuerte presencia de comedias y documentales
+  → Estrategia de diversificación con 42 géneros
+
+================================================================================
+                        7. CARACTERÍSTICAS DEL CONTENIDO                        
+================================================================================
+
+
+7.1 Películas - Duración
+------------------------
+  • Duración promedio: 99.6 minutos
+  • Mediana: 98.0 minutos
+  • Rango: 3 - 312 minutos
+
+  Distribución por rangos:
+    Cortas (<60 min)              :   458 ( 7.47%)
+    Medianas (60-90 min)          : 1,380 (22.52%)
+    Estándar (90-120 min)         : 3,092 (50.46%)
+    Largas (120-180 min)          : 1,149 (18.75%)
+    Muy largas (>180 min)         :    49 ( 0.80%)
+
+7.2 Series - Temporadas
+-----------------------
+  • Temporadas promedio: 1.76
+  • Mediana: 1 temporadas
+  • Rango: 1 - 17 temporadas
+
+  • Series de 1 temporada: 1,793 (67.0%)
+  • Series de 2+ temporadas: 883 (33.0%)
+
+INSIGHT CLAVE:
+  → Películas de duración estándar (~90-100 min)
+  → Mayoría de series son de 1 temporada (contenido conciso)
+  → Enfoque en contenido consumible rápidamente
+
+================================================================================
+                       8. CALIDAD Y COMPLETITUD DE DATOS                        
+================================================================================
+
+
+8.1 Campos con Valores Faltantes
+--------------------------------
+  • director            :  2,634 (29.91%)
+  • country             :    831 ( 9.44%)
+  • cast                :    825 ( 9.37%)
+  • date_added          :     98 ( 1.11%)
+  • year_added          :     98 ( 1.11%)
+  • time_to_netflix     :     98 ( 1.11%)
+  • month_added         :     98 ( 1.11%)
+  • rating              :      4 ( 0.05%)
+  • duration            :      3 ( 0.03%)
+
+INSIGHT CLAVE:
+  → Director, Cast y Country tienen valores faltantes significativos
+  → Requerirá tratamiento especial en análisis que usen estos campos
+
+  • Completitud promedio del dataset: 96.45%
+
+================================================================================
+                            9. ANÁLISIS DE CREADORES                            
+================================================================================
+
+
+9.1 Top Directores
+------------------
+   1. Rajiv Chilaka                           :  22 títulos
+   2. Jan Suter                               :  21 títulos
+   3. Raúl Campos                             :  19 títulos
+   4. Suhas Kadav                             :  16 títulos
+   5. Marcus Raboy                            :  16 títulos
+   6. Jay Karas                               :  15 títulos
+   7. Cathy Garcia-Molina                     :  13 títulos
+   8. Martin Scorsese                         :  12 títulos
+   9. Youssef Chahine                         :  12 títulos
+  10. Jay Chapman                             :  12 títulos
+  11. Steven Spielberg                        :  11 títulos
+  12. Don Michael Paul                        :  10 títulos
+  13. Anurag Kashyap                          :   9 títulos
+  14. Yılmaz Erdoğan                          :   9 títulos
+  15. David Dhawan                            :   9 títulos
+
+9.2 Top Actores
+---------------
+   1. Anupam Kher                             :  43 apariciones
+   2. Shah Rukh Khan                          :  35 apariciones
+   3. Julie Tejwani                           :  33 apariciones
+   4. Takahiro Sakurai                        :  32 apariciones
+   5. Naseeruddin Shah                        :  32 apariciones
+   6. Rupa Bhimani                            :  31 apariciones
+   7. Om Puri                                 :  30 apariciones
+   8. Akshay Kumar                            :  30 apariciones
+   9. Yuki Kaji                               :  29 apariciones
+  10. Amitabh Bachchan                        :  28 apariciones
+  11. Paresh Rawal                            :  28 apariciones
+  12. Boman Irani                             :  27 apariciones
+  13. Rajesh Kava                             :  26 apariciones
+  14. Vincent Tong                            :  26 apariciones
+  15. Andrea Libman                           :  25 apariciones
+
+INSIGHT CLAVE:
+  → 4,993 directores únicos en el catálogo
+  → 36,439 actores únicos en el catálogo
+  → Alta diversidad de talento creativo
+
+================================================================================
+                  10. RECOMENDACIONES ESTRATÉGICAS DE NEGOCIO                   
+================================================================================
+
+
+BASADO EN EL ANÁLISIS, SE RECOMIENDAN LAS SIGUIENTES ACCIONES:
+
+1. BALANCE DE CONTENIDO
+   • Incrementar la proporción de series vs películas para mejorar la
+     retención de usuarios (las series generan engagement más prolongado)
+   • Objetivo sugerido: Alcanzar un ratio 60:40 (Películas:Series)
+
+2. ESTRATEGIA DE AUDIENCIA
+   • Desarrollar más contenido familiar para diversificar la base de usuarios
+   • Actualmente solo 13.5% es contenido familiar
+   • Oportunidad de capturar mercado familiar
+
+3. CONTENIDO INTERNACIONAL
+   • Continuar invirtiendo en producciones locales de mercados clave
+   • India, Corea del Sur, y Europa son mercados con alto potencial
+   • El contenido internacional ha demostrado éxito global
+
+4. PROFUNDIDAD DE SERIES
+   • Considerar invertir en series multi-temporada de calidad
+   • Actualmente 67.0% de series tienen solo 1 temporada
+   • Las series longevas crean comunidades de fans leales
+
+5. CALIDAD DE DATOS
+   • Implementar procesos para completar metadatos faltantes
+   • Mejorar la captura de información de directores y elenco
+   • Esto permitirá mejores recomendaciones y búsquedas
+
+6. ESTRATEGIA TEMPORAL
+   • Mantener el enfoque en contenido moderno (post-2015)
+   • Adquirir contenido recién estrenado (< 2 años)
+   • Balance estratégico con clásicos culturalmente relevantes
+
+7. DIVERSIFICACIÓN DE GÉNEROS
+   • Identificar nichos desatendidos en el mercado
+   • Experimentar con géneros híbridos
+   • Documentales y contenido educativo tienen potencial de crecimiento
+
+8. ANÁLISIS ADICIONALES NECESARIOS
+   • Análisis de engagement por tipo de contenido
+   • Estudio de patrones de visualización
+   • Análisis de sentimiento en reseñas de usuarios
+   • Análisis predictivo de éxito de nuevas producciones
+   • Segmentación de usuarios por preferencias
+    
+
+================================================================================
+                           RESUMEN DE MÉTRICAS CLAVE                            
+================================================================================
+
+  Total de títulos              : 8,807
+  Películas                     : 6,131 (69.6%)
+  Series                        : 2,676 (30.4%)
+  Países productores            : 127
+  Géneros únicos                : 42
+  Rango de años                 : 1925-2021
+  Contenido moderno (post-2015) : 70.6%
+  Contenido adulto              : 45.5%
+  Contenido familiar            : 13.5%
+  País dominante                : USA (41.9%)
+  Completitud de datos          : 96.5%
+  Duración prom. películas      : 100 min
+  Temporadas prom. series       : 1.8
+
+================================================================================
+                                FIN DEL REPORTE                                 
+================================================================================
+
+
+Reporte generado exitosamente - 2025-10-27 12:27:38
+Para visualizaciones detalladas, consulte el notebook Jupyter ejecutado.
+

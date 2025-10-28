@@ -1,0 +1,117 @@
+# Gitignore para repositorio de docencia
+# Universidad Externado - Orbital Lab
+
+# ============================================================
+# Experimentos y outputs generados
+# ============================================================
+experimentos/*/output/
+experimentos/*/.env
+experimentos/*/venv/
+experimentos/*/__pycache__/
+experimentos/*/*.pyc
+
+# ============================================================
+# Archivos de configuración sensibles
+# ============================================================
+.env
+.env.local
+*.key
+*.pem
+config.local.yaml
+secrets/
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# ============================================================
+# Datasets grandes y archivos temporales
+# ============================================================
+*.csv
+*.xlsx
+*.parquet
+*.h5
+*.pkl
+*.joblib
+*.tmp
+*.log
+*.cache
+
+# EXCEPCIÓN: Permitir datasets de ejemplo pequeños
+!recursos_compartidos/datasets/*.csv
+!recursos_compartidos/datasets/*.xlsx
+
+# ============================================================
+# IDEs y editores
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================
+# Build y distribución
+# ============================================================
+build/
+dist/
+*.egg-info/
+
+# ============================================================
+# Imágenes y videos generados con IA
+# ============================================================
+# Excluir outputs generados, pero permitir assets de diseño
+recursos_compartidos/componentes/*/generated/
+site/public/generated/
+
+# Archivos de video pesados (excluir todos)
+*.mp4
+*.webm
+*.mov
+*.avi
+*.mkv
+*.flv
+
+# Archivos de imagen pesados originales (mantener solo optimizados)
+*-original.png
+*-original.jpg
+*-original.webp
+*-temp.png
+*-temp.jpg
+
+# Build de Astro
+materias/*/site/dist/
+materias/*/site/.astro/
+
+# ============================================================
+# Node.js (si se usa en site/)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================================
+# Archivos de sistema
+# ============================================================
+Thumbs.db
+.Spotlight-V100
+.Trashes

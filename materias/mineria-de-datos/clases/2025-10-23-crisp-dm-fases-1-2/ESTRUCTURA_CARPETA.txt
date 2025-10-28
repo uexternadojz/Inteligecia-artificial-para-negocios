@@ -1,0 +1,275 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                  📂 CLASE 2 - ESTRUCTURA DE CARPETA                      ║
+║                                                                          ║
+║                    Fecha: 23 de Octubre de 2025                          ║
+║              CRISP-DM: Fases 1 y 2 - Minería de Datos                   ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+📁 clase_2_2025-10-23/
+│
+├── ⭐ COMENZAR AQUÍ
+│   └── guia_interactiva_crisp_dm.html (224 KB)
+│       → Guía interactiva principal
+│       → 11+ visualizaciones
+│       → 6 pestañas navegables
+│       → Funciona en cualquier navegador
+│
+├── 📚 DOCUMENTACIÓN DE LA CLASE
+│   ├── README_CLASE_2.md ⭐ [LEER PRIMERO]
+│   │   → Plan de clase completo (6 horas)
+│   │   → Objetivos de aprendizaje
+│   │   → Actividades para estudiantes
+│   │   → Checklist de la clase
+│   │
+│   ├── INICIO_RAPIDO.txt
+│   │   → Guía visual de inicio rápido
+│   │   → Instrucciones para estudiantes y profesores
+│   │
+│   └── README.md
+│       → Documentación general del proyecto
+│
+├── 📖 MATERIAL PEDAGÓGICO
+│   ├── Reporte_Pedagogico_CRISP-DM_Fases_1_y_2.md (43 KB)
+│   │   → Guía completa para el profesor
+│   │   → Explicaciones detalladas de Fase 1 y 2
+│   │   → Ejercicios y actividades
+│   │   → Plan de clase sugerido
+│   │   → Consejos pedagógicos
+│   │
+│   ├── README_GUIA.md
+│   │   → Instrucciones de uso de la guía
+│   │   → Objetivos de aprendizaje
+│   │   → Actividades sugeridas
+│   │
+│   ├── INDICE_ARCHIVOS.md
+│   │   → Índice completo de todos los archivos
+│   │   → Mapa de navegación
+│   │
+│   └── RESUMEN_PROYECTO.md
+│       → Resumen ejecutivo del proyecto
+│       → Tecnologías utilizadas
+│       → Características destacadas
+│
+├── 📊 DATOS
+│   └── recursos_compartidos/datasets/mineria-de-datos/supermarket_analysis.csv
+│       → 1,000 transacciones de supermercado
+│       → 17 variables
+│       → Período: Enero-Marzo 2019
+│       → 3 sucursales (Alex, Giza, Cairo)
+│       → 6 líneas de productos
+│
+├── 🛠️ HERRAMIENTAS
+│   ├── generar_guia_interactiva.py (wrapper)
+│   │   → Script Python para generar la guía
+│   │   → Carga y analiza el CSV
+│   │   → Genera 11 visualizaciones
+│   │   → Crea HTML completo
+│   │
+│   ├── abrir_guia.sh (990 bytes)
+│   │   → Script para abrir la guía automáticamente
+│   │   → Compatible con Linux, macOS, Windows
+│   │
+│   └── .venv/ (entorno virtual)
+│       → Python 3.13
+│       → pandas 2.3.3
+│       → plotly 6.3.1
+│       → numpy 2.3.4
+│
+└── 📄 ESTE ARCHIVO
+    └── ESTRUCTURA_CARPETA.txt
+        → Índice visual de la carpeta
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 ESTADÍSTICAS DE LA CARPETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Total de archivos:              12 archivos + 1 carpeta
+  Tamaño total (sin venv):        ~544 KB
+  Tamaño con venv:                ~15 MB
+
+  Archivos principales:
+    • HTML interactivo:           224 KB
+    • Dataset CSV:                137 KB
+    • Script Python:               64 KB
+    • Reporte pedagógico:          43 KB
+    • Documentación (total):       46 KB
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 INICIO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Para Profesores:
+  ─────────────────────────────────────────────────────────────────────────
+  1. Leer: README_CLASE_2.md
+  2. Revisar: Reporte_Pedagogico_CRISP-DM_Fases_1_y_2.md
+  3. Abrir: guia_interactiva_crisp_dm.html
+  4. Preparar proyector para la clase
+
+  Para Estudiantes:
+  ─────────────────────────────────────────────────────────────────────────
+  1. Leer: INICIO_RAPIDO.txt o README_CLASE_2.md
+  2. Doble clic en: guia_interactiva_crisp_dm.html
+  3. Navegar por las 6 pestañas
+  4. Completar actividades sugeridas
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 CONTENIDO DE LA GUÍA INTERACTIVA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Pestaña 1: 🏠 Introducción
+    • Contexto del dataset
+    • Estadísticas generales (6 tarjetas)
+    • Diccionario de 17 variables
+
+  Pestaña 2: 📋 Fase 1: Comprensión del Negocio
+    • Objetivos comerciales aplicados
+    • Evaluación de recursos y riesgos
+    • Traducción a objetivos técnicos
+    • Plan de proyecto
+
+  Pestaña 3: 📊 Fase 2: Comprensión de los Datos
+    • Recopilación de datos
+    • Descripción de variables
+    • Tipos de datos
+    • Clasificación de variables
+
+  Pestaña 4: 🔍 Exploración (EDA)
+    • 11 visualizaciones interactivas:
+      ✓ Distribución de ventas
+      ✓ Análisis por sucursal
+      ✓ Ventas por producto
+      ✓ Tipos de cliente (Members vs Normal)
+      ✓ Métodos de pago
+      ✓ Evolución temporal
+      ✓ Ventas por hora del día
+      ✓ Distribución de ratings
+      ✓ Heatmap producto×sucursal
+      ✓ Scatter multivariado
+      ✓ Análisis de correlaciones
+
+  Pestaña 5: ✅ Calidad de Datos
+    • Checklist de calidad completo
+    • Problemas detectados
+    • Recomendaciones para Fase 3
+
+  Pestaña 6: 💡 Insights
+    • 6 insights principales
+    • Hipótesis preliminares (16 hipótesis)
+    • Próximos pasos
+    • Actividades de aprendizaje
+    • Ejercicios prácticos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 OBJETIVOS DE APRENDIZAJE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Al finalizar esta clase, serás capaz de:
+
+  Fase 1 - Comprensión del Negocio:
+    ✓ Definir objetivos comerciales claros y medibles
+    ✓ Traducir objetivos de negocio a objetivos técnicos
+    ✓ Identificar recursos, riesgos y restricciones
+    ✓ Crear un plan de proyecto estructurado
+
+  Fase 2 - Comprensión de los Datos:
+    ✓ Realizar análisis exploratorio de datos (EDA)
+    ✓ Clasificar variables y entender sus características
+    ✓ Detectar problemas de calidad de datos
+    ✓ Formular hipótesis preliminares
+    ✓ Crear visualizaciones efectivas
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 REQUISITOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Para ver la guía interactiva:
+    ✓ Navegador web moderno (Chrome, Firefox, Edge, Safari)
+    ✓ JavaScript habilitado
+    ✓ Conexión a Internet (primera vez solamente)
+
+  Para modificar/regenerar la guía:
+    ✓ Python 3.8+
+    ✓ Entorno virtual (incluido en .venv/)
+    ✓ Pandas, Plotly, NumPy (ya instalados)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📤 COMPARTIR MATERIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Opción 1: Compartir toda la carpeta (Recomendado)
+    • Comprimir clase_2_2025-10-23/ a .zip
+    • Enviar por email, Drive, USB, etc.
+    • Tamaño: ~15 MB con venv, ~544 KB sin venv
+
+  Opción 2: Solo la guía HTML
+    • Enviar solo: guia_interactiva_crisp_dm.html
+    • Tamaño: 224 KB
+    • La persona necesita Internet para ver gráficos
+
+  Opción 3: Archivos esenciales
+    • guia_interactiva_crisp_dm.html
+    • README_CLASE_2.md
+    • SuperMarket Analysis.csv (si quieren explorar datos)
+    • Tamaño: ~370 KB
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CHECKLIST DE LA CLASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Antes de la Clase (Profesor):
+    ☐ Revisar guía interactiva completa
+    ☐ Leer reporte pedagógico
+    ☐ Preparar proyector
+    ☐ Probar que el HTML funciona
+    ☐ Compartir carpeta con estudiantes
+
+  Antes de la Clase (Estudiantes):
+    ☐ Descargar carpeta completa
+    ☐ Abrir y explorar el HTML
+    ☐ Leer README_CLASE_2.md
+    ☐ Tener lista app de notas
+
+  Durante la Clase:
+    ☐ Tomar apuntes de conceptos clave
+    ☐ Participar en ejercicios grupales
+    ☐ Hacer preguntas
+    ☐ Explorar visualizaciones
+
+  Después de la Clase:
+    ☐ Completar actividades
+    ☐ Revisar material adicional
+    ☐ Practicar con otro dataset
+    ☐ Prepararse para Fases 3-6
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 SOPORTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ¿Preguntas o problemas?
+    1. Consulta INICIO_RAPIDO.txt
+    2. Revisa README_CLASE_2.md
+    3. Lee la documentación específica
+    4. Contacta al profesor del curso
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                   ¡Disfruta la Clase de Minería de Datos! 📊            ║
+║                                                                          ║
+║              Universidad Externado de Colombia - 2025                    ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝

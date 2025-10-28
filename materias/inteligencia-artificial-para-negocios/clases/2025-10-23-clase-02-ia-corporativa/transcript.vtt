@@ -1,0 +1,1420 @@
+WEBVTT
+
+00:00:11.956 --> 00:00:28.916
+<v Julian David Zuluaga Ospina>Listo. Bueno, voy a compartir mi pantalla, por favor, me confirman cuando la est&#233;n viendo hoy va a ser una clase dentro de todo, muy muy, muy pr&#225;ctica, no tan te&#243;rica y me gustar&#237;a que al final.</v>
+
+00:00:29.196 --> 00:00:45.876
+<v Julian David Zuluaga Ospina>Hagamos o cada uno haga un ejercicio con los temas que vamos a aprender. El d&#237;a de hoy y entonces disp&#243;nganse, sobre todo para el final, para que cada uno pueda trabajar en sus entornos. Listo pantalla.</v>
+
+00:00:52.956 --> 00:01:10.236
+<v Julian David Zuluaga Ospina>Bueno, perfecto. Hoy vamos a estar hablando de un concepto que hoy est&#225; rondando much&#237;simo toda la cultura y comunidad de inteligencia artificial. No s&#233; si alguno ya probablemente s&#237; lo haya. Lo hab&#237;a escuchado antes y se llama by coulding.</v>
+
+00:01:11.556 --> 00:01:12.756
+<v Julian David Zuluaga Ospina>El by codeing.</v>
+
+00:01:13.996 --> 00:01:36.036
+<v Julian David Zuluaga Ospina>Puede ser una especie de tendencia hacia donde va todo el tema de inteligencia artificial, pero sobre todo creo yo que es una habilidad y es una habilidad que todos deber&#237;amos desarrollar. &#191;Es una exigencia? Pues no, pero las personas que tengan la capacidad de hacer este tipo de t&#233;cnicas.</v>
+
+00:01:36.356 --> 00:01:55.476
+<v Julian David Zuluaga Ospina>Van a tener una ventaja competitiva sumamente crucial frente a las otras que no, esto es como hablar otro idioma, realmente esa es una gran, una gran analog&#237;a o como alguna otra skill, manejar excelente TC que va a empezar.</v>
+
+00:01:55.756 --> 00:02:14.956
+<v Julian David Zuluaga Ospina>A posicionarnos como mejores profesionales entonces esto no es para los programadores o los t&#233;cnicos que est&#225;n por all&#225; relegados en el Rack de los servidores de la empresa, sino que todos deber&#237;amos empezar sin importar nuestra skill, conocimiento previo.</v>
+
+00:02:15.236 --> 00:02:39.316
+<v Julian David Zuluaga Ospina>A dirigirnos hacia estas tendencias que vamos a estar analizando hoy, como todo el boicoding y ya van a ver que son muchos de los ejercicios que ustedes mismos van a realizar, temas de estos durante la clase. Repito, es una skill, entonces como cualquier otra habilidad, esto no se aprende ni.</v>
+
+00:02:39.716 --> 00:03:04.436
+<v Julian David Zuluaga Ospina>Leyendo libros, ni haciendo cursos, ni estudiando alg&#250;n punto, sino que la &#250;nica forma de aprenderlo es practicando, es como por ejemplo la guitarra. Entonces yo me puedo leer los 20000 libros de Guitarra y de t&#233;cnicas de Armonia y de Digitaci&#243;n y estudiar, pero no hacer hasta que yo me siente.</v>
+
+00:03:04.556 --> 00:03:27.356
+<v Julian David Zuluaga Ospina>Con el instrumento lateralmente a tocar, que no que voy a prender el tema. Por otro lado, es importante tambi&#233;n tener un manejo de la frustraci&#243;n, entonces vamos a ver que las primeras veces quiz&#225;s nos vamos a fluir como quisi&#233;ramos con el tema.</v>
+
+00:03:28.796 --> 00:03:48.596
+<v Julian David Zuluaga Ospina>Sino que llegar&#237;a esa habilidad va llegando con con el tiempo. Entonces es importante tambi&#233;n entender que las primeras veces no me va a salir tan bien YY que simplemente con la pr&#225;ctica voy a ir mejorando. &#191;Entonces, qu&#233; es puntualmente el bytecoding? Hoy la barrera de entrada.</v>
+
+00:03:48.916 --> 00:04:07.956
+<v Julian David Zuluaga Ospina>De la escritura de c&#243;digo de software, se est&#225; difuminando porque la inteligencia artificial lo hace y cuando nosotros nos enfrentamos a entornos de c&#243;digo de entrada, nos podemos llegar a asustar porque no entendemos nada, sobre todo si es en una terminal de comandos.</v>
+
+00:04:08.436 --> 00:04:28.516
+<v Julian David Zuluaga Ospina>Entonces se est&#225;n empezando a crear multitud de aplicaciones que ni siquiera nos exponen al c&#243;digo, sino que todo va por detr&#225;s y nos permiten interactuar de forma. Esto se llama no code o Low Code, que es lo que ve&#237;an ustedes en clases anteriores.</v>
+
+00:04:28.916 --> 00:04:53.156
+<v Julian David Zuluaga Ospina>De la creaci&#243;n de los flujos y dem&#225;s. Entonces las plataformas se est&#225;n volviendo tremendamente intuitivas para crear aplicaciones sin en ning&#250;n momento nosotros exponernos al C&#243;digo porque se llamaba Buy y esto es la tendencia hacia todos lados, no solamente el c&#243;digo o generaci&#243;n de aplicaciones, sino literalmente todo.</v>
+
+00:04:53.596 --> 00:05:17.596
+<v Julian David Zuluaga Ospina>&#191;Y es porque nosotros entramos en una especie de estado de flujo, donde empezamos a imaginarnos cu&#225;l es la aplicaci&#243;n, qu&#233; colores tiene, c&#243;mo se siente? Empieza a ver un juego de emociones superimportante y, a partir de eso y de nuestra habilidad con los proms, que tambi&#233;n se ve&#237;an en clases anteriores.</v>
+
+00:05:17.876 --> 00:05:42.116
+<v Julian David Zuluaga Ospina>Vamos a poder transmitir o vibrar junto con la I a para hacer nuestras creaciones. Entonces hablamos de algoritmos intuitivos, creaci&#243;n desde la intenci&#243;n, ETC. Hoy vamos a hacer muchos ejemplos y la intenci&#243;n es que al final vamos a dejar un buen espacio de la clase para que cada uno haga su propia aplicaci&#243;n con las.</v>
+
+00:05:42.356 --> 00:06:00.516
+<v Julian David Zuluaga Ospina>Plataformas que les voy a mencionar y si nos da el tiempo al final el que quiera, por supuesto, nos comparta su ejercicio para que podamos ver bueno c&#243;mo fue todo su proceso creativo, desde la planeaci&#243;n, desde los primeros prototipos hasta los &#250;ltimos refinamientos.</v>
+
+00:06:02.156 --> 00:06:06.036
+<v Julian David Zuluaga Ospina>&#191;Entonces vamos a continuar un segundito?</v>
+
+00:06:26.756 --> 00:06:32.116
+<v Julian David Zuluaga Ospina>Bueno, hablemos un poco de lo que hay detr&#225;s del concepto.</v>
+
+00:06:33.316 --> 00:06:52.516
+<v Julian David Zuluaga Ospina>El bytecodeing como tal es una pr&#225;ctica emergente ya entrando en en distinciones t&#233;cnicas de desarrollo de software que utiliza la inteligencia artificial para generar c&#243;digo funcional a partir de instrucciones en lenguaje natural, esta ser&#237;a como la la definici&#243;n formal.</v>
+
+00:06:52.996 --> 00:07:12.516
+<v Julian David Zuluaga Ospina>De lo que es by coding es importante. Tambi&#233;n que entender que el t&#233;rmino se se acu&#241;&#243; por un ingeniero que se llama Andrew de Paty. Es un reconocido investigador de la inteligencia artificial. Es cofundador de open AI a ustedes saben que es el laboratorio detr&#225;s de chachi Pity.</v>
+
+00:07:12.916 --> 00:07:35.316
+<v Julian David Zuluaga Ospina>Es el ex director de de Tesla y es un t&#233;rmino super nuevo que se acu&#241;a hace un par de a&#241;os por las tendencias que empiezan a ver en desarrollo. Yo les dec&#237;a Ahorita que este t&#233;rmino de Baip se empieza a relegar, no la palabra no es relegar, sino a expandir para diferentes disciplinas, entonces empezamos a ver que tambi&#233;n hay by designing.</v>
+
+00:07:36.196 --> 00:07:59.996
+<v Julian David Zuluaga Ospina>Los los que probablemente trabajan con dise&#241;o la. La sesi&#243;n pasada hac&#237;amos diapositivas tambi&#233;n con con ella. Es b&#225;sicamente lo mismo y es de poder transmitir esa emoci&#243;n, esa imagen, esa idea que yo tengo en cualquier disciplina, ya sea dise&#241;o, ya sea hay tambi&#233;n exploraciones de m&#250;sica, en este caso en escritura de de aplicaciones.</v>
+
+00:08:00.516 --> 00:08:02.596
+<v Julian David Zuluaga Ospina>A la inteligencia artificial.</v>
+
+00:08:04.316 --> 00:08:28.556
+<v Julian David Zuluaga Ospina>Algunos datos bien bien interesantes sobre el by coding. Y es que a hoy el 41% del C&#243;digo mundial es generado por inteligencia artificial. Por supuesto que ac&#225; ya estamos hablando de un contexto t&#233;cnico, de de escritores de software y programadores y dem&#225;s, pero es interesante y hablemos un poco de para d&#243;nde est&#225; yendo, sobre todo el tema.</v>
+
+00:08:28.756 --> 00:08:51.316
+<v Julian David Zuluaga Ospina>&#191;Del Byte Code y es que el 25% de las startups del Programa Winter 2025 y White Combinator, que son las aceleradoras m&#225;s grandes del mundo en San Francisco, en Silicon, vale? Tienen bases de c&#243;digo generadas hasta en un 95% por inteligencia artificial. &#191;Y qu&#233; quiere decir este dato? Y no es menor.</v>
+
+00:08:51.596 --> 00:09:13.196
+<v Julian David Zuluaga Ospina>Y es muy interesante. Y es que el bytecoiding a hoy es la herramienta madre para prototipar ideas, es brutal para prototipar ideas, hacer presentaciones de pronto no va a tener la robustez de de una aplicaci&#243;n hecha por ingenieros y por temas, pero si yo quiero presentar una idea.</v>
+
+00:09:13.916 --> 00:09:38.076
+<v Julian David Zuluaga Ospina>Ya sea para un potencial emprendimiento que tenga o para presentar en la empresa una iniciativa de algo nuevo que se quiera construir. El by coding es la soluci&#243;n porque como van a ver hoy se puede crear una aplicaci&#243;n suma sumamente r&#225;pido ahora para temas de productividad para desarrollar. &#191;Tools que me?</v>
+
+00:09:38.156 --> 00:09:58.956
+<v Julian David Zuluaga Ospina>Y van en el trabajo en mi d&#237;a a d&#237;a mejorar mi productividad. Esta es tambi&#233;n la forma de hacerlo. Supremamente r&#225;pido. Volvemos al tema de los desarrolladores. Otro dato interesante es que el 44% de los desarrolladores ya hab&#237;an adoptado herramientas de codificaci&#243;n con I a para 2023.</v>
+
+00:09:59.356 --> 00:10:12.956
+<v Julian David Zuluaga Ospina>Estableciendo las bases para el crecimiento en 2025. Ahorita vamos a hablar de algunas de las m&#225;s usadas y c&#243;mo se han ido adoptando y c&#243;mo han ido explotando y c&#243;mo la fuente de usuarios ha ido creciendo much&#237;simo.</v>
+
+00:10:14.556 --> 00:10:14.756
+<v Julian David Zuluaga Ospina>&#191;Eh?</v>
+
+00:10:16.996 --> 00:10:39.356
+<v Julian David Zuluaga Ospina>Las plataformas m&#225;s utilizadas hoy d&#237;a, como chat GPT Antropy, tienen sus funcionalidades de by coding. Ahorita las vamos a ver, entonces es muy importante tambi&#233;n empezarlas a dominar a Practicarlas y a sentirnos cada vez m&#225;s c&#243;modos con esto porque los n&#250;meros nos muestran que esta es la tendencia.</v>
+
+00:10:39.876 --> 00:11:04.276
+<v Julian David Zuluaga Ospina>De del tema otros datos interesantes el mercado de programaci&#243;n asistida por I a que ser&#237;a como el el el nombre t&#233;cnico de by coding by Coding suena mucho m&#225;s creativo y m&#225;s m&#225;s imponente. Est&#225; experimentando un crecimiento exponencial valorado en 5000 millones en el 2023 y si se proyecta alcanzar a.</v>
+
+00:11:04.356 --> 00:11:25.356
+<v Julian David Zuluaga Ospina>26000 millones para el 2030.1 crecimiento anual de entre el 20 y el 30%. Estos son cifras de locura, a las cuales muy pocas industrias, conceptos, tecnolog&#237;as, disciplinas, han estado expuestas antes. Un crecimiento hasta el 30% anual es algo absolutamente loco.</v>
+
+00:11:26.276 --> 00:11:44.516
+<v Julian David Zuluaga Ospina>Los asistentes de codificaci&#243;n generativa por inteligencia artificial podr&#237;an acercarse a los 100000 millones de valor en el mercado para finales de la d&#233;cada. &#191;Entonces, esto est&#225; muy muy interesante, ahora hablemos de qui&#233;nes hacen boicot YY cu&#225;les son los perfiles de usuario?</v>
+
+00:11:45.356 --> 00:12:04.836
+<v Julian David Zuluaga Ospina>Entonces, realmente en todo el stack de de de productividad de de perfiles vamos a encontrar desde lo m&#225;s t&#233;cnico hasta lo menos, pero es importante hacer un barrido de los mismos. Entonces empecemos con usuarios no t&#233;cnicos y aqu&#237; nos referimos con usuarios no t&#233;cnicos a.</v>
+
+00:12:05.276 --> 00:12:23.876
+<v Julian David Zuluaga Ospina>&#191;Personas cuyo perfil est&#225; el no saber escritura de c&#243;digo desde cero, entonces, qui&#233;nes pueden ser, por ejemplo, fundadores de startups o de negocios, emprendedores que no tienen el perfil de desarrollador o ingeniero de sistemas?</v>
+
+00:12:24.556 --> 00:12:42.996
+<v Julian David Zuluaga Ospina>Marketers, dise&#241;adores, gerentes de producto, educadores, inclusive padres creativos que necesitan transformar ideas en prototipos funcionales r&#225;pidamente sin tocar nada de c&#243;digo. Este es nuestro perfil madre.</v>
+
+00:12:43.796 --> 00:13:07.916
+<v Julian David Zuluaga Ospina>Herramientas recomendadas ahorita igual las vamos a ver, pero hay y hay un mont&#243;n y cada d&#237;a saldr&#225;n 20000 m&#225;s. De pronto alguna la ha escuchado igual, repito, Ahorita vamos a verlas, pero est&#225;, lo hago. Replete agent hostinger Horizont y vamos a ver qu&#233; las m&#225;s usadas de Chatri Piti Yemen, ah&#237; Dipsy cloud tienen.</v>
+
+00:13:08.036 --> 00:13:32.876
+<v Julian David Zuluaga Ospina>Bien su sus componentes de botecoding. &#191;Qu&#233; podemos hacer con botecoding? Repito, Ahorita vamos a entrar en toda la parte pr&#225;ctica, pero principalmente landing pages, presentaciones, mvp para validaciones de ideas de negocio, apps personales para productividad, prototipos para inversiones o tools que nos permitan mejorar nuestra actividad.</v>
+
+00:13:33.756 --> 00:13:52.556
+<v Julian David Zuluaga Ospina>Automatizar alg&#250;n proceso que tengamos, ya sea en nuestro trabajo o en nuestra vida personal. Otros perfiles por supuesto que ya entramos en tecnicismos, perfiles semi t&#233;cnicos. La curva de aprendizaje en el anterior para perfiles no t&#233;cnicos es sumamente reducida, casi que no hay muy baja.</v>
+
+00:13:52.836 --> 00:14:17.476
+<v Julian David Zuluaga Ospina>Aqu&#237; ya empieza a haber curva de aprendizaje media y baja y entendemos que hay herramientas que ya se van a, digamos que las editores de c&#243;digo y que se integran y permiten ya tener una exposici&#243;n un poco m&#225;s para las personas que ya manejan algo de c&#243;digo. Entonces, dise&#241;adores con conocimientos b&#225;sicos en en c&#243;digo.</v>
+
+00:14:17.556 --> 00:14:42.316
+<v Julian David Zuluaga Ospina>Digo P Ms Project managers que ya tengan un perfil t&#233;cnico ac&#225; ya hablamos de tecnolog&#237;a, analistas de datos que se exponen a ciertas tendencias de c&#243;digo. Tambi&#233;n ya tienen una curva de aprendizaje un poco m&#225;s elevada, pero la tendencia es que van a estar haciendo by cooling todo el tiempo. Necesidades, construcci&#243;n r&#225;pida de Apps.</v>
+
+00:14:42.436 --> 00:15:01.556
+<v Julian David Zuluaga Ospina>Con algo de control sobre el c&#243;digo y herramientas. Aqu&#237; ya cambia los nombres, pues para muchos no van a sonar, vamos a ver algunos de esos y la idea de la clase hoy es precisamente explorar los verse, bolt, cloud artifaz, chat, JPT, cambas, ETC. Casos de uso.</v>
+
+00:15:02.916 --> 00:15:10.196
+<v Julian David Zuluaga Ospina>Micro sistemas interactivos ya dashboards, por ejemplo, herramientas internas. Prototipos de productos.</v>
+
+00:15:11.316 --> 00:15:12.596
+<v Julian David Zuluaga Ospina>Para aqu&#237; un par de palabras.</v>
+
+00:15:16.996 --> 00:15:37.236
+<v Julian David Zuluaga Ospina>Y por &#250;ltimo, desarrolladores profesionales. Esto no es solo para prototipar la productividad con tecnolog&#237;as asistidas por inteligencia artificial para la generaci&#243;n de c&#243;digo. Dicho de otra manera, by coding potencia brutalmente a los desarrolladores sin importar su nivel de expertise.</v>
+
+00:15:38.116 --> 00:15:58.156
+<v Julian David Zuluaga Ospina>Aqu&#237; ya vemos que hay plataformas que se usan y que est&#225;n tremendamente adoptadas por los t&#233;cnicos de c&#243;digo, ya no est&#225;n en web, sino totalmente integradas con los stacks de desarrollo. Hablamos de cursor, hablamos de windsurf, hablamos de cloud code.</v>
+
+00:15:58.636 --> 00:16:08.596
+<v Julian David Zuluaga Ospina>&#191;Por si alguno ha escuchado algunas de estas, quiz&#225;s y en alg&#250;n momento Lilian, c&#243;mo est&#225;s? &#191;Nos vas a compartir algo adelante?</v>
+
+00:16:06.116 --> 00:16:16.076
+<v Lilian Garcia>Buenos d&#237;as. Bien, no es que quer&#237;a consultarte, no s&#233; si est&#225;s pasando las diapositivas porque yo sigo viendo la misma imagen, no s&#233; si ah o K.</v>
+
+00:16:14.556 --> 00:16:25.436
+<v Julian David Zuluaga Ospina>No, gracias por gracias por tu apreciaci&#243;n y con toda la validez. No, no estoy pasando diapositivas. Toda es la misma. Ima est&#225;s en lo correcto.</v>
+
+00:16:25.756 --> 00:16:26.716
+<v Lilian Garcia>&#191;Listo? Vale, gracias.</v>
+
+00:16:29.196 --> 00:16:41.396
+<v Julian David Zuluaga Ospina>&#191;Entonces es es muy interesante este tema y justo ahorita s&#237; voy a pasar la diapositiva tambi&#233;n cambio para que entremos a ver, pues qu&#233;? &#191;Qu&#233; se puede encontrar?</v>
+
+00:16:42.556 --> 00:16:53.956
+<v Julian David Zuluaga Ospina>En aplicaciones en el d&#237;a a d&#237;a, con temas de by coding. Y con esto terminamos la parte y vamos que te&#243;rica y vamos a estar toda la clase de hoy desarrollando aplicaciones.</v>
+
+00:17:06.956 --> 00:17:07.116
+<v Julian David Zuluaga Ospina>Bien.</v>
+
+00:17:09.516 --> 00:17:28.436
+<v Julian David Zuluaga Ospina>Entonces vamos a ver y ahorita les muestro unos datos m&#225;s, algunas de las m&#225;s usadas, yo les voy a pasar esto tambi&#233;n para que anoten y al final escojan la que quieran. Probablemente est&#225; mal decir la que m&#225;s les guste. Si nunca han usado alguna, pero todas son gratis hasta cierto punto.</v>
+
+00:17:28.916 --> 00:17:47.276
+<v Julian David Zuluaga Ospina>Hablamos la clase pasada de que al final las startups, los proveedores de servicio, pues al final todos son negocios, entonces vamos a ver que hoy la tendencia es un concepto que se llama Freemium, es decir, que me dan unos tokens o cr&#233;ditos mensuales o diarios.</v>
+
+00:17:47.796 --> 00:18:06.676
+<v Julian David Zuluaga Ospina>En un plan gratuito para poder crear mis desarrollos y como deci&#233;ndolo, de alg&#250;n modo, me pican para que pues yo pague la versi&#243;n pro y tenga la el tema ilimitado YETC entonces obviamente estas aplicaciones dir&#237;a que todas tienen su parte gratis.</v>
+
+00:18:07.596 --> 00:18:29.316
+<v Julian David Zuluaga Ospina>Pero hasta cierto punto Charchi piti que a m&#237; me encanta y lo han visto y dec&#237;amos la clase pasada que se empieza a volver. Un sistema operativo. Es decir, que dentro de de la aplicaci&#243;n vamos a tener cada vez m&#225;s y m&#225;s y m&#225;s funcionalidades que nos impliquen estar metidos ah&#237;, de lleno.</v>
+
+00:18:29.716 --> 00:18:54.076
+<v Julian David Zuluaga Ospina>No s&#233; si vieron la noticia que esta semana sali&#243; el nuevo navegador de Chat City creo que se llama Atlas, la verdad, no lo he probado, permite inclusive tomar control de la pantalla. Me gustar&#237;a que una de las clases lo abordar&#225; cuando voy a estudiar, yo utilizo otro que se llama Comet, pero bueno, ese no es el punto, el hecho es que chaty pity, por supuesto que tiene su funcionalidad para ser by coding.</v>
+
+00:18:54.436 --> 00:19:13.116
+<v Julian David Zuluaga Ospina>Vamos a usarla hoy, para los que la tienen, no s&#233; si la gratis. Yo pensar&#237;a que s&#237;. Permite tambi&#233;n hacer estos artefactos, pero bueno, exploremos algunas lo awol, Reply Bolt, Hostinger B cero de bersell. Cloud artifacts chachipiticambas windsurf.</v>
+
+00:19:13.436 --> 00:19:33.236
+<v Julian David Zuluaga Ospina>&#191;Earth Table Firebase, Github, Copilot y, como con todo, van a ser tantas las herramientas que nos vamos a empezar a confundir, no? &#191;Y cu&#225;l uso? Y entonces ser&#225; que las anoto todas y luego a cu&#225;l me meto y lo que les dec&#237;a tambi&#233;n la clase pasada es que la el truco no est&#225; en casarse con alguna.</v>
+
+00:19:33.636 --> 00:19:54.596
+<v Julian David Zuluaga Ospina>Porque el d&#237;a de ma&#241;ana salen otras 30. El truco est&#225; en aprender la habilidad y al final esto se empieza a centralizar, entonces van a ver lo poderoso que es hacer by code, y con simplemente chat JPT o con Yemen ah&#237; o con las grandes, aunque hay unas yo recomiendo mucho. Por eso sale de primeras loba out.</v>
+
+00:19:55.076 --> 00:19:58.836
+<v Julian David Zuluaga Ospina>Se empiezan a mostrar como esa.</v>
+
+00:20:00.156 --> 00:20:10.436
+<v Julian David Zuluaga Ospina>Ah, precisamente dise&#241;ada para eso. Luego vamos a cambiar actual de diapositiva, cambiar.</v>
+
+00:20:24.756 --> 00:20:39.436
+<v Julian David Zuluaga Ospina>Luego ahora es una empresa alemana, sale a Bolsa en el 23/10/2020 estaba viendo la acci&#243;n, de hecho les voy a compartir la sede central, est&#225; en India.</v>
+
+00:20:45.196 --> 00:21:07.556
+<v Julian David Zuluaga Ospina>Esperaba verme una curva mucho m&#225;s creciente de por el hype y por todo el tema, pero esta es tal vez hoy el APP para hacer bike cooling m&#225;s usada que m&#225;s se est&#225; usando en el pasado. Hablamos tambi&#233;n de los flujos, creo que ustedes los vieron directamente con chadjipity, pero hay otro tema que es n 8 n que ser&#237;an las 2 m&#225;s utilizadas.</v>
+
+00:21:08.396 --> 00:21:26.716
+<v Julian David Zuluaga Ospina>Lo hago, es simplemente esto ahorita lo vamos a usar y es como un chat, lo que pasa es que a trav&#233;s de los proms, &#233;l crea literalmente una aplicaci&#243;n y vamos a ver qu&#233; hay, pues toda una serie y yo les voy a pasar la lista para que la anoten y al final vamos a dejar un espacio para que cada uno.</v>
+
+00:21:27.236 --> 00:21:47.476
+<v Julian David Zuluaga Ospina>Haga su propio prototipo, entonces vamos a empezar y esto por lo mismo que se llama byte, cada persona tendr&#225; su forma de realizarlo. Yo podr&#237;a de una solicitar el APP con el promp, pero digamos que lo m&#225;s interesante ser&#237;a al principio.</v>
+
+00:21:47.956 --> 00:22:12.036
+<v Julian David Zuluaga Ospina>Hacer un planteamiento, un plan de c&#243;mo quiero yo que haga la aplicaci&#243;n, entonces les voy a hacer una demostraci&#243;n. Vamos a usar unas 23 herramientas distintas y vamos a crear unas cuantas Apps para que ustedes entiendan el concepto de by cooling y al final vamos a dejar unos 40 minutos, una media hora para que cada uno seleccione la que m&#225;s le gust&#243;.</v>
+
+00:22:12.356 --> 00:22:32.276
+<v Julian David Zuluaga Ospina>Y cree su propia aplicaci&#243;n y el que quiera, por supuesto que no. No es obligaci&#243;n. Al final, en unos 5 minutos nos comparta todo su proceso creativo, desde que se pens&#243; qu&#233; se ide&#243;, c&#243;mo lleg&#243; hasta ah&#237;, c&#243;mo dise&#241;&#243; y lo que nos quiera mostrar. Entonces vamos a empezar con.</v>
+
+00:22:32.516 --> 00:22:33.156
+<v Julian David Zuluaga Ospina>Chat JPT.</v>
+
+00:22:35.876 --> 00:22:44.876
+<v Julian David Zuluaga Ospina>&#191;Ya chipiti nos permite hacer much&#237;simas cosas, pero entonces nuestra primera APP va a ser una APP financiera?</v>
+
+00:22:47.996 --> 00:22:48.996
+<v Julian David Zuluaga Ospina>&#191;Que me permita?</v>
+
+00:22:50.676 --> 00:22:59.436
+<v Julian David Zuluaga Ospina>Tomar decisiones de inversi&#243;n para revisar acciones y dem&#225;s. Claramente, si yo me meto a Internet y busco investing.</v>
+
+00:23:01.796 --> 00:23:03.476
+<v Julian David Zuluaga Ospina>&#191;O busco ya Finance?</v>
+
+00:23:07.436 --> 00:23:30.756
+<v Julian David Zuluaga Ospina>O busco Google stops, pues voy a tener todas estas funcionalidades, pero no, yo soy yo, quiero la m&#237;a porque es m&#225;s, va a ser personalizada y porque le puedo meter mis colores y todo el de entonces. Uno de los primeros pasos que que yo puedo tener a la hora de de hacer by cooding es todo el planteamiento.</v>
+
+00:23:30.996 --> 00:23:50.516
+<v Julian David Zuluaga Ospina>De la aplicaci&#243;n. Entonces yo tengo antes que empezar a hacer el byte que imaginarme en mi cabeza. &#191;C&#243;mo va a ser esta aplicaci&#243;n? Entonces, yo me empiezo a imaginar una interfaz donde yo pueda tener a un lado todas las las acciones que me interesan.</v>
+
+00:23:50.996 --> 00:24:15.156
+<v Julian David Zuluaga Ospina>Pueda quitar y poner nuevas acciones cuando seleccione una pueda tener la estimaci&#243;n del precio y todo el tema pueda tener una parte quiz&#225;s de de sugerencias de la aplicaci&#243;n. Entonces me la empiezo a imaginar, me empiezo a imaginar los colores, los t&#237;tulos donde quiero que vaya a cada cosa y ser&#237;a muy poderoso.</v>
+
+00:24:15.796 --> 00:24:38.796
+<v Julian David Zuluaga Ospina>Y de pronto hacemos el ejercicio, s&#237;, yo la dibujo. Quisiera que para la la parte pr&#225;ctica que ustedes van a hacer sobre el final de la clase y lo hagan, la dibujen la pueden dibujar en paint la pueden dibujar en un cuaderno, la pueden dibujar en herramientas como esta que se llama Scally Row.</v>
+
+00:24:43.756 --> 00:25:00.316
+<v Julian David Zuluaga Ospina>Es como un paint en en web y entonces hagamos el ejercicio como nos imaginamos nuestra APP financiera, que adem&#225;s tiene que tener un PIN. &#191;Entonces le voy a poner ac&#225; imagin&#225;ndome orbital?</v>
+
+00:25:01.516 --> 00:25:02.156
+<v Julian David Zuluaga Ospina>Finance.</v>
+
+00:25:06.996 --> 00:25:24.436
+<v Julian David Zuluaga Ospina>Entonces que esta va a ser mi aplicaci&#243;n financiera va a tener un color azul, me lo imagino azul y me imagino que ac&#225; va a tener una parte con todas las acciones que yo voy a estar siguiendo en mi d&#237;a a d&#237;a.</v>
+
+00:25:25.036 --> 00:25:31.116
+<v Julian David Zuluaga Ospina>Entonces vamos a tener por aqu&#237; Apple, vamos a tener por aqu&#237; envidia.</v>
+
+00:25:33.876 --> 00:25:37.316
+<v Julian David Zuluaga Ospina>&#191;Pero si se escribe as&#237;, vamos a tener Tesla?</v>
+
+00:25:38.676 --> 00:25:45.556
+<v Julian David Zuluaga Ospina>Y una opci&#243;n de poder a&#241;adir m&#225;s ya entonces.</v>
+
+00:25:49.676 --> 00:26:08.596
+<v Julian David Zuluaga Ospina>Y entonces me puede empezar a imaginar los colores y todo el tema y cuando seleccione alguna aqu&#237; se me va a desplegar todo el tema de la cotizaci&#243;n de precio del mercado, que si adem&#225;s yo pongo el Mouse en alg&#250;n punto me va a desplegar.</v>
+
+00:26:09.436 --> 00:26:11.556
+<v Julian David Zuluaga Ospina>Una especie, esto se llama Tooltip.</v>
+
+00:26:13.276 --> 00:26:25.196
+<v Julian David Zuluaga Ospina>Donde voy a poder ver alguna informaci&#243;n puntual de la acci&#243;n y la fecha y cu&#225;nto est&#225; cotizando y ac&#225; informaci&#243;n adicional.</v>
+
+00:26:26.396 --> 00:26:38.396
+<v Julian David Zuluaga Ospina>Tambi&#233;n me imagino que voy a poder tener quiz&#225;s una pantalla con consejos o noticias de la acci&#243;n.</v>
+
+00:26:49.156 --> 00:26:56.596
+<v Julian David Zuluaga Ospina>Pon todo el texto y voy a tener una segunda interfaz. Habr&#225; que ver d&#243;nde la poner.</v>
+
+00:26:58.756 --> 00:27:03.596
+<v Julian David Zuluaga Ospina>Una segunda interfaz que me permita tener mi portafolio.</v>
+
+00:27:04.796 --> 00:27:09.236
+<v Julian David Zuluaga Ospina>Todo esto me lo estoy imaginando aqu&#237; en un momentico podr&#237;a ser muy diferente.</v>
+
+00:27:16.876 --> 00:27:38.196
+<v Julian David Zuluaga Ospina>Esto es ahora, esta es mi idea inicial. Esto es lo que yo me imagino, porque yo hago inversiones en el mercado financiero, quiero tener mi portafolio y la voy a estar utilizando todos los d&#237;as y quiero ver cu&#225;nto voy ganando y cu&#225;les son mis balances. Pues si me quedo ac&#225; pensando voy a llegar a algo muy grande. &#191;Entonces otro truco?</v>
+
+00:27:38.756 --> 00:28:01.476
+<v Julian David Zuluaga Ospina>Con cuando hacemos by coding es que menos es m&#225;s. Entonces si yo le pido a la I a que programe Uber, la I a siempre me va a responder YY va a intentar generarlo, pero el resultado al ser algo tan complejo y tan dif&#237;cil y tan largo y tan extenso, no va a ser tan bueno. En cambio, si yo empiezo.</v>
+
+00:28:01.796 --> 00:28:22.156
+<v Julian David Zuluaga Ospina>Por lo m&#225;s b&#225;sico desmenuzadito como si estuviese hablando literalmente con un beb&#233; y voy incrementando de a poquitos. &#191;Va a ser mejor? &#191;Cu&#225;l es el l&#237;mite? &#191;Cu&#225;l es el balance? &#191;Cu&#225;l es el umbral de que tanto le debo pedir? Por pronto, pues eso es la habilidad que ustedes van a ir adquiriendo con la pr&#225;ctica, como ese matiz.</v>
+
+00:28:22.636 --> 00:28:43.796
+<v Julian David Zuluaga Ospina>Esa esencia de esa saz&#243;n a la hora de hacer baik&#250; entonces, teniendo esto presente voy a empezar una parte de ya tengo el dise&#241;o, digamos que visual. Ahora vamos a utilizar una parte de dise&#241;o conceptual, entonces me voy a apoyar.</v>
+
+00:28:44.276 --> 00:29:02.956
+<v Julian David Zuluaga Ospina>En la en chachipit&#237; para en este caso, poder hacer toda la parte del dise&#241;o. Yo siempre sugiero que antes de arrancar directamente con el desarrollo, hagamos un proceso creativo, inclusive de pensar el nombre de pensar el logo y pensar varios puntos.</v>
+
+00:29:03.316 --> 00:29:21.676
+<v Julian David Zuluaga Ospina>Los colores, las funcionalidades, los spects, los requerimientos antes en una interfaz no interfaz, no que en un artefacto conceptual antes de pasar al desarrollo mismo, entonces le voy a poner un prompt inicial de quiero.</v>
+
+00:29:21.996 --> 00:29:24.156
+<v Julian David Zuluaga Ospina>Construir a.</v>
+
+00:29:26.836 --> 00:29:30.636
+<v Julian David Zuluaga Ospina>Personal para poder llevar control.</v>
+
+00:29:32.156 --> 00:29:35.356
+<v Julian David Zuluaga Ospina>Mis inversiones en acciones.</v>
+
+00:29:37.756 --> 00:29:40.316
+<v Julian David Zuluaga Ospina>&#191;En el mercado, ir al cielo?</v>
+
+00:29:41.596 --> 00:29:48.356
+<v Julian David Zuluaga Ospina>Quisiera poder explorar las acciones, a&#241;adir otras nuevas.</v>
+
+00:29:53.436 --> 00:29:58.036
+<v Julian David Zuluaga Ospina>Y poder tener una lista de mis favoritas.</v>
+
+00:30:01.116 --> 00:30:19.476
+<v Julian David Zuluaga Ospina>Me imagino que la colores azules, como ven, estoy dando una descripci&#243;n de c&#243;mo yo lo siento, por eso se llamaba como yo lo siento como como en mi emoci&#243;n, con la misma que quiero expresar y entre m&#225;s detalles.</v>
+
+00:30:19.676 --> 00:30:39.076
+<v Julian David Zuluaga Ospina>Entre m&#225;s matices, descripciones, adjetivos pueda usar, pues m&#225;s cerca voy a estar de esto que me imagino, y es muy importante imaginarmelo, porque si yo le digo quiero una financiera lo que estoy haciendo es permiti&#233;ndole a la inteligencia artificial que ella imagine.</v>
+
+00:30:39.516 --> 00:31:03.036
+<v Julian David Zuluaga Ospina>Y tampoco est&#225; mal. El resultado puede ser muy bueno, pero el chiste es que yo lo haga, que yo lo sienta. Entonces es muy importante. Tambi&#233;n esquematizar que se imaginan y tener la habilidad de poderlo proyectar en un promp, y eso no se aprende haciendo cursos ni revisando el promp perfecto que nos da las sugerencias.</v>
+
+00:31:03.276 --> 00:31:17.796
+<v Julian David Zuluaga Ospina>Y teniendo ac&#225; mi panfletico al lado de c&#243;mo es que tengo que hacer un prom cada vez, sino, simplemente, es vibrando, fluyendo. Por eso el nombre entonces continuemos, tiene una lista de mis favoritas, me imagino una con colores azules vibrantes.</v>
+
+00:31:20.076 --> 00:31:21.076
+<v Julian David Zuluaga Ospina>Y naranjas.</v>
+
+00:31:25.196 --> 00:31:40.036
+<v Julian David Zuluaga Ospina>Quisiera tambi&#233;n si selecciono alguna de las acciones por ver el detalle de la cotizaci&#243;n en los diferentes.</v>
+
+00:31:41.356 --> 00:31:42.116
+<v Julian David Zuluaga Ospina>Time Friends.</v>
+
+00:31:46.236 --> 00:31:47.676
+<v Julian David Zuluaga Ospina>&#191;Qu&#233; m&#225;s pens&#225;bamos?</v>
+
+00:31:48.956 --> 00:31:53.796
+<v Julian David Zuluaga Ospina>Tener una secci&#243;n con noticias y.</v>
+
+00:31:55.036 --> 00:32:05.476
+<v Julian David Zuluaga Ospina>Consejos sobre la acci&#243;n y otra interfaz con mi porfavor.</v>
+
+00:32:10.076 --> 00:32:15.436
+<v Julian David Zuluaga Ospina>Ay&#250;dame a esquematizar. Esta idea es todo.</v>
+
+00:32:18.716 --> 00:32:39.996
+<v Julian David Zuluaga Ospina>Entonces, con este tipo de palabras o de frases de ay&#250;dame a esquematizar en lo que va a hacer es pues, volver todo esto. Una especie de brief de descripci&#243;n de proyecto. Sabemos que con Charlie pitillo en este caso tengo el plus, le puedo poner aqu&#237; en en autom&#225;tico para que el.</v>
+
+00:32:40.356 --> 00:33:04.796
+<v Julian David Zuluaga Ospina>Piense o no en este caso, pens&#243; 17 segundos para tareas supercomplejas puede pensar hasta minutos enteros. &#191;O lo puedo poner en instant&#225;neo para que me conteste de inmediato? Entonces veamos todo lo que &#233;l, &#233;l me esquimatiz&#243;, esto por supuesto que lo podemos ir cambiando antes de empezar y no, no me gust&#243;. Est&#225; as&#237;, &#233;l entra en.</v>
+
+00:33:05.156 --> 00:33:26.276
+<v Julian David Zuluaga Ospina>T&#233;cnicos aqu&#237; puede hacer que yo le diga no entres en tecnicismos si toma las decisiones por ti mismo o si yo entiendo la parte t&#233;cnica, puedes hacerle los ajustes visi&#243;n del producto a personal para explorar acciones, seguir favoritas, ver detalle con gr&#225;ficos multitainframe, noticias y consejos para gestionar tu portafol.</v>
+
+00:33:26.836 --> 00:33:46.596
+<v Julian David Zuluaga Ospina>Posiciones pianel rendimiento est&#233;tica azul vibrante m&#225;s acentos naranjas r&#225;pida y centrada en decisiones m&#243;dulos de navegaci&#243;n. Entonces tenemos nuestro inicio o today resumen del mercado, explorar buscador, m&#225;s filtros, detalle de la acci&#243;n el gr&#225;fico con los time frames y las velas.</v>
+
+00:33:46.956 --> 00:34:11.356
+<v Julian David Zuluaga Ospina>Algunas m&#233;tricas o indicadores financieros, noticias relevantes o consejos y botones de a&#241;adir a favoritos. Comprar, vender registro y crear alerta. Vamos a ver otra cosa, y es que cuando usamos inteligencia artificial normalmente se van muy lejos muy arriba y se empiezan a afritar a enloquecer. A veces hay que pararlos como OYE, no espera. No quiero todo esto porque.</v>
+
+00:34:11.596 --> 00:34:31.356
+<v Julian David Zuluaga Ospina>Todo esto va a entrar en un puede hacer que el resultado tenga errores o no. Es lo que esperaba, igual lo vamos a probar y vamos a ver si lo logramos, pero yo muchas de estas cosas no iban en mi idea inicial. Ahora est&#225; muy bien, no las tuve en cuenta, pero me las sugiere. Est&#225; perfecto flujo del usuario, buscar una acci&#243;n, abrir de favoritos, crear alerta.</v>
+
+00:34:31.676 --> 00:34:54.076
+<v Julian David Zuluaga Ospina>Compra ficticia del registro, aparecen portafolios y piden rebalancea revisa noticias entonces aqu&#237; hoy con que se va sumamente arriba, yo todo esto no me lo imaginaba, pero me gusta, est&#225; ch&#233;vere, est&#225; interesante, los colores azul, naranja, componentes a combar datos de arquitectura, aqu&#237; ya entramos en una parte t&#233;cnica que asumamos que yo no entiendo.</v>
+
+00:34:54.316 --> 00:35:15.476
+<v Julian David Zuluaga Ospina>Y desconozco l&#243;gica de los Consejos, Portafolios, alerta, seguridad y privacidad. Roma por fases KPIS entonces, pues creo la estructura de una completa, yo no pensaba llegar hasta all&#225;, quer&#237;a simplemente un prototipo, entonces basado en esto, quiero un prototipo.</v>
+
+00:35:16.596 --> 00:35:21.636
+<v Julian David Zuluaga Ospina>Son tantas funcionalidades y desde ah&#237;.</v>
+
+00:35:26.676 --> 00:35:27.796
+<v Julian David Zuluaga Ospina>Abrir, literal.</v>
+
+00:35:31.436 --> 00:35:39.916
+<v Julian David Zuluaga Ospina>Esta era mi idea inicial, ahora tratemos de con m&#225;s en esto.</v>
+
+00:35:41.956 --> 00:35:42.916
+<v Julian David Zuluaga Ospina>Esquematizar.</v>
+
+00:35:44.396 --> 00:36:05.116
+<v Julian David Zuluaga Ospina>La interfaz y las funcionalidades. Entonces, charly Piti tiene la opci&#243;n de copiar y pegar im&#225;genes. O yo podr&#237;a haber hecho esto en mi cuaderno literal dibujado, si alguno se atreve a hacerlo ahorita, que hagamos cada uno de los ejemplos.</v>
+
+00:36:05.636 --> 00:36:26.756
+<v Julian David Zuluaga Ospina>Maravilloso. Lo pude haber dibujado literalmente en mi cuaderno y tomarle la foto y adjuntarlo, y &#233;l lo va a entender, pues al final tiene capacidad multimodales, en este caso de de visi&#243;n. &#191;Entonces yo le podr&#237;a decir, qu&#233; opinas? &#191;Ma? Si no Julian eres incre&#237;ble, tienes ideas maravillosas.</v>
+
+00:36:27.156 --> 00:36:51.756
+<v Julian David Zuluaga Ospina>Entonces, pues vemos que ese tipo de cosas no, no, no importan mucho, sino m&#225;s bien h&#225;gale, vamos adelante. Entonces ac&#225; le paso lo que yo me imaginaba con los colores y el tema, las noticias, los consejos y entonces perfecto, tuvo cierto, ya tiene una estructura muy clara y coherente con un prototipo funcional, vamos a esquematizar la la interfaz y las funcionalidad.</v>
+
+00:36:51.836 --> 00:37:16.436
+<v Julian David Zuluaga Ospina>A partir de &#233;l como si fu&#233;ramos a construir la versi&#243;n B cero de interactiva de Orbital fines. Estructura general de la interfaz principal saibar Izquierdo. Digamos que ya le pone nombres en aplicativo. T&#237;tulo lista vertical de acciones, bot&#243;n panel principal funcionalidades, panel central Panel inferior, portafolios estilos, flujo de usuario, funcionalidades.</v>
+
+00:37:17.756 --> 00:37:41.356
+<v Julian David Zuluaga Ospina>Listo, teniendo presente todo esto que ya me me ayud&#243; el chat a esquematizar como si fuese el la definici&#243;n de mi APP, de mi proyecto vamos a utilizar ya la funcionalidad de Canvas. Ac&#225; vamos a ver que esto no solamente nos sirve para crear c&#243;digo, sino tambi&#233;n para crear textos. Despu&#233;s no s&#233; si alguno lo ha usado. Este canvas est&#225; tambi&#233;n en yen.</v>
+
+00:37:41.596 --> 00:37:49.436
+<v Julian David Zuluaga Ospina>Est&#225; en cloud, est&#225; en grock, est&#225; en varios, lo voy a seleccionar y pon base en el contexto.</v>
+
+00:37:51.916 --> 00:37:53.036
+<v Julian David Zuluaga Ospina>Mirad, Mirad.</v>
+
+00:38:00.796 --> 00:38:22.796
+<v Julian David Zuluaga Ospina>Eso es todo, entonces el el camas, que es el camas, es un artefacto sobre el cual &#233;l se puede. &#201;l puede escribir o yo puedo escribir y cambiar y sobre el cual es muy f&#225;cil luego hacer ajustes, a diferencia del chat que ya no se puede hacer ajustes porque esto ya queda ah&#237;. Y para devolverme est&#225; complejo me toca subir el artefacto, lo puedo acceder en cualquier momento.</v>
+
+00:38:24.196 --> 00:38:26.276
+<v Julian David Zuluaga Ospina>A despu&#233;s, a time, estudiando errores.</v>
+
+00:38:30.596 --> 00:38:49.676
+<v Julian David Zuluaga Ospina>Entonces, bueno, aqu&#237; empieza a pensar. &#201;l crea el artefacto y con todo esto que definimos, &#233;l empieza a escribir el c&#243;digo. &#191;Necesito yo entender el c&#243;digo y dem&#225;s? No necesito es ver qu&#233; hizo y hacerle ajustes. Como no cambia esto aqu&#237; ponle esto y no quer&#237;a rojo sino morado.</v>
+
+00:38:50.356 --> 00:39:14.516
+<v Julian David Zuluaga Ospina>Eso es bycoin, ahorita vamos a ver el ejemplo, no s&#233; si alguno ya se hab&#237;a expuesto a hacer estos desarrollos bastante interesantes, y mientras &#233;l piensa vamos a explorar algunos, otros tenemos y habl&#225;bamos de low, me gustar&#237;a que lo explorase. Loabol es la herramienta ahorita madre a diferencia de chatripitic, que simplemente es una funcionalidad loabol es una aplicaci&#243;n.</v>
+
+00:39:14.636 --> 00:39:36.036
+<v Julian David Zuluaga Ospina>Hecha exclusivamente para hacer back code y de hecho voy a pedirle ac&#225; otra herramienta. Vamos a ver qu&#233; me qu&#233; me invento, que que mi idea me surge en mi cabeza. Vamos a hacer algo, no s&#233; qu&#233; tan simple sea, vamos a ver si lo podemos romper o si logra el reto que le voy a poner, que va a ser un poco complejo.</v>
+
+00:39:36.916 --> 00:39:40.676
+<v Julian David Zuluaga Ospina>&#191;Crea una APP o una interfaz?</v>
+
+00:39:42.996 --> 00:39:45.516
+<v Julian David Zuluaga Ospina>Garc&#237;a a mi C&#225;mara web.</v>
+
+00:39:48.076 --> 00:40:11.836
+<v Julian David Zuluaga Ospina>Entonces ac&#225; vamos a hacer el dise&#241;o antes, mientras &#233;l empieza a crear todo el c&#243;digo, es lo que yo les digo del artefacto, vean que en ning&#250;n momento hemos hablado de temas t&#233;cnicos. Yo no le dije, USA React, Neirif y USA el framework de Typescript con Twilant y no s&#233; qu&#233; asumamos, que yo no s&#233; absolutamente nada de c&#243;digo.</v>
+
+00:40:13.396 --> 00:40:31.236
+<v Julian David Zuluaga Ospina>&#191;Tengo que entender esto, no? &#201;l lo est&#225; haciendo. &#201;l me lo muestra porque mira, est&#225; haciendo ac&#225;. Esto es el APP, literalmente en Type School con un framework que se llama React, lo que nosotros queremos ver es el APP y hacerle ajustes. Entonces, mientras el termino volvamos a nuestro scalitro y yo me imagino ahora.</v>
+
+00:40:32.436 --> 00:40:32.876
+<v Julian David Zuluaga Ospina>Patr&#243;n.</v>
+
+00:40:36.356 --> 00:40:46.316
+<v Julian David Zuluaga Ospina>Una interfaz donde salga de una funcionalidad con mi C&#225;mara web y pueda salir. Yo perdonar&#225;n mis dotes de dibujante.</v>
+
+00:40:48.756 --> 00:40:52.156
+<v Julian David Zuluaga Ospina>Y la interfaz detecte mi man.</v>
+
+00:40:53.876 --> 00:41:04.996
+<v Julian David Zuluaga Ospina>Y con un gesto de pinza con el &#237;ndice y el y el anular me estoy imaginando locuras, pueda mover 111 recuadro que salga ac&#225;.</v>
+
+00:41:06.476 --> 00:41:26.236
+<v Julian David Zuluaga Ospina>No s&#233; si me siguen los que no, pues ya lo van a ver cuando lo programemos, lo que quiero es intentar poner un reto. Supercomplejo a ver si logro romper el sistema o si logra entenderme. Y lo hace ahora, como le explico esto en un prompt bueno, vamos a intentarlo.</v>
+
+00:41:26.796 --> 00:41:32.076
+<v Julian David Zuluaga Ospina>Crea una APP por una interfaz que acceda a mi C&#225;mara web y etc.</v>
+
+00:41:34.396 --> 00:41:35.636
+<v Julian David Zuluaga Ospina>Mi man trap.</v>
+
+00:41:41.356 --> 00:41:43.836
+<v Julian David Zuluaga Ospina>Que salga un rect&#225;ngulo.</v>
+
+00:41:45.676 --> 00:41:48.076
+<v Julian David Zuluaga Ospina>En en una parte de la pantalla.</v>
+
+00:41:50.636 --> 00:41:57.076
+<v Julian David Zuluaga Ospina>Qu&#233; color mojado relleno y que con el gesto.</v>
+
+00:41:58.956 --> 00:42:03.596
+<v Julian David Zuluaga Ospina>De unir el &#237;ndice del anular.</v>
+
+00:42:05.196 --> 00:42:26.716
+<v Julian David Zuluaga Ospina>Pueda mover este rect&#225;ngulo sobre la pantalla, eso no tiene ninguna utilidad, simplemente mostr&#225;ndoles cosas locas que yo me imagino, y pues el concepto literal visceral de de bitcoin muere. Este rect&#225;ngulo por la pantalla cuando hago el gesto.</v>
+
+00:42:27.236 --> 00:42:29.556
+<v Julian David Zuluaga Ospina>S&#237;, s&#237; nota.</v>
+
+00:42:32.676 --> 00:42:33.436
+<v Julian David Zuluaga Ospina>En los dedos.</v>
+
+00:42:35.156 --> 00:42:36.236
+<v Julian David Zuluaga Ospina>Con el etiquetado.</v>
+
+00:42:39.996 --> 00:43:03.996
+<v Julian David Zuluaga Ospina>Cambiando este ya, eso es todo, &#233;l hace lo mismo, entonces &#233;l empieza, a diferencia de chat piti y veamos que yo tengo el gratis. &#201;l empieza aqu&#237; a planear y ya listo. Tengo que hacer a BCYD, tengo que escribir esta parte, tengo que hacer esto otro, tengo que tal, ya vamos a ver c&#243;mo es el proceso, a diferencia del anterior.</v>
+
+00:43:04.076 --> 00:43:08.476
+<v Julian David Zuluaga Ospina>Y volv&#225;monos a nuestra, que todav&#237;a se est&#225; escribiendo.</v>
+
+00:43:11.476 --> 00:43:20.116
+<v Julian David Zuluaga Ospina>Y vamos a ver con otro, vamos a usar 3 al tiempo para mostrarles diferentes casos de uso. En este caso nos vamos a ir a yeminine.</v>
+
+00:43:23.556 --> 00:43:42.836
+<v Julian David Zuluaga Ospina>En gerini tambi&#233;n tenemos un tema, que es el canvas, no s&#233; si es este right buil, creo que es este build, entonces yo quiero hacer una investigaci&#243;n sobre los avances del c&#225;ncer.</v>
+
+00:43:44.236 --> 00:43:44.556
+<v Julian David Zuluaga Ospina>&#191;Eras?</v>
+
+00:43:48.156 --> 00:43:57.036
+<v Julian David Zuluaga Ospina>Se le empieza a buscar en Internet, veamos c&#243;mo van cada uno de nuestros elementos. Aqu&#237; sigue escribiendo el c&#243;digo.</v>
+
+00:44:00.436 --> 00:44:22.516
+<v Julian David Zuluaga Ospina>Aqu&#237;, entonces, miren, voy a crear una aplicaci&#243;n interactiva de handtracking con las siguientes caracter&#237;sticas, dise&#241;o inspirado en interfaces de realidad aumentada modernas, con colores vibrantes y ne&#243;n. Caracter&#237;sticas de acceso a C&#225;mara web rect&#225;ngulo morado interactivo detecci&#243;n del gesto del pitch las marchas de mano que cambian de color, de detectar el gesto. Interfaz futurista con gradientes y efectos visuales.</v>
+
+00:44:23.396 --> 00:44:44.556
+<v Julian David Zuluaga Ospina>Muchos quiz&#225;s no, no entienden aqu&#237; qu&#233; estamos haciendo aqu&#237; ya lo van a ver y pues de pronto tampoco fue la gran cosa, entonces &#233;l arranca implementar y dentro del STACK empieza a escribir un mont&#243;n de c&#243;digo. Esto a m&#237; no me interesa, a m&#237; me interesa si la c&#243;mo lo haga, mira a ver c&#243;mo lo hace.</v>
+
+00:44:45.676 --> 00:44:55.036
+<v Julian David Zuluaga Ospina>Qu&#233; tan bueno, pues ah&#237; depende el el. Entonces ya eso fue un momentico listo, t&#250; deja estar completa, ahora vamos a ver c&#243;mo la puedo ver.</v>
+
+00:45:02.156 --> 00:45:21.996
+<v Julian David Zuluaga Ospina>Permitir mientras se visita el sitio, no se pudo acceder a la cama. Entonces vamos a ver que muchas veces, y esto era lo que quer&#237;a, yo quer&#237;a romperlo para que veamos de que muchas veces fallan, entonces esto es todo el c&#243;digo y lo que queremos hacer aqu&#237; es literalmente hay un fallo.</v>
+
+00:45:25.196 --> 00:45:27.916
+<v Julian David Zuluaga Ospina>Permite acceder a la C&#225;mara.</v>
+
+00:45:29.636 --> 00:45:49.956
+<v Julian David Zuluaga Ospina>Venta solucionar a diferencia de pronto del de Chachipitic y que tambi&#233;n se puede este, lo hago que para m&#237; es mi favorito para ser by coding, que no lo uso tanto, permite hacer este tipo de interacciones de hey t&#250;, este fallo no me sirvi&#243;. Sali&#243; este error.</v>
+
+00:45:50.436 --> 00:46:09.356
+<v Julian David Zuluaga Ospina>&#191;C&#243;mo lo podemos arreglar? O no quer&#237;a esto, c&#225;mbialo. &#191;Voy a solucionar el problema? Veamos si este Dios m&#237;o siempre que tenemos la clase, me me sale el fallo, si no lo hacemos m&#225;s simple ahorita para mostrarles, les voy a regenerar, aunque se va a demorar otra vez.</v>
+
+00:46:09.596 --> 00:46:28.596
+<v Julian David Zuluaga Ospina>Pero bueno, mientras tanto vamos a Jimmy. Entonces aqu&#237; le ped&#237; que hiciese una investigaci&#243;n sobre el c&#225;ncer y los avances en el &#250;ltimo, en el &#250;ltimo tiempo, entonces, utilizando el tema del canvas, s&#237;, adelante. Alguien iba a hablar.</v>
+
+00:46:25.436 --> 00:46:25.596
+<v Diana Rivera>No s&#233;.</v>
+
+00:46:29.516 --> 00:46:35.996
+<v Diana Rivera>Ah, el error no de la C&#225;mara no ser&#225; porque la est&#225;s utilizando en este momento para, pues con el teams.</v>
+
+00:46:36.596 --> 00:46:38.636
+<v Julian David Zuluaga Ospina>Oye, puede ser, es muy probable.</v>
+
+00:46:37.556 --> 00:46:39.916
+<v Diana Rivera>&#191;Y por eso s&#237; te pasa cuando est&#225;s en clase?</v>
+
+00:46:40.956 --> 00:46:51.676
+<v Julian David Zuluaga Ospina>Es muy probable. Ser&#225; que si la pago funciona me tendr&#233; que salir. Esperemos a ver que ac&#225; Trabo Shirin. &#191;Qu&#233; pasa si yo le doy? Refresh, pagarla.</v>
+
+00:47:03.036 --> 00:47:05.516
+<v Julian David Zuluaga Ospina>Parece que intentar acceder a la C&#225;mara.</v>
+
+00:47:06.756 --> 00:47:17.636
+<v Julian David Zuluaga Ospina>Pero por alg&#250;n motivo no sale, repito lo que yo quer&#237;a era romperlo. Le puse 11111. Tema muy complejo. Veamos, a ver si ac&#225; est&#225; intentando.</v>
+
+00:47:22.356 --> 00:47:24.276
+<v Julian David Zuluaga Ospina>Pero ya no me sale el error, por lo menos.</v>
+
+00:47:26.076 --> 00:47:35.756
+<v Julian David Zuluaga Ospina>&#191;El solucionado ay, miren, ya entonces veamos que perfecto, esto es, by cody, muchachos, vamos a ver, c&#243;mo puedo poner esto m&#225;s grande? Ven.</v>
+
+00:47:37.116 --> 00:47:56.956
+<v Julian David Zuluaga Ospina>Entonces veamos que cuando pongo mi mano la detecta, esto se llama anchoaquing, esto me lo invent&#233;, pude haberme puesto literal el del tema y se supone que cuando uno mis dedos, este es el gesto que yo quer&#237;a, aunque creo que me lo entendi&#243; mal. &#191;Y el &#237;ndice de anular puedo mover el rect&#225;ngulo?</v>
+
+00:47:58.596 --> 00:48:19.716
+<v Julian David Zuluaga Ospina>Ah&#237; tal vez fue error m&#237;o, de como lo lo dije, porque yo quer&#237;a decir estos 2, pero bueno, me entendi&#243; que estos 2, Ian, como cambia el de en cu&#225;nto nos demoramos 2 minutos logramos sacar el aplicativo y de hecho mi reto era romperlo. Yo no quer&#237;a llegar hasta ac&#225;, no esper&#233;, entonces sorprende, por eso digo, lo hago.</v>
+
+00:48:20.316 --> 00:48:23.676
+<v Julian David Zuluaga Ospina>Es s&#250;per pro y yo tengo la versi&#243;n gratuita.</v>
+
+00:48:25.036 --> 00:48:27.756
+<v Julian David Zuluaga Ospina>Entonces, qu&#233; podr&#237;a yo hacer ac&#225; y vamos a intentarlo.</v>
+
+00:48:29.956 --> 00:48:49.156
+<v Julian David Zuluaga Ospina>El barcodi no es solo llegar hasta aqu&#237;, sino empezar a interactuar y entonces ahora quiero que incluyas un c&#237;rculo de color verde y que este solo se pueda mover con el gesto.</v>
+
+00:48:49.556 --> 00:48:50.236
+<v Julian David Zuluaga Ospina>Del uno.</v>
+
+00:48:51.556 --> 00:49:16.396
+<v Julian David Zuluaga Ospina>&#191;Entonces, como ven, es iterativo? Ya sea porque quiero hacer ajustes o porque quiero a&#241;adir funcionalidades, entonces simplemente le doy el texto, &#233;l empieza a pensar y empieza a hacer las modificaciones en el C&#243;digo. Yo podr&#237;a acceder al c&#243;digo aqu&#237; y ver todo lo que &#233;l cre&#243;, pero como yo no soy un usuario t&#233;cnico, pues no voy a entender nada, entonces no hace falta, ahora s&#237; lo.</v>
+
+00:49:16.476 --> 00:49:35.356
+<v Julian David Zuluaga Ospina>O fuese, pues puede entrar inclusive a hacer ajustes directamente y aqu&#237; entonces se le empieza a hacer toda la edici&#243;n y a cambiar y todo el tema, vamos a ver si chachititi no me no me, no me hace quedar mal y termina el tema, bueno, mientras tanto v&#225;monos a Gemini y con el canvas, que es el mismo que usamos.</v>
+
+00:49:34.556 --> 00:49:58.636
+<v Natalia Ibeth Rojas Daza>Perd&#243;n, profe, perd&#243;n, una pregunta con esa aplicaci&#243;n que acabaste de de mostrarnos lo que not&#233; es que &#233;l guard&#243; esa nueva APP, llam&#233;moslo as&#237; directamente en lo cierta &#233;l queda guardada ah&#237; en en la aplicaci&#243;n y el uso de tu C&#225;mara queda disponible tambi&#233;n ah&#237;, en esa p&#225;gina, o sea t&#250; en esa p&#225;gina, activas la cara.</v>
+
+00:49:35.756 --> 00:49:36.396
+<v Julian David Zuluaga Ospina>S&#237;, adelante.</v>
+
+00:49:38.636 --> 00:49:39.156
+<v Julian David Zuluaga Ospina>Adelante.</v>
+
+00:49:48.876 --> 00:49:49.156
+<v Julian David Zuluaga Ospina>S&#237;.</v>
+
+00:49:51.556 --> 00:49:51.956
+<v Julian David Zuluaga Ospina>Correcto.</v>
+
+00:49:58.716 --> 00:50:01.556
+<v Natalia Ibeth Rojas Daza>C&#225;mara y puedes hacer uso de esa APP.</v>
+
+00:50:02.716 --> 00:50:03.356
+<v Julian David Zuluaga Ospina>Correcto.</v>
+
+00:50:03.836 --> 00:50:10.796
+<v Natalia Ibeth Rojas Daza>O KY, digamos que en el en el en el tema, de pronto de guardar digamos si t&#250; si t&#250; quieres.</v>
+
+00:50:12.156 --> 00:50:28.636
+<v Natalia Ibeth Rojas Daza>No s&#233; tomar una foto y guardar eso, esa parte como de del manejo de del almacenamiento de datos y ese tipo de de de de partes, influye en esta en esta o hasta ya no est&#225; llegando porque todav&#237;a no hemos llegado ese punto. Esa parte tengo como la inquietud.</v>
+
+00:50:29.876 --> 00:50:35.636
+<v Julian David Zuluaga Ospina>Depende, aqu&#237; aprende muchos temas, el guardado, tendr&#237;amos que pensarlo en.</v>
+
+00:50:36.836 --> 00:50:56.196
+<v Julian David Zuluaga Ospina>Si necesitamos una base de datos, vamos a ver que esto tambi&#233;n permite conectarnos con otras bases de datos gratuitas para mi APP de Handtrocker. Yo no quiero guardar nada ya as&#237;, un screenshot yo le podr&#237;a pedir la funcionalidad, pero si quisiera guardar, por ejemplo.</v>
+
+00:50:56.876 --> 00:51:16.836
+<v Julian David Zuluaga Ospina>El tema de de alg&#250;n otro punto, por ejemplo, si voy a hacer un an&#225;lisis de Excel y un dashboard y otro tema, hay posibilidades de que se guarde dentro de la misma o si es mucho el el dato tendr&#237;a que integrar una base de datos. Aqu&#237; ya se empieza a volver m&#225;s t&#233;cnica la cosa.</v>
+
+00:51:17.156 --> 00:51:35.956
+<v Julian David Zuluaga Ospina>No es complejo. Esto tiene conectores, pero muy probablemente pues tenga que ir un poquito m&#225;s all&#225;. Ahora como la comparto que creo que tambi&#233;n era parte de tu de tu pregunta, pues tiene funcionalidades para publicarlo cuando yo lo publico se crea una p&#225;gina web, una URL.</v>
+
+00:51:36.396 --> 00:51:55.796
+<v Julian David Zuluaga Ospina>Donde yo puedo entrar y &#233;l ya guard&#243; los datos y ya puedo continuar donde iba o lo puedo compartir con otras personas para mi uso dial. Por supuesto que esto tiene ciertos limitantes en s&#237; es gratuito o o el pro, pero el gratuito me deja. Creo que publicar unas cosas entonces depende de la.</v>
+
+00:51:56.156 --> 00:52:16.196
+<v Julian David Zuluaga Ospina>Pero a tu pregunta la gran mayor&#237;a se guarda literalmente en en en esta base de c&#243;digo en lo que t&#233;cnicamente es el medio frente, entonces veamos ya ya justo y ahora con el con el el pu&#241;o, puedo mover el el c&#237;rculo, el c&#237;rculo verde, mientras que con el otro, que me lo entendi&#243; mal.</v>
+
+00:52:16.516 --> 00:52:40.956
+<v Julian David Zuluaga Ospina>&#191;Puedo mover el mora? Entonces vean que no lo pude romper yo. Mi intenci&#243;n era que no pudiera, me gan&#243;. Vamos a ver si este ya termin&#243; perfecto ya termino. Entonces esto es un artefacto que se llama el Canvas, donde yo puedo editarlo. Puedo descargarlo puedo copiarlo y me queda aqu&#237; siempre que lo necesite. &#191;Si tengo varios, puedo entrar a cu&#225;l?</v>
+
+00:52:41.036 --> 00:52:41.756
+<v Julian David Zuluaga Ospina>Que era de ellos.</v>
+
+00:52:43.276 --> 00:53:04.716
+<v Julian David Zuluaga Ospina>En canvas el C&#243;digo al final se renderiza utilizando este bot&#243;n de vista previo, entonces, al tocarlo, se va a desplegar mi APP. Vamos a ver si lo logr&#243; o tiene errores porque veo que tambi&#233;n est&#225; muy extensa, lo que yo les comentaba es que, de entrada no busquemos crear el APP completa, sino ir por partecitas desmenuzado, que muchas veces s&#237; lo logra.</v>
+
+00:53:05.836 --> 00:53:17.556
+<v Julian David Zuluaga Ospina>Entonces, vamos a ver qu&#233; tanto pude yo vibrar y darle el el mensaje que quer&#237;a. Entonces yo no s&#233; si pueda colapsar esta parte para verla completa.</v>
+
+00:53:19.116 --> 00:53:35.036
+<v Julian David Zuluaga Ospina>Pareciese que no, pero bueno, miren que es muy parecida a lo que yo me imaginaba, le damos las las distinciones entonces vean que y de hecho tiene ac&#225; la opci&#243;n de portafolio, como veo yo, STOP full screen.</v>
+
+00:53:42.356 --> 00:54:01.636
+<v Julian David Zuluaga Ospina>Entonces tenemos nuestras acciones, tenemos nuestra funcionalidad de ponerlo en favoritos, puedo a&#241;adir otra m&#225;s. De hecho, me puso las mismas que yo le hab&#237;a pedido, interesante est&#225; mi excalibro en Villa y Tesla en el mismo orden, vean que &#233;l entiende perfectamente una una foto.</v>
+
+00:54:02.356 --> 00:54:20.556
+<v Julian David Zuluaga Ospina>Podr&#237;a haber sido un dibujo hecho en en en el en la en en un cuaderno, se los prometo que no entienden. Tenemos nuestra parte interactiva de la acci&#243;n, donde adem&#225;s est&#225; nuestro tooltip este s&#237;, no me lo entendi&#243; tambi&#233;n.</v>
+
+00:54:21.316 --> 00:54:43.716
+<v Julian David Zuluaga Ospina>Que yo quer&#237;a as&#237; naranjita y con los colores, pero tal vez no se lo supe explicar. Tenemos algunos indicadores, el &#250;ltimo precio, el cambio del d&#237;a, el el, la media m&#243;vil de 50 periodos. Lo que yo no s&#233; si esto est&#233; bien a veces puede alucinar, entonces vamos a confirmarlo. &#191;El valor de 170 USD?</v>
+
+00:54:44.236 --> 00:54:48.716
+<v Julian David Zuluaga Ospina>A a precio de de este momento, entonces Apple ser&#225; por.</v>
+
+00:54:50.156 --> 00:54:50.956
+<v Julian David Zuluaga Ospina>Up wir stock.</v>
+
+00:54:53.756 --> 00:55:17.756
+<v Julian David Zuluaga Ospina>Entonces vemos que aqu&#237; s&#237; hay un error. &#191;258 qu&#233; pas&#243;? Probablemente se lo invent&#243;. O sea, hay, hay que tener mucho cuidado con el uso de la inteligencia artificial porque tiene un problema. &#191;Y es que alucina por qu&#233; se lo habr&#225; inventado? Porque seguramente quiz&#225;s por eso fue yo en el en un principio no pudo instalar alguna librer&#237;a que me conecte con el precio real.</v>
+
+00:55:18.036 --> 00:55:39.836
+<v Julian David Zuluaga Ospina>Y termin&#243; simplemente poniendo uno aleatorio. O no s&#233; qu&#233; pudo pasar por detr&#225;s. Puede ser que yo no me haya dado cuenta y est&#233; confiando en el tema, entonces tengan tambi&#233;n cuidado, chachi, piti no es para esto, quiz&#225;s este no era el mejor ejemplo, porque de pronto otro tipo de datos ya m&#225;s de quiero planear viajes y otros temas.</v>
+
+00:55:40.276 --> 00:55:58.836
+<v Julian David Zuluaga Ospina>Los pudo haber hecho mucho mejor. 170 USD vamos a ver el del a&#241;o que efectivamente esto no est&#225; bien. Probablemente estas noticias tampoco sean reales. Orbita News Street Wire ayer, adem&#225;s, porque yo le dije que era un prototipo y est&#225; bien.</v>
+
+00:55:59.756 --> 00:56:19.396
+<v Julian David Zuluaga Ospina>Quiz&#225;s si yo me quedo datos simulados dice ac&#225; est&#225; bien, est&#225; perfecto lo que yo quer&#237;a era la funcionalidad, quiz&#225;s si yo ya empiezo aqu&#237; desde el canvas a hacer ajustes y con&#233;ctate con el precio real y todo el tema, voy a poder reconfigurar, pero a lo que voy es que en el primer prompt.</v>
+
+00:56:19.676 --> 00:56:27.036
+<v Julian David Zuluaga Ospina>Me gener&#243; la aplicaci&#243;n, obviamente falta interacciones, falta cambiar y que el tema y vuelva a aprender con otra vez.</v>
+
+00:56:29.716 --> 00:56:31.596
+<v Julian David Zuluaga Ospina>&#191;Ah, c&#243;mo la est&#225; usando el lobo ahora?</v>
+
+00:56:33.836 --> 00:56:33.996
+<v Julian David Zuluaga Ospina>Bien.</v>
+
+00:56:39.396 --> 00:56:49.796
+<v Julian David Zuluaga Ospina>A cerrar aqu&#237; este lo va a ver porque ac&#225; ya me qued&#243; claro el uso, la verdad, creo que todos lo van a usar, ahorita vamos a cerrarlo para poder volver a poner.</v>
+
+00:56:51.716 --> 00:57:11.236
+<v Julian David Zuluaga Ospina>Listo era un prototipo, es la versi&#243;n cero. Est&#225; bien que no lo haya hecho, porque adem&#225;s probablemente si lo haya integrado con con noticias reales, el tema del desarrollo hubiera sido muy complejo y quiz&#225;s hubiera dado fallos y el tema, pero por eso es la importancia de ser iterativo.</v>
+
+00:57:11.676 --> 00:57:23.956
+<v Julian David Zuluaga Ospina>No buscar el APP completa en el primer round de hacer un one shot, sino que voy de a poquitos con eso garantizo que lo poquito que vaya a&#241;adiendo salga bien. Entonces vamos a ver si ac&#225; me deja Microsoft.</v>
+
+00:57:33.876 --> 00:57:53.396
+<v Julian David Zuluaga Ospina>Vemos que puedo a&#241;adir otro tipo de acciones, tiene un mont&#243;n de funcionalidades. Est&#225; muy interesante. Ahora, veamos esta parte. Si la alcanzo a dise&#241;ar portafolio este es mi portafolio, entonces aqu&#237; puedo a&#241;adir posiciones. Entonces voy a decir, no compr&#233; 80 acciones de Microsoft a un precio de.</v>
+
+00:57:55.396 --> 00:58:14.236
+<v Julian David Zuluaga Ospina>85 en este caso supongo que es d&#243;lares a&#241;adir posici&#243;n, y ac&#225; ya empiezo a tener mi portafolio con mi cantidad, mi precio &#250;ltimo valor y piano, y lo puedo limpiar ahora. Lo interesante con esto es que adem&#225;s lo puedo compartir, esto nunca lo he hecho. Vamos a ver qu&#233; pasa.</v>
+
+00:58:14.716 --> 00:58:39.276
+<v Julian David Zuluaga Ospina>Voy a crear un enlace, lo voy a copiar y lo voy a compartir por el chat. Quisiera que alguno me confirme si al abrirlo le sale la APP o solo me sale a m&#237;. Este tema es privado, entonces ah&#237; alguno que intente, abra su micr&#243;fono y nos diga que es y la puede utilizar si ve lo mismo que yo hice o si el APP de alg&#250;n modo se resetea.</v>
+
+00:58:39.876 --> 00:58:50.036
+<v Julian David Zuluaga Ospina>Y toca empezar de cero. Mientras tanto, vamos a irnos a Gemini y le voy a decir crear una hipograf&#237;a por esta informaci&#243;n.</v>
+
+00:58:53.356 --> 00:58:55.156
+<v Julian David Zuluaga Ospina>Graf&#237;a, interaction.</v>
+
+00:59:03.036 --> 00:59:24.676
+<v Julian David Zuluaga Ospina>Entonces &#233;l empieza de igual manera que vimos en Chachipit&#237; hacer toda la parte de c&#243;digo en este artefacto que se llama Canvas, pero aqu&#237; no estoy haciendo una APP, estoy haciendo una especie de infograf&#237;a, lo van a ver como queda interesante. Esa infograf&#237;a se puede tambi&#233;n compartir, entonces es una forma.</v>
+
+00:59:25.196 --> 00:59:45.276
+<v Julian David Zuluaga Ospina>Autom&#225;tica, f&#225;cil, interactiva, de alto valor de crear a veces presentaciones o presentar resultados tambi&#233;n con la inteligencia artificial. Y esto tambi&#233;n es by cody, porque me est&#225; escribiendo el C&#243;digo, algo que quiero dejar claro es que ning&#250;n momento yo tengo que saber de c&#243;digo.</v>
+
+00:59:45.636 --> 01:00:10.036
+<v Julian David Zuluaga Ospina>En todos los casos que les he mostrado, en ning&#250;n momento tuve que saber y ac&#225; creo mi APP interactiva a modo de infograf&#237;a de la Revoluci&#243;n Oncol&#243;gica y avances clave entre el 2024 y 2025. Ahora yo pudiese a esto de si no me gusta. Ponle gr&#225;ficos, ponle colores. Veamos tambi&#233;n que geminine no es tan poderoso como.</v>
+
+01:00:11.236 --> 01:00:29.196
+<v Julian David Zuluaga Ospina>En cuanto a la generaci&#243;n y menos como lo u otras herramientas expresas para hacer bacoin, tiene aqu&#237; algunas fichas donde bueno le empieza a a&#241;adirlas autom&#225;ticamente algunas funcionalidades con base en lo que ya est&#225;.</v>
+
+01:00:29.836 --> 01:00:40.196
+<v Julian David Zuluaga Ospina>Y tambi&#233;n lo puedo compartir por si quiero tener alguna presentaci&#243;n corporativa o alg&#250;n tema. Alguno pudo abrir el el, el que compart&#237; les funcion&#243;.</v>
+
+01:00:47.436 --> 01:00:51.556
+<v Julian David Zuluaga Ospina>Lo estoy abriendo en otro navegador, donde probablemente no estoy ni siquiera logueado.</v>
+
+01:00:51.636 --> 01:00:55.756
+<v Judith Montenegro>Creo que a m&#237; s&#237; me funcion&#243;, me abre y veo exactamente todo igual.</v>
+
+01:00:56.276 --> 01:00:57.516
+<v Angie Briyith Ríos León>S&#237;, tambi&#233;n, aj&#225;.</v>
+
+01:00:56.676 --> 01:00:58.076
+<v Julian David Zuluaga Ospina>Pero mira, aqu&#237; se resetea.</v>
+
+01:00:57.036 --> 01:01:01.396
+<v Judith Montenegro>Incluso me deja navegar por por las otras acciones.</v>
+
+01:01:02.156 --> 01:01:20.356
+<v Julian David Zuluaga Ospina>Perfecto. &#191;Lo que s&#237; parece es que se resetea si lo vuelvo a abrir, no guarda alguien hacia ahorita la pregunta desde la base de datos y c&#243;mo se guarda la informaci&#243;n? Pues tendr&#237;a yo que especific&#225;rselo en los proms, pero para esta APP que construimos con tan solo un promp no guardo nada. Veamos tambi&#233;n.</v>
+
+01:01:20.996 --> 01:01:38.116
+<v Julian David Zuluaga Ospina>Que al cerrar muchas gracias para los que me contestan Fixter aqu&#237; ya le a&#241;adimos algunas funcionalidades, vemos que hay un error y ahora preguntar&#225; la I a sobre la inmunoterapia, preguntarle Le a&#241;adido algunas funcionalidades, ya lo est&#225; volviendo a.</v>
+
+01:01:39.276 --> 01:01:48.556
+<v Julian David Zuluaga Ospina>Devolv&#225;monos un momento a nuestras inversiones y quiero hacer unos ajustes, vamos a ver qu&#233; ajustes voy a intentar, s&#237;.</v>
+
+01:01:46.836 --> 01:01:49.836
+<v Judith Montenegro>&#191;Profe, disculpa esta clase no est&#225; quedando grabada cierto?</v>
+
+01:01:50.436 --> 01:01:59.436
+<v Julian David Zuluaga Ospina>S&#237;, s&#237;, ya est&#225; grabado. S&#237; est&#225; grab&#225;ndose, correcto, tranquilo. Vamos a hacer unos ajustes. Quiero que cambies.</v>
+
+01:01:51.396 --> 01:01:52.756
+<v Judith Montenegro>S&#237;, Ah, OK, gracias.</v>
+
+01:02:00.956 --> 01:02:07.276
+<v Julian David Zuluaga Ospina>Los colores por verde y rojo y que el tooltip.</v>
+
+01:02:10.236 --> 01:02:21.876
+<v Julian David Zuluaga Ospina>Al interactuar con la acci&#243;n tenga mucha m&#225;s informaci&#243;n sobre la misma y que adicionalmente.</v>
+
+01:02:26.316 --> 01:02:28.716
+<v Julian David Zuluaga Ospina>Tenga tambi&#233;n colores.</v>
+
+01:02:31.476 --> 01:02:33.756
+<v Julian David Zuluaga Ospina>Y un un vibrante.</v>
+
+01:02:43.516 --> 01:02:59.836
+<v Julian David Zuluaga Ospina>Entonces, como ya estoy en el artefacto, &#233;l lo que hace es, ah, listo, ya s&#233; c&#243;mo es la cosa y empieza a modificar todo el c&#243;digo por detr&#225;s para poder crear tambi&#233;n el aplicativo. Vamos a esperar que que termine y ver qu&#233; hace.</v>
+
+01:03:08.636 --> 01:03:18.556
+<v Julian David Zuluaga Ospina>Y devolv&#225;monos aqu&#237; a Yemenine. Entonces &#233;l agreg&#243; unas funcionalidades, yo no creo que esto funcione, las agrego tambi&#233;n autom&#225;ticamente. Haz una pregunta sobre.</v>
+
+01:03:32.116 --> 01:03:51.116
+<v Julian David Zuluaga Ospina>Interesante. Yo no s&#233; si esto de verdad sea una all&#225; o o lo lo tiene ah&#237;, como dummy preparado, pero bueno, a ver qu&#233; qu&#233; fue lo que hice. Jimena tiene una opci&#243;n que dice a Jimena y Features las la A&#241;ade funcionalidades de forma autom&#225;tica, porque yo nada de estos se lo ped&#237;.</v>
+
+01:03:51.636 --> 01:04:11.516
+<v Julian David Zuluaga Ospina>Pero est&#225; bien interesante porque funciona entonces dice preguntar a la inteligencia artificial sobre medicina de precisi&#243;n, preguntar sobre diagn&#243;stico temprano. Yo no s&#233; si le hago una pregunta aqu&#237; ahorrando medicina de precisi&#243;n, cu&#225;les son los efectos t&#233;cnicas son las m&#225;s utilizadas.</v>
+
+01:04:22.716 --> 01:04:46.996
+<v Julian David Zuluaga Ospina>Ya que s&#237; est&#225; conectado, vean que s&#237;. Bueno, me sorprendi&#243;. Excelente pregunta. La medicina de presi&#243;n busca tratar a cada paciente de manera &#250;nica, teniendo el plano gen&#233;tico espec&#237;fico de su enfermedad. Para lograr esto, los m&#233;dicos utilizan varias t&#233;cnicas diagn&#243;stico, a ver el boicodi es muy poderoso, como les estoy mostrando, pero tiene tambi&#233;n un tema de cuidado.</v>
+
+01:04:47.236 --> 01:05:07.476
+<v Julian David Zuluaga Ospina>Y es que yo no s&#233; qu&#233; est&#225; haciendo &#233;l por detr&#225;s, entonces si de alg&#250;n modo conect&#243; una inteligencia artificial, supongo que es el mismo yemenine para contestarme cualquier pregunta sobre el tema. Y se volvi&#243; tremendamente interactivo. De hecho lo voy a compartir. Tambi&#233;n. Copy Content SHARE para que lo puedan probar.</v>
+
+01:05:09.676 --> 01:05:27.796
+<v Julian David Zuluaga Ospina>Imag&#237;nense una presentaci&#243;n corporativa haciendo algo as&#237; pues es bastante sorprendente que de hecho, adem&#225;s yo le puedo preguntar, pero esto tiene un tema delicado y es que yo no s&#233; c&#243;mo lo hizo entonces, pues para estos casos del c&#225;ncer investigativos, pues no pasa nada.</v>
+
+01:05:28.476 --> 01:05:50.356
+<v Julian David Zuluaga Ospina>Pero pensemos en que si yo llego a utilizar, ya sea alguna informaci&#243;n delicada o le estoy pidiendo alguna tema interactivo que ahorita no se me ocurre que pueda ser delicado, pero que al no saber yo c&#243;mo lo est&#225; haciendo, pueda entrar en un riesgo, eso es de tenerlo presente, entonces tengan mucho cuidado, yo les dec&#237;a tambi&#233;n la sesi&#243;n anterior.</v>
+
+01:05:51.116 --> 01:06:15.236
+<v Julian David Zuluaga Ospina>Que a no ser que esto est&#233; en sus empresas, donde trabajan y dem&#225;s, aprobado y verificado, que sea literal. La cuenta de la empresa tengan mucho cuidado de incluir informaci&#243;n corporativa. Las empresas son demasiado celosas y pueden acarrear problemas con el tema y sobre todo tengan presente que al final la decisi&#243;n t&#233;cnica de c&#243;mo se hace.</v>
+
+01:06:15.316 --> 01:06:32.156
+<v Julian David Zuluaga Ospina>Las cosas est&#225; a manos de la y va a ser muy dif&#237;cil de supervisar entonces, as&#237; como es una herramienta gran, Dios tiene sus sus temas a tener en cuenta y de hecho me sale ac&#225;, &#250;ltimos avances, buscar &#250;ltimos avances, vamos a ver qu&#233; est&#225; haciendo.</v>
+
+01:06:33.996 --> 01:06:57.516
+<v Natalia Ibeth Rojas Daza>&#191;Profe, tengo una una inquietud en esos escenarios, digamos que si por ejemplo uno quiere trabajar con la gu&#237;a, el manejo de an&#225;lisis de informaci&#243;n, pero debe cuidar ese tema de seguridad, de pronto, qu&#233; tips nos pueden dar para contar con esa capacidad que tiene la gu&#237;a de de?</v>
+
+01:06:36.436 --> 01:06:37.076
+<v Julian David Zuluaga Ospina>Adelante.</v>
+
+01:06:58.036 --> 01:07:18.556
+<v Natalia Ibeth Rojas Daza>La informaci&#243;n de de an&#225;lisis de informaci&#243;n, pero tambi&#233;n cuidando la la el tema de informaci&#243;n aparte, digamos que de ofuscar la la la, la informaci&#243;n o las bases de datos, de pronto. &#191;Qu&#233; otros tips nos pueden dar para que podamos tener el el el, el uso, la facilidad de la herramienta de la I a?</v>
+
+01:07:18.916 --> 01:07:24.156
+<v Natalia Ibeth Rojas Daza>Pero cuidando de no de pronto caer en ese riesgo de entregarle a la IE informaci&#243;n delicada.</v>
+
+01:07:19.876 --> 01:07:20.076
+<v Julian David Zuluaga Ospina>S&#237;.</v>
+
+01:07:25.276 --> 01:07:34.116
+<v Julian David Zuluaga Ospina>Mira, hay aplicativos de pronto que tienen un stack, hay uno que se llama cluster spider.</v>
+
+01:07:38.956 --> 01:08:00.036
+<v Julian David Zuluaga Ospina>Si si es este fi studio firebase y esto no es para que lo utilicen, simplemente quiero contestar tu pregunta es algo muy parecido al ovul dentro de las opciones que yo les voy a dar al final la lista y dem&#225;s creo que est&#225; firebase firebase tiene el Firebase Studio.</v>
+
+01:08:00.436 --> 01:08:20.836
+<v Julian David Zuluaga Ospina>Pero hist&#243;ricamente firebase es un stack de Google. Esto es, esto es una APP de Google que tiene capas de seguridad. Entonces si t&#250; vas a hacer el ERP de la empresa con Chachipit y le metes toda la informaci&#243;n financiera y encima le das share.</v>
+
+01:08:21.636 --> 01:08:45.436
+<v Julian David Zuluaga Ospina>Pues obviamente ah&#237; no hay manera. O sea, digamos que a tu pregunta no hay manera de garantizar la seguridad, porque esto no est&#225; hecho, para eso hay otras aplicaciones que s&#237; tienen capas de seguridad. Ahora la pregunta de la cual, t&#250; quieres llegar y de mejores pr&#225;cticas, y el tema si la informaci&#243;n es sensible, yo te dir&#237;a esta no es la manera, si se hace hoy.</v>
+
+01:08:46.156 --> 01:09:05.916
+<v Julian David Zuluaga Ospina>Pero ya se necesita ah&#237; un conocimiento t&#233;cnico para poder garantizar la seguridad, tener unas bases de datos con todos estos esquemas ya se necesita saber un poquito de lo que es el backend, entonces esto es muy &#250;til, muy &#250;til para prototipos. Entonces, si t&#250; quisieras hacer.</v>
+
+01:09:06.676 --> 01:09:18.756
+<v Julian David Zuluaga Ospina>&#191;Algo con la empresa? Un dashboard, un tema, mi sugerencia es poder presentar el prototipo con estas tecnolog&#237;as y de ser validado, pues ya escalarlo con las &#225;reas subsecuentes.</v>
+
+01:09:07.036 --> 01:09:07.156
+<v Natalia Ibeth Rojas Daza>&#191;Ok?</v>
+
+01:09:12.996 --> 01:09:20.196
+<v Natalia Ibeth Rojas Daza>De desarrollo que se encarga de o K.</v>
+
+01:09:20.276 --> 01:09:36.476
+<v Julian David Zuluaga Ospina>O trabajar con datos que no tengan sensibilidad porque la la el nivel de seguridad no lo vas a poder controlar, entonces vamos aqu&#237; con con firebase y voy a irme, yo no s&#233; si les pasaba la la clase pasada. El tema de Netflix que creo que s&#237;.</v>
+
+01:09:37.716 --> 01:09:39.996
+<v Julian David Zuluaga Ospina>Voy a irme a buscarlo ac&#225; en Netflix.</v>
+
+01:09:42.156 --> 01:09:46.636
+<v Julian David Zuluaga Ospina>A tu pregunta de los datos, Netflix Stylus le voy a pasar el archivo.</v>
+
+01:09:48.876 --> 01:09:51.116
+<v Julian David Zuluaga Ospina>As&#237; no me deja, imagino v&#225;monos a lo.</v>
+
+01:09:53.356 --> 01:09:55.076
+<v Julian David Zuluaga Ospina>Voy a usar otro para que conozca.</v>
+
+01:10:04.476 --> 01:10:05.476
+<v Julian David Zuluaga Ospina>Que ten&#237;a cami.</v>
+
+01:10:08.396 --> 01:10:09.676
+<v Julian David Zuluaga Ospina>Se llama Holtinger.</v>
+
+01:10:12.156 --> 01:10:15.636
+<v Julian David Zuluaga Ospina>Por ah&#237;, este es muy ch&#233;vere tambi&#233;n, que yo le recomiendo lo.</v>
+
+01:10:19.276 --> 01:10:27.356
+<v Julian David Zuluaga Ospina>Para crear apps, p&#225;ginas web que no lo vimos hoy tambi&#233;n p&#225;ginas web. De hecho, esta es la p&#225;gina, esta es mi p&#225;gina web de mi empresa.</v>
+
+01:10:29.716 --> 01:10:50.836
+<v Julian David Zuluaga Ospina>Yo trabajo una tecnolog&#237;a que se llama Computer Vision y todo esto es hecho con by coding. Yo nunca puse c&#243;digo ni nada. &#191;Entonces para p&#225;ginas web que varios me han preguntado por datos YY d&#243;nde se guarda? Pues no todo es datos, a veces temas de p&#225;ginas web, ahorita con el con el con todo esto que aprendimos es muy f&#225;cil de hacer.</v>
+
+01:10:51.556 --> 01:11:06.396
+<v Julian David Zuluaga Ospina>Entonces, ya sea para presentaciones para emprendimientos, para mostrar temas de negocio con estas tecnolog&#237;as, tambi&#233;n lo pueden hacer s&#250;per f&#225;cil, yo quiero aqu&#237; a ver c&#243;mo entramos a hostinger.</v>
+
+01:11:07.916 --> 01:11:11.276
+<v Julian David Zuluaga Ospina>Pesar gratis, vamos a votar.</v>
+
+01:11:14.196 --> 01:11:26.796
+<v Julian David Zuluaga Ospina>&#191;Repito, no se me frustren por pero cu&#225;ntas hay y c&#243;mo me las aprendo todas y este tema cambia todos los d&#237;as, entonces no es de casarse ni de sacar aqu&#237; notas de cu&#225;ntas hay?</v>
+
+01:11:29.316 --> 01:11:30.276
+<v Julian David Zuluaga Ospina>As&#237; me dej&#243;.</v>
+
+01:11:32.636 --> 01:11:37.156
+<v Julian David Zuluaga Ospina>Pero que hagamos un ejercicio de no no me deja y lo va a ver.</v>
+
+01:11:40.676 --> 01:11:43.196
+<v Julian David Zuluaga Ospina>Espera que si me deja ah&#237; juntar.</v>
+
+01:11:47.476 --> 01:11:49.516
+<v Julian David Zuluaga Ospina>Un archivo Excel s&#237;.</v>
+
+01:11:57.516 --> 01:12:22.116
+<v Julian David Zuluaga Ospina>&#191;Cu&#225;l? Un pronto re malo genera un dashboard interactivo y poderoso con base en estos datos. Entonces las preguntas que me hac&#237;an ahorita primero, si yo pongo la informaci&#243;n de la empresa comercial financiera, ac&#225; me meto en un problema listo, entonces de entrada estar&#237;a bien generar un prototipo presentado y miren, este es el potencial que opinan.</v>
+
+01:12:22.276 --> 01:12:47.196
+<v Julian David Zuluaga Ospina>Adquirimos y tener una cuenta de la empresa que adem&#225;s ya me quedan muy poquitos cr&#233;ditos. Hoy no s&#233; si alcance a crear el dashboard, que adem&#225;s alguien valida y diga, listo, h&#225;gale adelante porque repito, nadie sabe que est&#225; pasando por detr&#225;s. &#191;Entonces a veces es mejor pedir permiso y hacer las cosas? Pues con la validaci&#243;n que intentar ser proactivo.</v>
+
+01:12:47.276 --> 01:13:06.756
+<v Julian David Zuluaga Ospina>Si por descrestar de pronto incurrir en en alg&#250;n alg&#250;n tema de de vulneraci&#243;n de datos. Pero veamos que yo estoy ac&#225; usando informaci&#243;n que no es delicada, los t&#237;tulos de Netflix entonces, pues la informaci&#243;n va a quedar guardada en el APP, si yo la comparto.</v>
+
+01:13:07.116 --> 01:13:31.796
+<v Julian David Zuluaga Ospina>Ustedes van igual a poder ver la informaci&#243;n, pero no estoy, no me preocupa el riesgo detr&#225;s de que se est&#233; el tema de seguridad que me preguntaba ahora si yo entro en stack como este, esto por detr&#225;s tiene capas de seguridad y todo el tema, pero para resolver la pregunta final que me hac&#237;an la seguridad no es algo que podamos cubrir.</v>
+
+01:13:31.876 --> 01:13:50.676
+<v Julian David Zuluaga Ospina>Por lo menos con este tema de byco no hay manera, ya tendr&#237;a que entrar un t&#233;cnico, un programador, a garantizarla entonces. Repito que el foco de esto es m&#225;s creativo, es m&#225;s para temas del d&#237;a a d&#237;a. Es m&#225;s para prototipos.</v>
+
+01:13:51.116 --> 01:14:10.676
+<v Julian David Zuluaga Ospina>Que para alguna aplicaci&#243;n robusta empresarial que tenga implicaciones de temas de seguridad eso no lo vamos a poder cubrir de ninguna manera, porque la &#250;nica forma es entender los tecnicismos y como vieron por detr&#225;s hay un mont&#243;n de c&#243;digo y al final nuestros perfiles no no son de de entender.</v>
+
+01:14:11.236 --> 01:14:29.796
+<v Julian David Zuluaga Ospina>Entonces espero que con eso quede claro las las, digamos que los warnings las alertas y las repercusiones que pueden cubrir el el utilizar este tipo de herramientas que son maravillosas, pero que tienen su l&#237;mite. Ahora seguramente yo les dec&#237;a al principio que ya termino.</v>
+
+01:14:31.756 --> 01:14:51.476
+<v Julian David Zuluaga Ospina>Les dec&#237;a al principio que hay diferentes perfiles y el t&#233;cnico superavanzado tambi&#233;n utiliza bike coding, lo que pasa es que &#233;l s&#237; lo hace en su visual, en su stack de desarrollo y yo despu&#233;s les puedo mostrar que no es el el esquema de estas clases.</v>
+
+01:14:52.516 --> 01:15:13.916
+<v Julian David Zuluaga Ospina>Pues todo lo que uno puede hacer con bytecoiding ya a estos niveles y el nivel de control que se tiene aqu&#237; s&#237; se puede garantizar las capas de seguridad y aqu&#237; s&#237; se pueden hacer temas empresariales y vemos que tenemos otros agentes, en este caso, yo utilizo cloudcoat. Dato at&#237;pico, el el vale 100 USD, entonces veamos que ya pasamos de algo gratis.</v>
+
+01:15:14.196 --> 01:15:38.796
+<v Julian David Zuluaga Ospina>Y por supuesto, que va a ser muy dif&#237;cil garantizar seguridad, un tema ya mucho m&#225;s complejo, con exposici&#243;n hasta de desarrollo, donde pues el el la parte de seguridad obviamente se controla. Espero que con eso quede claro la pregunta. Ahora solo significa que yo no puedo hacer cosas geniales con datos. Aqu&#237; les estoy mostrando algo brutal, un dashboard completo que en Power Via y Tablo Excel me hubiera tardado.</v>
+
+01:15:38.876 --> 01:15:50.276
+<v Julian David Zuluaga Ospina>Buenos d&#237;as. Lo hice mientras daba la explicaci&#243;n y es totalmente interactivo y a ver si yo lo puedo compartir.</v>
+
+01:15:53.636 --> 01:16:12.356
+<v Julian David Zuluaga Ospina>Por favor, alguno intente abrir este link. Com&#233;nteme si el dash entonces preguntaban para cerrar y pasar tambi&#233;n a que ustedes hagan sus propios prototipos y donde se guarda la informaci&#243;n, la la definici&#243;n t&#233;cnica es en el Front end, esto por detr&#225;s yo entro aqu&#237; a un F 12.</v>
+
+01:16:13.156 --> 01:16:31.316
+<v Julian David Zuluaga Ospina>Por detr&#225;s est&#225; el c&#243;digo. El Front end es, digamos que la parte de exposici&#243;n de C&#243;digo Elements que est&#225; en el web por aqu&#237; detr&#225;s en un concepto que se llama HTML, est&#225; toda la data, no est&#225; en una base de datos porque yo no le ped&#237; que lo hiciese entonces.</v>
+
+01:16:31.676 --> 01:16:50.316
+<v Julian David Zuluaga Ospina>En t&#233;rminos pr&#225;cticos y para que me entiendan, se guardan en el APP o en la web. &#191;Como esto no es tan es m&#225;s bien r&#237;gido porque es un Excel? Pues no, no necesito tener base de datos. Seguridad no tiene ninguna.</v>
+
+01:16:50.516 --> 01:17:14.396
+<v Julian David Zuluaga Ospina>Entonces, pues esto simplemente est&#225; expuesto. &#191;Si alguien entra alg&#250;n hacker o lo que sea, pues simplemente aqu&#237; como les mostr&#233;, pues en el c&#243;digo a poder ver casi que el mismo Excel, entonces, repito, tengan cuidado, est&#225; s&#250;per Ch&#233;vere, pues yo supongo que algunos se imaginar&#225;n, no? Yo presento as&#237;. Los datos de la el balance general de octubre de la empresa no lo hagan.</v>
+
+01:17:15.196 --> 01:17:39.436
+<v Julian David Zuluaga Ospina>Porque se van a meter en un problema rudo, pero como prototipo o con informaci&#243;n digamos que general o para temas de productividad que no implique vulneraci&#243;n de la informaci&#243;n. Esto es poderos&#237;simo, y aqu&#237; si habr&#225;n 20000 casos de uso del tema, ahora si quisiesen llegar a datos empresariales importantes, pues presenten la idea primero.</v>
+
+01:17:40.316 --> 01:17:59.396
+<v Julian David Zuluaga Ospina>Val&#237;denla que se garantice en un comit&#233; el tema de seguridad y seguramente si se adquiere una una licencia pro o si alguien asume la responsabilidad sobre la misma y ustedes est&#225;n tranquilos presentando algo de esto, pues adelante, no s&#233; si alguien me pueda confirmar si el &#250;ltimo el ingl&#233;s abre el dashboard.</v>
+
+01:17:59.676 --> 01:18:00.356
+<v Julian David Zuluaga Ospina>&#191;O solo a m&#237;?</v>
+
+01:18:04.916 --> 01:18:06.076
+<v Lina Alvarez Suarez>Si, si, si abre.</v>
+
+01:18:06.676 --> 01:18:30.436
+<v Julian David Zuluaga Ospina>Y abre perfecto. A ver sacando cositas, veamos que este factor no es tan visual, pero, pero le mete una funcionalidades chever&#237;simas buscar &#250;ltimos avances para infograf&#237;as yemina es muy interesante, de hecho vamos a voy a abrir otro nuevo ya por &#250;ltimo, para cerrar el tema voy a abrir aqu&#237;.</v>
+
+01:18:31.436 --> 01:18:31.956
+<v Julian David Zuluaga Ospina>Gamba.</v>
+
+01:18:35.236 --> 01:18:38.836
+<v Julian David Zuluaga Ospina>Y vamos a poner aqu&#237; un tema que es.</v>
+
+01:18:40.956 --> 01:18:49.276
+<v Julian David Zuluaga Ospina>Genera un informe con las &#250;ltimas tendencias de Python.</v>
+
+01:18:53.276 --> 01:19:13.676
+<v Julian David Zuluaga Ospina>El canvas para los que no lo hab&#237;an usado no es solamente para c&#243;digo, es un artefacto, yo puedo ac&#225; tener texto y es muy &#250;til tenerlo aqu&#237; porque luego yo puedo editarlo directamente en el canvas, les dec&#237;a que cuando es un chat, ya que hay en en piedra y no se puede cambiar, pero cuando est&#225;n en canvas.</v>
+
+01:19:14.196 --> 01:19:35.996
+<v Julian David Zuluaga Ospina>As&#237; como a modo de reporte, yo lo puedo evitar, lo puedo hacer m&#225;s largo, le puedo cambiar que use un tono m&#225;s formal y lo puedo exportar a un formato PDF o Word. Entonces para trabajar temas de escritura est&#225; buen&#237;simo y casi todas las las inteligencias artificiales tienen cambas. Vimos que ya chipiti lo tiene, que de hecho aqu&#237; ya me cambi&#243; a ver.</v>
+
+01:19:36.596 --> 01:19:49.876
+<v Julian David Zuluaga Ospina>Este es bike coding, literal, repitamos el el pront quiero que cambies los colores por verde y rojo y que el tooltip al interactuar con acci&#243;n tenga mucha m&#225;s informaci&#243;n sobre la misma y adicionalmente tenga tambi&#233;n colores y un hood vibrante.</v>
+
+01:19:51.076 --> 01:20:15.596
+<v Julian David Zuluaga Ospina>Cada quien pudo haber hecho su prom diferente. Es por eso que para m&#237; est&#225;s a t&#237;tulo personal, mi criterio, si me paro ac&#225; de pronto con otro profesor o con otro gur&#250; de de inteligencia artificial pueda que me diga que no es as&#237;, pero para m&#237; el tema del prompt no es de tener el al ladito el c&#243;mo hacer el prompt perfecto y entonces tengo que poner.</v>
+
+01:20:15.716 --> 01:20:33.476
+<v Julian David Zuluaga Ospina>Contexto y luego tal cosa y luego, si no es el criterio de cada punto, todos hubieran podido llegar a definiciones parecidas o distintas dependiendo de su prom. &#191;Y no se trata entonces de tener aqu&#237; el apunte de c&#243;mo hacer el prom perfecto? Pues s&#237;, es importante saber esas mejores pr&#225;cticas. Marta.</v>
+
+01:20:36.236 --> 01:20:37.476
+<v Julian David Zuluaga Ospina>&#191;Vas a comentarnos algo?</v>
+
+01:20:37.396 --> 01:20:59.276
+<v Martha Jinneth Castillo Alvarez>S&#237;, s&#237;, quer&#237;a preguntarle. &#191;Es que he visto que en en algunos de los cuando le dan las &#243;rdenes utilizas palabras en ingl&#233;s que pues en realidad, por ejemplo, el &#250;ltimo que fuiste un bron o sea, por ejemplo uno lo puede decir en sus palabras, porque yo no s&#233;, por ejemplo, esa parte cu&#225;nto?</v>
+
+01:20:49.116 --> 01:20:49.436
+<v Julian David Zuluaga Ospina>S&#237;.</v>
+
+01:20:59.716 --> 01:21:13.076
+<v Martha Jinneth Castillo Alvarez>Colocas s&#237; como indicaciones que que dan a entender t&#233;cnicamente lo que quieres colocar. Yo puedo decir un cuadrito, es que no s&#233; esa parte, tengo la duda.</v>
+
+01:21:13.316 --> 01:21:38.036
+<v Julian David Zuluaga Ospina>Por por eso mismo, y es muy buena tu pregunta y gracias por hacerla. Por eso mismo, yo soy enemigo de hacer, no es, no es cursos, pero de de todo esto que nos venden de haga el prom perfecto y c&#243;mo hacer un prom y todo el tema porque es que al final cada quien tiene su expresi&#243;n. &#191;Qu&#233; es un? Es que ni siquiera se la traducci&#243;n. Un es. Es esto que vemos aqu&#237;, el.</v>
+
+01:21:38.076 --> 01:21:59.236
+<v Julian David Zuluaga Ospina>&#191;Verde es como una especie de microinterfaz entonces con solo usar esta palabra, me ahorr&#233; un p&#225;rrafo de explicaci&#243;n, t&#250; pudieses haber dicho un cuadrito con estos colores? Que cuando ahora sea de esta manera, de este tema, entonces por eso yo les digo, cada quien tiene su forma y est&#225; bien. Lo importante es que t&#250;.</v>
+
+01:21:59.556 --> 01:22:18.516
+<v Julian David Zuluaga Ospina>Te hagas entender con tu con tu forma, entonces no tienes que usar palabras en ingl&#233;s, no tienes que usar tecnicismos, lo que pasa es que yo s&#233; que esto se llama Hood. Entonces, en vez de decirle el cuadrito de esta forma TRAN, pues yo ya pongo esa palabra, pero es porque, pues yo tengo, digamos que ese entendimiento, eso me hace un mejor.</v>
+
+01:22:18.956 --> 01:22:39.356
+<v Julian David Zuluaga Ospina>&#191;Programador o hay couder? No, porque seguramente con la pr&#225;ctica, Marta, t&#250; llegues a la misma habilidad, solo que usando otras palabras, pero son tus palabras, no las que alguien te dijo que as&#237; se crea un una aplicaci&#243;n ITCY. Eso no s&#233; si es clara la respuesta a a tu pregunta.</v>
+
+01:22:39.316 --> 01:22:40.316
+<v Martha Jinneth Castillo Alvarez>S&#237;, s&#237;, s&#237;.</v>
+
+01:22:39.716 --> 01:22:41.876
+<v Julian David Zuluaga Ospina>Y vamos con angie adelante.</v>
+
+01:22:42.596 --> 01:23:06.796
+<v Angie Briyith Ríos León>S&#237;, profe, lo que pasa es que con la anterior profesor digamos que la &#250;ltima clase que alcanzamos a tener con &#233;l era precisamente construir el pronto y el ejemplo que &#233;l puso en clase fue subir un documento y a y darle una instrucci&#243;n a la inteligencia artificial, pues para que genere un informe, lo &#250;ltimo que &#233;l nos comentaba es que es posible que el la la I a se invente informaci&#243;n que no estaba en el documento y nos qued&#243; digamos de compartir.</v>
+
+01:23:07.396 --> 01:23:28.156
+<v Angie Briyith Ríos León>No s&#233;, as&#237; como un comando o una instrucci&#243;n para evitar de que la I a se invent&#233; informaci&#243;n, entonces no s&#233; si esto, pues pas&#243; todos los contextos, ya sea uno cargando la informaci&#243;n para que le genere un resultado, o el ejemplo que estamos viendo, pantalla que no se invente valores digamos para para el caso que estamos viendo, que no est&#225;s compartiendo un valor de una acci&#243;n que no es c&#243;mo podemos.</v>
+
+01:23:28.636 --> 01:23:30.156
+<v Angie Briyith Ríos León>&#191;Eh? &#191;Llegar a mitigar eso?</v>
+
+01:23:31.236 --> 01:23:55.076
+<v Julian David Zuluaga Ospina>Esa esa pregunta es muy bellosa de angie y yo tampoco quiero aqu&#237; entonces digamos que yo entiendo que hab&#237;a otro profesor y valios&#237;simo, lo que lo que les pude ense&#241;ar la la idea tampoco es sano. &#191;Entonces, ahora no aprendemos pronts y Juli&#225;n nos dijo y el otro profesor? &#191;Y las cosas? Lo que yo quiero dejarles claros es que el la creaci&#243;n de pronts es una habilidad, no es.</v>
+
+01:23:55.156 --> 01:24:15.156
+<v Julian David Zuluaga Ospina>&#191;Es una pauta, entonces como habilidad? Pues hay que fortalecerla y la la manera de fortalecerla es escribiendo y d&#225;ndose a entender y a la primera no me entendi&#243; por eso yo dec&#237;a, hay que tambi&#233;n tener un manejo de frustraci&#243;n, y ahorita que hagamos los ejercicios que ya les vamos a arrancar, cada uno puede hacer que no les funcione.</v>
+
+01:24:15.596 --> 01:24:39.716
+<v Julian David Zuluaga Ospina>O le sale errores o no le sali&#243; a la primera. &#191;Entonces no se trata de, ser&#225; que debo aprender o no a hacer un probando las pautas? Esos son esos fundamentos, son importantes, no quiero tampoco de desvirtuar lo que dijo el profesor anterior, pero para m&#237; es m&#225;s una habilidad que un simple una simple pauta. Ahora tu pregunta de la alucinaci&#243;n, que es la palabra t&#233;cnica que entran los modelos.</v>
+
+01:24:40.116 --> 01:25:04.196
+<v Julian David Zuluaga Ospina>Eso es muy complejo de manejar, es muy complejo, no siempre pasa, pasa en casos espec&#237;ficos, aqu&#237; no es que haya alucinado, evidentemente si se invent&#243; los valores. &#201;l me lo dice, pero es porque para ponerlos reales pues tengo que iterar varias veces a la primera no lo iba a lograr porque por el C&#243;digo tiene que conectarlos a librer&#237;as que saquen el tema de directo y de pronto necesita llaves.</v>
+
+01:25:04.436 --> 01:25:20.436
+<v Julian David Zuluaga Ospina>Y quiz&#225;s ni siquiera es posible con este stack de chachipit&#237;, pero si pasa a m&#237; me pasa todo el tiempo en muchos textos que estoy analizando. De hecho hemos visto noticias hace poco de que Accenture, una de las empresas m&#225;s grandes, de hecho, va a buscar la noticia.</v>
+
+01:25:32.996 --> 01:25:33.676
+<v Julian David Zuluaga Ospina>Gobierno.</v>
+
+01:25:39.996 --> 01:25:58.156
+<v Julian David Zuluaga Ospina>Si no la si la encuentro bueno para no no perder tiempo porque yo quiero que hagamos el ejercicio accenture, de pronto era otra, pero creo que era Accenture es una empresa de consultor&#237;a, justamente en tecnolog&#237;a gigante gigante hizo una consultor&#237;a para un gobierno.</v>
+
+01:25:58.716 --> 01:26:17.916
+<v Julian David Zuluaga Ospina>Con una serie de documentaciones donde al final mucha de la informaci&#243;n no exist&#237;a, es decir, fue alucinado, fue inventar. Esto hizo que esta empresa perdiera millones de d&#243;lares y tuviese que devolver todo el costo que que hubo. Detr&#225;s de eso. Pasa mucho en derecho.</v>
+
+01:26:18.516 --> 01:26:37.676
+<v Julian David Zuluaga Ospina>Cuando trabajamos as&#237;, con textos muy largos y utilizamos inteligencia artificial, hemos visto noticias de sentencias de temas de constitucionales donde el la jurisprudencia citada no exist&#237;a, es decirla, ya se la invent&#243;.</v>
+
+01:26:38.636 --> 01:26:40.756
+<v Julian David Zuluaga Ospina>&#191;Hay t&#233;cnicas para controlar esto?</v>
+
+01:26:42.036 --> 01:27:01.716
+<v Julian David Zuluaga Ospina>Yo no s&#233; si es de de pronto s&#237; haya en algunas no las conozco en detalle, pues t&#250; le podr&#237;as simplemente decir si no sabes el dato, pues no lo pongas o no lo digas, el punto. &#191;Y por qu&#233;? La pregunta es tan valiosa. Es que a hoy es una falencia que tienen las IAS.</v>
+
+01:27:02.196 --> 01:27:22.916
+<v Julian David Zuluaga Ospina>Y con la cual tenemos que convivir y tener sumo cuidado, por eso no est&#225; bien simplemente decir, haz el reporte siempre tiene que haber la supervisi&#243;n y esto por eso mismo hoy no nos va a reemplazar y est&#225; lejos de lo mismo, es porque es un apoyo en toma de decisiones y en productividad, mas no la reemplaza.</v>
+
+01:27:23.356 --> 01:27:40.876
+<v Julian David Zuluaga Ospina>&#191;Qu&#233; pasa si se equivoca? Pues s&#237;, se alucina a tu pregunta, pues hay t&#233;cnicas, yo te podr&#237;a responder ya en un tema t&#233;cnico, pero no es el alcance de esta sesi&#243;n. Hay una t&#233;cnica que se llama Rack, donde si yo tengo un agente de inteligencia artificial que.</v>
+
+01:27:42.356 --> 01:28:06.476
+<v Julian David Zuluaga Ospina>Contesta preguntas de recursos humanos de la empresa, realmente &#233;l no acude a su memoria, sino que va y consulta una documentaci&#243;n antes de contestar. O ah&#237; consulta la base de datos con ese tipo de t&#233;cnicas, se ha demostrado reducir la, el, el, la alucinaci&#243;n, en un 90 o m&#225;s por ciento, pero ya implica un stack de desarrollo, ya implica la generaci&#243;n de un agente que por detr&#225;s tenga todos unos.</v>
+
+01:28:06.596 --> 01:28:30.076
+<v Julian David Zuluaga Ospina>Unos tecnicismos que nosotros no vamos a poder alcanzar, por lo menos en el en el alcance de este curso, sin un entendimiento t&#233;cnico profundo, pero seguramente que con un par de comandos dentro del prop que yo ser&#237;a enemigo de que lo tengan escrito y siempre lo pongan, sino que ustedes mismos, con su criterio y habilidad de Prompting, lo desarrolle.</v>
+
+01:28:30.316 --> 01:28:35.756
+<v Julian David Zuluaga Ospina>Se pueda evitar, por ejemplo, yo aqu&#237; hubiese podido decir.</v>
+
+01:28:37.516 --> 01:28:59.876
+<v Julian David Zuluaga Ospina>&#191;Exijo que utilices datos reales y si no, mu&#233;strame que que a un error o alg&#250;n tema no s&#233;, se me acaba de ocurrir alg&#250;n alg&#250;n tema as&#237;? &#191;Vale la pena preguntarle al profesor anterior, lo voy a hacer? &#191;Pues cu&#225;l era este truco? As&#237; como la clase pasada, alguien nos dio el truco de la traducci&#243;n, buen&#237;simo, quiz&#225;s haya alguno, pero el punto final para que continuemos es que.</v>
+
+01:29:00.156 --> 01:29:23.476
+<v Julian David Zuluaga Ospina>Eso es una falencia que tiene hoy la ya y siempre la va a tener, entonces la tiene, viene por defecto con el tema de la alucinaci&#243;n, sobre todo cuando el reto es tan complejo, cuando la informaci&#243;n no la tiene porque es un modelo que al final es esto casti, pues es decir est&#225; basado en probabilidad, &#233;l simplemente escupe la siguiente palabra siguiente, siguiente siguiente, entonces, si no lo sabe, igual me la va a dar.</v>
+
+01:29:23.756 --> 01:29:43.436
+<v Julian David Zuluaga Ospina>Y normalmente ser&#225; invento, entonces es algo con lo que tenemos que convivir, tengan mucho cuidado porque pasa, pasa y le pasa a las empresas m&#225;s grandes como esta. Es una tecnolog&#237;a tan nueva, pues est&#225; ah&#237; latente. Entonces, tengan cuidado con lo que presentan con lo que hacen, porque pueda ser que esa informaci&#243;n no exista y me ha pasado muchas veces.</v>
+
+01:29:32.916 --> 01:29:33.116
+<v Angie Briyith Ríos León>O K.</v>
+
+01:29:43.676 --> 01:29:52.916
+<v Julian David Zuluaga Ospina>Tampoco es de alarmarse, entonces ya no puedo usar ya, pero s&#237; es simplemente tenerlo presente para saber acciones correctivas. &#191;Quitlin nos vas a mencionar al?</v>
+
+01:29:54.516 --> 01:29:56.196
+<v Julian David Zuluaga Ospina>No s&#233; si pronuncio bien tu nombre.</v>
+
+01:29:58.916 --> 01:30:00.676
+<v Julian David Zuluaga Ospina>Est&#225;s ah&#237;, tienes la mano levantada.</v>
+
+01:29:59.956 --> 01:30:01.716
+<v KATHLEEN GISELLE OÑATE MOLANO>&#191;Ah, al&#243;?</v>
+
+01:30:02.836 --> 01:30:03.356
+<v Julian David Zuluaga Ospina>Adelante.</v>
+
+01:30:03.036 --> 01:30:04.076
+<v KATHLEEN GISELLE OÑATE MOLANO>S&#237;, profe, buenos d&#237;as.</v>
+
+01:30:04.636 --> 01:30:05.156
+<v Julian David Zuluaga Ospina>Buenos d&#237;as.</v>
+
+01:30:06.756 --> 01:30:25.276
+<v KATHLEEN GISELLE OÑATE MOLANO>&#191;Tengo 2 preguntas, y si yo creo? O sea, si digamos que yo me registro con una licencia, s&#237; digamos en en lobal o en chat jpit. Esto podr&#237;a garantizar que la informaci&#243;n quede protegida cuando necesitamos datos.</v>
+
+01:30:08.676 --> 01:30:08.956
+<v Julian David Zuluaga Ospina>S&#237;.</v>
+
+01:30:26.076 --> 01:30:27.956
+<v KATHLEEN GISELLE OÑATE MOLANO>Analizar datos propios de la empresa.</v>
+
+01:30:29.836 --> 01:30:53.676
+<v Julian David Zuluaga Ospina>Bueno, mira, yo te voy a hablar desde mi experiencia personal y yo ahorita estoy pasando precisamente porque a m&#237; no me dijeron estas cosas y por eso quiero compart&#237;rselas. Yo no utilizo estas herramientas, yo utilizo unas mucho m&#225;s poderosas, est&#225;n aqu&#237;, despu&#233;s las podemos ver, esto me permite a mi garantizar precisamente la seguridad y llevar a otro nivel los desarrollos y hacer cosas a.</v>
+
+01:30:55.236 --> 01:31:18.236
+<v Julian David Zuluaga Ospina>Pero las empresas est&#225;n muy quedadas en el desarrollo de todo este tema de tecnolog&#237;a, entonces muchas cogen y prohiben chat. &#191;Y Piti no puedo entrar? Desde la empresa de ETC. Entonces por incauto, yo utilic&#233; una cuenta m&#237;a personal porque la empresa no ten&#237;a otra y era simplemente un ejercicio exploratorio y.</v>
+
+01:31:18.356 --> 01:31:42.836
+<v Julian David Zuluaga Ospina>De prototipado los datos no eran tan sensibles y me expuse ah&#237; una sanci&#243;n brava con la empresa porque, pues al final esto nadie sabe. No sabemos si est&#225; regulado, igual, yo ya te voy a contestar, mi criterio, no sabemos si por detr&#225;s el dato lo utilicen o se lo vendan a China o lo que sea o si hay temas de certificaciones de auditor&#237;a para.</v>
+
+01:31:42.916 --> 01:32:05.156
+<v Julian David Zuluaga Ospina>Para tratar informaci&#243;n sensible entonces, algunas pautas que yo les voy a dar para que no les pase lo que me pas&#243; a m&#237;. La primera es que si el dato que van a trabajar es sensible, antes de hacer cualquier cosa, pidan permiso y validen porque puede ser que la empresa diga listo, yo te compro la licencia corporativa, hazlo con la m&#237;a y al aceptarlo ellos asumen el riesgo. Y ustedes como trabajadores se blindan.</v>
+
+01:32:06.236 --> 01:32:09.516
+<v Julian David Zuluaga Ospina>Por otro lado, todas las inteligencias artificiales las vamos a ver.</v>
+
+01:32:11.716 --> 01:32:13.316
+<v Julian David Zuluaga Ospina>Tienen una opci&#243;n ac&#225; oculta.</v>
+
+01:32:14.796 --> 01:32:18.236
+<v Julian David Zuluaga Ospina>Vamos a entrar aqu&#237; a configuraci&#243;n privacidad.</v>
+
+01:32:21.356 --> 01:32:23.876
+<v Julian David Zuluaga Ospina>No s&#233; si es esta ocasiones.</v>
+
+01:32:33.076 --> 01:32:35.316
+<v Julian David Zuluaga Ospina>Eso debe estar por aqu&#237; s&#250;per oculto.</v>
+
+01:32:37.036 --> 01:32:37.796
+<v Julian David Zuluaga Ospina>Memoria.</v>
+
+01:32:39.956 --> 01:32:47.596
+<v Julian David Zuluaga Ospina>Aqu&#237;, controles de datos o t&#250;, enlaces compartidos, chats, archivos, eliminaci&#243;n de todos los chats exportadores ac&#225;.</v>
+
+01:32:48.876 --> 01:33:01.556
+<v Julian David Zuluaga Ospina>&#191;Tienes positivos de confianza? Si ven esto est&#225; s&#250;per oculto. Yo no la encontr&#233;, pero se las voy a mostrar en de pronto, si sigo buscando la encuentro, pero se las voy a mostrar en otro que se llama.</v>
+
+01:33:13.436 --> 01:33:14.636
+<v Julian David Zuluaga Ospina>Por aqu&#237; en privacidad.</v>
+
+01:33:13.756 --> 01:33:35.316
+<v KATHLEEN GISELLE OÑATE MOLANO>&#191;Profe, mientras vas buscando ten&#237;a otra, tengo otra duda, digamos, ya hice, ya hice mi mi APP? S&#237;, yo digamos quiero hacer un tema de gesti&#243;n de tesorer&#237;a, entonces pues obviamente &#233;l, aqu&#237; no me hace los datos reales, si yo quisiera utilizarlo en datos reales, tengo que pegar como la tabla de la informaci&#243;n diaria en el en el mismo aplicativo.</v>
+
+01:33:23.916 --> 01:33:24.196
+<v Julian David Zuluaga Ospina>S&#237;.</v>
+
+01:33:37.316 --> 01:33:58.796
+<v Julian David Zuluaga Ospina>Depende si es un tema muy din&#225;mico, no, no tiene sentido estar pegando y soltando, y el tema con con Excel es que lo puedes lograr ac&#225; ya tendr&#237;amos que entrar en un concepto de base de datos, puedes conectar de pronto un Google Sheets, puedes conectar otro tipo de bases de datos llamadas t&#233;cnicas, hay una que se llama su pa&#237;s.</v>
+
+01:33:59.636 --> 01:34:02.276
+<v Julian David Zuluaga Ospina>Hay muchas maneras, yo tambi&#233;n, pues.</v>
+
+01:34:01.876 --> 01:34:08.316
+<v KATHLEEN GISELLE OÑATE MOLANO>O sea, uno podr&#237;a bajar, es como el c&#243;digo que desarroll&#243; esto y de pronto, tratar de atarlo. Es como a mis bases de datos, algo as&#237;.</v>
+
+01:34:08.716 --> 01:34:33.116
+<v Julian David Zuluaga Ospina>Se podr&#237;a, por supuesto. S&#237; pues, al final t&#250; est&#225;s haciendo una dentro de una, puedes hacer cualquier cosa. El problema es que hay unos retos que van a implicar que quiz&#225;s con el backcodeing no lo puedas lograr. &#191;Te invitar&#237;a a que si te interesa mucho el tema, me escribas a aqu&#237; por teams en privado y lo lo podemos revisar juntos, y yo te doy algunas pautas o algunos lineamientos de c&#243;mo puedes avanzar? &#191;Te parece?</v>
+
+01:34:34.276 --> 01:34:35.956
+<v KATHLEEN GISELLE OÑATE MOLANO>Listo gracias.</v>
+
+01:34:35.276 --> 01:34:57.196
+<v Julian David Zuluaga Ospina>Voy a cerrar la pregunta que me hac&#237;as con el tema de que estas IAS tienen aqu&#237; un tema YY lo ponen bonito para que uno ay tan lindos, ay&#250;danos a mejorar, pero por detr&#225;s es permitir el uso de chats y sesiones de programaci&#243;n para entrenar y mejorar modelos de I a esto est&#225; aprendido por defecto. Entonces mi invitaci&#243;n es que tambi&#233;n entrenar los temas de privacidad y traten de apagar estas opciones.</v>
+
+01:34:57.836 --> 01:35:17.996
+<v Julian David Zuluaga Ospina>Estas IAS est&#225;n reguladas, est&#225;n certificadas en protocolos de seguridad de tratamiento de datos. Entonces en teor&#237;a los datos son sensibles y no se pueden usar, pero al final las empresas son muy celosas con eso. Entonces lo mejor es que pidan permiso, que lo validen antes de de poder.</v>
+
+01:35:19.236 --> 01:35:37.316
+<v Julian David Zuluaga Ospina>Utilizar informaci&#243;n sensible y, sobre todo en la medida de sus posibilidades, lo hagan en cuentas corporativas, no privadas, porque esto es muy delicado y como no hay regulaci&#243;n y est&#225; nuevo, a veces las empresas cortan por lo sano y me paso entonces tengan cuidado con el tema.</v>
+
+01:35:37.716 --> 01:36:00.636
+<v Julian David Zuluaga Ospina>YY la informaci&#243;n pidan permiso, o sea de entrada piden permiso, yo te dir&#237;a, no pasa nada, esto est&#225; regulado por detr&#225;s hay lineamientos, pero pues al final las empresas son las que deciden sobre el tema. Bueno, quer&#237;a dejarles m&#225;s tiempo, pero vamos a hacerlo as&#237;. Algunos ya han avanzado como que el de que nos muestra.</v>
+
+01:36:01.236 --> 01:36:04.636
+<v Julian David Zuluaga Ospina>Entonces les voy a pasar aqu&#237; una imagen.</v>
+
+01:36:06.756 --> 01:36:27.276
+<v Julian David Zuluaga Ospina>Como yo hago esto con con el la no banana, pues comete errores de ortograf&#237;a. Ya nos la semana pasada una compa&#241;era, la clase pasada nos comparti&#243; la manera de resolverlo, pero no siempre funciona. De hecho es concejazo muchas gracias a a la que nos comparti&#243; esa esa esa idea.</v>
+
+01:36:27.996 --> 01:36:30.996
+<v Julian David Zuluaga Ospina>Entonces vamos para de compartir.</v>
+
+01:36:32.876 --> 01:36:54.156
+<v Julian David Zuluaga Ospina>Vamos a trabajar en los 15 minutos que nos quedan, si alguien ya arranc&#243; o alcanza en 15 minutos, faltando 5 a tener alg&#250;n avance, le pedir&#237;a, si no, pues de pronto lo hacemos la pr&#243;xima clase que nos muestre su proceso creativo. &#191;Qu&#233; dise&#241;&#243;, c&#243;mo lo logr&#243;, c&#243;mo se sinti&#243;, qu&#233; herramienta utiliz&#243;, c&#243;mo fue el tema?</v>
+
+01:36:54.916 --> 01:37:07.356
+<v Julian David Zuluaga Ospina>Y les voy a compartir, entonces aqu&#237; otro link con hecho, tambi&#233;n con el tema, a ver c&#243;mo comparto yo esto copiar enlace. Entonces hay 3 opciones.</v>
+
+01:37:06.476 --> 01:37:27.036
+<v KATHLEEN GISELLE OÑATE MOLANO>Profe, pues yo alcanc&#233; a pegarte ah&#237; en el qu&#233; pena, profe en el en el Grupo del del teams, que es como donde tenemos m&#225;s comunicaci&#243;n, pues pegue la informaci&#243;n que quiero desarrollar despu&#233;s ah&#237; que a mi dato, porque si me interesar&#237;a, yo yo trabajo con el &#225;rea de tesorer&#237;a tambi&#233;n, entonces pues s&#237; quisiera llevar, digamos el ejercicio a un tema.</v>
+
+01:37:10.556 --> 01:37:10.996
+<v Julian David Zuluaga Ospina>Penalmente.</v>
+
+01:37:27.276 --> 01:37:34.716
+<v KATHLEEN GISELLE OÑATE MOLANO>&#191;Real no? Entonces, pues, digamos que que, pues ah&#237; puse como lo que quiero plantear para mi ejercicio como profesional.</v>
+
+01:37:35.356 --> 01:37:59.636
+<v Julian David Zuluaga Ospina>Perfecto de entrada. No utilices datos reales hasta que te lo te te te lo validen. Porque pues tesorar&#237;as informaci&#243;n s&#250;per sensible, entonces TEN mucho cuidado, pero definitivamente se pueden hacer cosas muy interesantes garantizando la seguridad, la informaci&#243;n que ser&#225;n otras conversaciones est&#225; muy ch&#233;vere recibido. Si quieres ahorita a no ser que alguien m&#225;s tambi&#233;n quiera.</v>
+
+01:38:00.236 --> 01:38:12.236
+<v Julian David Zuluaga Ospina>Cuando nos compartes y nos muestras un poco, c&#243;mo lograste ese resultado y escr&#237;beme si quieres por interno, y validamos de pronto c&#243;mo llevarlo a otro nivel para que tambi&#233;n lo puedas presentar. &#191;Te parece?</v>
+
+01:38:13.636 --> 01:38:33.756
+<v Julian David Zuluaga Ospina>Entonces, cerrando el tema acabo, acabo de compartir un link con una APP creada con bytecoding, les iba a dar m&#225;s tiempo, pero bueno, pues se nos fueron en algunas preguntas. La idea es que alg&#250;n reto una para invertir en mercados financieros, que fue la que yo hice. Planeador de tareas diarias.</v>
+
+01:38:14.956 --> 01:38:15.396
+<v KATHLEEN GISELLE OÑATE MOLANO>Gracias.</v>
+
+01:38:34.116 --> 01:38:58.756
+<v Julian David Zuluaga Ospina>Planeador de viajes o si alguno tiene alguna idea aqu&#237; como que que nos muestra su gesti&#243;n de tesorer&#237;a. Tambi&#233;n la pueden proponer. La idea es que hagan tanto el dise&#241;o. No es, pues haz una un planeador de viajes, pues qu&#233; chiste hagan, hagan el dise&#241;o, empiecen a meter su creatividad, imag&#237;nense la aplicaci&#243;n y pueden utilizar cualquiera de las.</v>
+
+01:38:58.996 --> 01:39:17.956
+<v Julian David Zuluaga Ospina>Ups que yo compart&#237; en la imagen anterior. Mi sugerencia es que usen lo logo, tiene un conflicto y que tiene unos toques diarios. Entonces, en alg&#250;n momento si siguen y se emocionan, van a tener que que parar o pagar. Entonces demos unos 10 minuticos.</v>
+
+01:39:19.796 --> 01:39:37.236
+<v Julian David Zuluaga Ospina>Para que lo trabajen no s&#233; si en 10 minutos pueden hacer algo. Lo pueden trabajar en su, en su tiempo libre despu&#233;s, pero si alguno alcanza ser&#237;a chever&#237;simo que nos muestre y nos comente lo que hizo y c&#243;mo lo hizo. Y aqu&#237; lleg&#243;, listo.</v>
+
+01:39:37.916 --> 01:39:56.196
+<v Julian David Zuluaga Ospina>Entonces me voy a silenciar y en 10 minutos pues hacemos como una conclusi&#243;n YY cerramos la clase de hoy, probablemente en las pr&#243;ximas clases estemos haciendo by coding, ya doy por hecho que ustedes pues saben c&#243;mo, entonces t&#233;nganlo presente pr&#225;ct&#237;quenlo.</v>
+
+01:39:56.956 --> 01:40:02.636
+<v Julian David Zuluaga Ospina>Porque pues lo vamos a trabajar tambi&#233;n, probablemente enloquece bien. S&#237; nos vemos en 10 minutos.</v>
+
+01:40:12.716 --> 01:40:13.356
+<v Diana Rivera>&#191;Listo?</v>
+
+01:45:52.796 --> 01:45:53.476
+<v Diana Rivera>El correo.</v>
+
+01:47:14.956 --> 01:47:15.036
+<v Diana Rivera>De.</v>
+
+01:47:29.356 --> 01:47:53.876
+<v Julian David Zuluaga Ospina>Bueno, a todos, no s&#233; si alguno trabaj&#243;. El tema alcanz&#243;, no pierdan tampoco el la oportunidad de trabajar estas tecnolog&#237;a tan maravillosas. Nos quedan 5 minutos si alguno quiere y ch&#233;vere que nos compartan de pronto compartir la pantalla y mostrarnos lo que pudo hacer. No s&#233; si el tiempo Dios yo les iba a dar unos 30 minutos, pero bueno, no s&#233;.</v>
+
+01:47:53.956 --> 01:48:01.316
+<v Julian David Zuluaga Ospina>&#191;No se nos fue larga el tema y si no, pues bueno queda de tarea para la siguiente, entonces Com&#233;nteme, Qui&#233;n qui&#233;n se aventura?</v>
+
+01:48:16.476 --> 01:48:22.076
+<v Julian David Zuluaga Ospina>Nadie alcanz&#243; de verdad. &#191;Bueno, bueno, si alguno quiere me interrumpe, y si no?</v>
+
+01:48:21.276 --> 01:48:42.636
+<v KATHLEEN GISELLE OÑATE MOLANO>No, pues no, no puedo. No. No puedo compartir pantalla porque estoy desde el celular, pero realmente creo que a veces pensamos que es como mucho tema de meterle c&#243;digo y que nosotros tenemos que saber de pronto programar o codificar y pues b&#225;sicamente, pues lo que aprend&#237; es que con instrucciones muy sencillas s&#237; se puede, pues lograr.</v>
+
+01:48:42.956 --> 01:49:05.876
+<v KATHLEEN GISELLE OÑATE MOLANO>&#191;Digamos tener para mi caso una gesti&#243;n de tesorer&#237;a que se podr&#237;a pues trabajar YY pues creo que un poco es, es de pronto que que se rompan esos mitos de que, o sea, todos tenemos la capacidad de poder hacer algo diferente en nuestro puesto de trabajo no? O pues de pronto en alg&#250;n estudio que queremos hacer en inversiones s&#237;.</v>
+
+01:49:06.916 --> 01:49:25.396
+<v KATHLEEN GISELLE OÑATE MOLANO>Entonces me parece que es que es sencillo, se puede seguir, obviamente estructurando mucho mejor y creo que a medida que uno vaya aprendiendo precisamente como a construir esos prom y a saber de pronto, un poco m&#225;s del lenguaje. &#191;Pues uno, pues probablemente tendr&#225; mejores resultados, no? Pero pues me parece genial. Me parece genial que a trav&#233;s de una imagen.</v>
+
+01:49:25.756 --> 01:49:37.516
+<v KATHLEEN GISELLE OÑATE MOLANO>T&#250; puedas plasmar algo de una manera tan sencilla, o sea que yo pueda hacer un dibujo en paint y lo pegue y &#233;l trate de entenderme. Mi concepto me parece genial, entonces, es la verdad muy ch&#233;vere el ejercicio.</v>
+
+01:49:38.276 --> 01:49:57.356
+<v Julian David Zuluaga Ospina>Buen&#237;simo Kevin. &#191;Gracias por compartir y, efectivamente ustedes vieron que cu&#225;nto c&#243;digo hicimos hoy? Absolutamente nada. De hecho, los proms y yo algunos utilic&#233; un lenguaje medianamente t&#233;cnico, pero creo que todos estamos en la capacidad de llegar Asus niveles. Aqu&#237; el reto es pr&#225;ctica.</v>
+
+01:49:58.076 --> 01:50:14.316
+<v Julian David Zuluaga Ospina>Para ver que con la pr&#225;ctica cada vez m&#225;s y esas preguntas, pues ustedes mismos las pueden responder porque tienen a la gu&#237;a de c&#243;mo conecto los de Excel y la base de datos YY van a llegar a cosas incre&#237;bles. &#191;Si practican Marta nos vas a compartir, nos vas a mencionar algo?</v>
+
+01:50:16.316 --> 01:50:25.236
+<v Martha Jinneth Castillo Alvarez>S&#237; les voy a compartir. Esp&#233;rame es, es esta. Yo no s&#233; si si la pueden ver.</v>
+
+01:50:18.596 --> 01:50:23.636
+<v Julian David Zuluaga Ospina>Adelante tenemos un par de Minuticos, no m&#225;s, pero cu&#233;ntanos, mu&#233;stranos que lograste.</v>
+
+01:50:27.556 --> 01:50:29.356
+<v Julian David Zuluaga Ospina>No, no estamos viendo todav&#237;a, est&#225; cargando.</v>
+
+01:50:29.236 --> 01:50:29.276
+<v Martha Jinneth Castillo Alvarez>Y.</v>
+
+01:50:31.436 --> 01:50:35.276
+<v Martha Jinneth Castillo Alvarez>Esp&#233;rame a ver pantalla lista.</v>
+
+01:50:37.076 --> 01:50:37.956
+<v Julian David Zuluaga Ospina>Visto ahora s&#237;.</v>
+
+01:50:37.316 --> 01:50:56.916
+<v Martha Jinneth Castillo Alvarez>Me cuentas, s&#237;, listo. Entonces hice un APP de consultor contable, cierto de actualizaci&#243;n actualizaste pro. &#191;Entonces d&#243;nde hay unos indicadores contables, econ&#243;micos y laborales?</v>
+
+01:50:39.836 --> 01:50:40.196
+<v Julian David Zuluaga Ospina>Gracias.</v>
+
+01:50:59.076 --> 01:51:08.556
+<v Martha Jinneth Castillo Alvarez>Sobre el salario m&#237;nimo lo el oscile de transporte, pero aqu&#237; &#233;l me est&#225; mostrando, es como el el bosquejo cierto.</v>
+
+01:51:08.876 --> 01:51:15.116
+<v Julian David Zuluaga Ospina>&#191;Aj&#225;? S&#237;, entonces te te contin&#250;a, contin&#250;a. Ya te doy mis comentarios.</v>
+
+01:51:10.436 --> 01:51:12.116
+<v Martha Jinneth Castillo Alvarez>Pero dime.</v>
+
+01:51:15.716 --> 01:51:37.436
+<v Martha Jinneth Castillo Alvarez>Entonces ah&#237; yo quer&#237;a mirar c&#243;mo lo puedo, o sea, ya &#233;l me est&#225; mostrando aqu&#237; ya le di las indicaciones, espera que me quedo ah&#237;. Ac&#225;. &#191;Yo ya le hab&#237;a dado las indicaciones de lo que yo quer&#237;a, s&#237;, &#233;l me hizo este este este bosquejo, ahora que le digo para que me lo deje utilizar, o c&#243;mo lo descargo?</v>
+
+01:51:38.196 --> 01:51:56.356
+<v Julian David Zuluaga Ospina>Buen&#237;simo, buen&#237;simo, bueno, no has hecho el APP, la dise&#241;aste generaste el el. El boceto est&#225; buen&#237;simo. Entonces, qu&#233; bueno que preguntaste. Ahora veo que que tienes, digamos, yo tengo el plan pro, no s&#233; si sea un limitante, esperemos que no dale ah&#237; en el m&#225;s en el chat.</v>
+
+01:51:58.036 --> 01:51:58.396
+<v Martha Jinneth Castillo Alvarez>Ac&#225;.</v>
+
+01:51:58.076 --> 01:52:01.396
+<v Julian David Zuluaga Ospina>Abajo ah&#237; y vas a seleccionar canvas.</v>
+
+01:52:03.516 --> 01:52:04.036
+<v Martha Jinneth Castillo Alvarez>&#191;Cantas?</v>
+
+01:52:03.556 --> 01:52:09.036
+<v Julian David Zuluaga Ospina>Ah&#237; est&#225; y le vas a decir, genera la y pone interactiva para que entienda que es c&#243;digo.</v>
+
+01:52:09.996 --> 01:52:10.796
+<v Martha Jinneth Castillo Alvarez>Genera.</v>
+
+01:52:12.076 --> 01:52:12.436
+<v Julian David Zuluaga Ospina>Era.</v>
+
+01:52:12.476 --> 01:52:13.516
+<v Martha Jinneth Castillo Alvarez>En la.</v>
+
+01:52:14.676 --> 01:52:15.436
+<v Julian David Zuluaga Ospina>Interactio.</v>
+
+01:52:14.956 --> 01:52:18.316
+<v Martha Jinneth Castillo Alvarez>Ya imperativa.</v>
+
+01:52:19.076 --> 01:52:30.716
+<v Julian David Zuluaga Ospina>Es importante que seleccione el canvas porque acu&#233;rdense que el C&#243;digo va a estar en ese artefacto, sino &#233;l, &#233;l te va a decir texto, se vuelve simplemente un chat.</v>
+
+01:52:22.676 --> 01:52:23.236
+<v Martha Jinneth Castillo Alvarez>Ah OK.</v>
+
+01:52:31.796 --> 01:52:32.956
+<v Martha Jinneth Castillo Alvarez>S&#237;, ah, bueno.</v>
+
+01:52:32.076 --> 01:52:49.436
+<v Julian David Zuluaga Ospina>Entonces, si lo logras, Marta, por favor, nos mandas el el link de tu aplicaci&#243;n para que lo podamos ver todo cuando termine en un par de minutos se te va a habilitar la opci&#243;n de vista previa que ves arriba s&#237;, la ves.</v>
+
+01:52:50.756 --> 01:52:52.036
+<v Martha Jinneth Castillo Alvarez>S&#237;, listo.</v>
+
+01:52:52.156 --> 01:52:54.956
+<v Julian David Zuluaga Ospina>Cuando se habilite, ah&#237; vas a tener tu APP.</v>
+
+01:52:56.596 --> 01:52:57.116
+<v Martha Jinneth Castillo Alvarez>&#191;Listo?</v>
+
+01:52:56.956 --> 01:53:20.756
+<v Julian David Zuluaga Ospina>Realmente en en Chachi Piti, yo no s&#233; si esto es escalable porque vimos que el el tema se resetea, cada que yo lo abro entonces no s&#233; si pueda ser para una APP de verdad o para de pronto ejercicios m&#225;s de prototipado o de infograf&#237;as como el que algunos les mostr&#233;, pero lo hago el s&#237;. Entonces tambi&#233;n le sugiero mucho.</v>
+
+01:53:20.836 --> 01:53:33.436
+<v Julian David Zuluaga Ospina>Usarlo con loa va a tener m&#225;s poder, es limitado. En cuanto a los tokens, pero bueno, pues ya t&#250; empezar&#225;s a ver que que puedes lograr con chat JPT que no, y si lo puedes seguir usando en tu d&#237;a a d&#237;a o se queda ah&#237;.</v>
+
+01:53:34.196 --> 01:53:36.356
+<v Martha Jinneth Castillo Alvarez>Listo, listo, listo, muchas gracias.</v>
+
+01:53:35.916 --> 01:53:43.716
+<v Julian David Zuluaga Ospina>Bueno, Diana, siendo las 10 y respetando el tiempo de los dem&#225;s. Adelante con tu pregunta pero ya contigo cerramos.</v>
+
+01:53:40.116 --> 01:53:40.196
+<v Diana Rivera>S&#237;.</v>
+
+01:53:43.716 --> 01:53:54.036
+<v Diana Rivera>No, no me tardo tanto, yo ya lo o sea, ya tengo toda la indicaci&#243;n, tengo las im&#225;genes, pero no veo una parte donde dice canvas.</v>
+
+01:53:55.556 --> 01:53:58.836
+<v Julian David Zuluaga Ospina>Si quieres, si gustas nos compartes tu pantalla y.</v>
+
+01:53:59.956 --> 01:54:02.716
+<v Diana Rivera>Voy a a ver hoy hasta tarde.</v>
+
+01:54:04.396 --> 01:54:24.276
+<v Diana Rivera>&#191;Crees que estoy conectada desde mi celular? Pero as&#237; computador entonces digamos que esta es como la la la instrucci&#243;n que le estoy dando, pero si yo le doy ac&#225; como en la pesita de subirlo, pues no, no me no me produce nada, ahorita me bot&#243;n de los bueno ac&#225;.</v>
+
+01:54:24.996 --> 01:54:32.516
+<v Diana Rivera>Eso tambi&#233;n tengo el celular, pero me bota, me dice que tenemos un error, pero no veo la parte de.</v>
+
+01:54:34.916 --> 01:54:35.996
+<v Diana Rivera>Donde dice cama.</v>
+
+01:54:37.516 --> 01:54:54.116
+<v Julian David Zuluaga Ospina>No. El canvas solo es en Chan Chipiti y Germina y Evas lo hago es para hacer Apps solamente para hacer este no es un chat. Entonces el s&#250;per r&#225;pido apenas termine, suena, suena, suena algo suena como una notificaci&#243;n y te sale como un botoncito azul.</v>
+
+01:54:41.196 --> 01:54:41.956
+<v Diana Rivera>&#191;Ah o K?</v>
+
+01:54:54.076 --> 01:54:55.436
+<v Diana Rivera>O sea, ah&#237; est&#225; trabajando.</v>
+
+01:54:56.276 --> 01:55:02.076
+<v Julian David Zuluaga Ospina>No lee, lee el pronto a ver si te dice estoy trabajando y lo voy a empezar. El primero planea.</v>
+
+01:55:01.556 --> 01:55:14.276
+<v Diana Rivera>Y s&#233; perfecto, me encanta el proyecto de crear una aplicaci&#243;n para el jard&#237;n en Bogot&#225; con una atm&#243;sfera calidad animada antes de comenzar a construir. Necesito que me compartas o K la imagen de referencia que ya sea de.</v>
+
+01:55:13.476 --> 01:55:24.476
+<v Julian David Zuluaga Ospina>Entonces &#233;l no, siempre &#233;l no siempre arranca. Ten cuidado. &#201;l a veces dice como bueno para arrancar, necesito abcd, que es lo que te est&#225; pidiendo entonces. Ah&#237; en el chat tienes la opci&#243;n de adjuntar.</v>
+
+01:55:26.396 --> 01:55:34.316
+<v Julian David Zuluaga Ospina>Entonces, ah&#237; le puedes cargar las im&#225;genes, le puedes dar las explicaciones que &#233;l te pide abajo en el chat.</v>
+
+01:55:35.996 --> 01:55:39.676
+<v Diana Rivera>O K Bueno lo voy a hacer y lo lo lo pongo ahorita.</v>
+
+01:55:38.636 --> 01:55:58.196
+<v Julian David Zuluaga Ospina>&#191;Igual el que quiera, el que quiera me pregunta, me pueden escribir por teams o a mi n&#250;mero YY yo los ayudo sin problemas? La grabaci&#243;n se hizo para los que preguntan que de pronto no. Ah&#237; se est&#225; grabando el tema es que la persona que que administra estas sesiones me dice que las env&#237;a.</v>
+
+01:55:58.956 --> 01:56:17.796
+<v Julian David Zuluaga Ospina>Entonces igual la grabaci&#243;n queda en el chat, si cualquier cosa, pues yo hablo con esta persona para que les envi&#233; al correo todos la grabaci&#243;n, la asistencia ya la tenemos verificada. Entonces bueno, esa fue la clase de hoy esta semana. La pr&#243;xima semana continuamos el martes 8 a M.</v>
+
+01:56:18.076 --> 01:56:37.436
+<v Julian David Zuluaga Ospina>Muchas gracias a todos por participar y espero puedan terminar sus proyectos para que pues al final todo esto se aprenda y no quede simplemente en en en una clase. Muchas gracias a todos. Feliz fin de semana. Cu&#237;dense mucho y estamos conversando el que necesito tenga preguntas, me puede contactar sin problema hasta luego.</v>
+
+01:56:33.476 --> 01:56:34.436
+<v Luz Elena Conde Acosta>Gracias.</v>
+
+01:56:37.276 --> 01:56:38.156
+<v Angie Briyith Ríos León>Gracias.</v>
+
+01:56:37.916 --> 01:56:38.956
+<v Luz Elena Conde Acosta>Gracias, buen d&#237;a.</v>
+
+01:56:38.196 --> 01:56:38.916
+<v Lina Alvarez Suarez>Gracias.</v>
+
+01:56:38.436 --> 01:56:39.116
+<v Diana Rivera>Gracias.</v>
+
+01:56:39.796 --> 01:56:40.756
+<v Martha Jinneth Castillo Alvarez>Gracias.</v>
+
+01:56:42.156 --> 01:56:42.676
+<v Andrea Becerra>Gracias.</v>
+
+01:56:42.276 --> 01:56:43.476
+<v Luis Polo>Gracias, hasta luego.</v>

@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+
+const { title = "Inteligencia Artificial para Negocios", description, lang = "es" } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body class="relative overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 opacity-40 blur-3xl">
+      <div class="absolute -left-32 top-10 h-64 w-64 rounded-full bg-red-500/40" />
+      <div class="absolute right-0 top-32 h-80 w-80 rounded-full bg-cyan-400/30" />
+      <div class="absolute bottom-0 left-32 h-72 w-72 rounded-full bg-red-500/30" />
+    </div>
+    <main class="relative flex min-h-screen w-full flex-col gap-24 pb-24">
+      <slot />
+    </main>
+  </body>
+</html>

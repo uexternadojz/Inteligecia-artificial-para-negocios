@@ -1,0 +1,120 @@
+{
+  "name": "Orbital Lab Brand Palette",
+  "version": "1.0.0",
+  "last_updated": "2025-10-27",
+  "colors": {
+    "black": {
+      "hex": "#000000",
+      "rgb": [0, 0, 0],
+      "role": "Primary background",
+      "typical_percentage": "55-65%",
+      "usage": "Dominant color, provides high contrast base"
+    },
+    "red": {
+      "hex": "#ED2024",
+      "rgb": [237, 32, 36],
+      "role": "Brand primary accent",
+      "typical_percentage": "10-15%",
+      "usage": "Orbital Lab primary brand color, energy and action"
+    },
+    "cyan": {
+      "hex": "#00D4FF",
+      "rgb": [0, 212, 255],
+      "role": "Tech/AI accent",
+      "typical_percentage": "10-15%",
+      "usage": "Technology indicator, neural networks, data flows"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "rgb": [255, 255, 255],
+      "role": "Highlights and contrast",
+      "typical_percentage": "10-20%",
+      "usage": "Highlights, text, geometric shapes"
+    }
+  },
+  "verticals": [
+    {
+      "id": 1,
+      "name": "Strivio",
+      "category": "Deportes",
+      "description": "Analítica deportiva con IA - tracking, clips automáticos, heatmaps",
+      "icon_subject": "soccer ball with neural network tracking lines",
+      "icon_pattern": "geometric heatmap pattern",
+      "checklist_prompt": "Balón deportivo con redes neuronales de tracking, heatmaps geométricos, estilo minimalista lineal futurista rojo y negro",
+      "validated": true,
+      "notes": "First vertical validated with V2 methodology (Oct 27, 2025)"
+    },
+    {
+      "id": 2,
+      "name": "Lighthouse Audience",
+      "category": "Negocio",
+      "description": "Analítica de audiencias para publicidad exterior - OOH",
+      "icon_subject": "urban skyline with lighthouse antenna rays",
+      "icon_pattern": "geometric audience analysis pattern",
+      "checklist_prompt": "Skyline urbano con faro/antena emitiendo rayos de análisis de audiencias, estilo arquitectónico minimal tech",
+      "validated": false
+    },
+    {
+      "id": 3,
+      "name": "Jaguar Orbital",
+      "category": "Biología",
+      "description": "Conservación ambiental vía CV - monitoreo de fauna",
+      "icon_subject": "jaguar silhouette with DNA pattern",
+      "icon_pattern": "geometric orbital sensor lines",
+      "checklist_prompt": "Silueta de jaguar con patrón de ADN y sensores orbitales, fusión naturaleza-tecnología, líneas orgánicas tech",
+      "validated": false
+    },
+    {
+      "id": 4,
+      "name": "Academia Orbital",
+      "category": "Academia",
+      "description": "Formación aplicada en IA, automatización y ética digital",
+      "icon_subject": "orbital book with data circuit lines",
+      "icon_pattern": "geometric knowledge flow pattern",
+      "checklist_prompt": "Libro orbital con circuitos de datos emanando, conocimiento tecnológico, educativo-futurista",
+      "validated": false
+    },
+    {
+      "id": 5,
+      "name": "AI Systems/Superagents",
+      "category": "Otros",
+      "description": "Automatización corporativa - RAG, agentes CLI, integraciones",
+      "icon_subject": "brain gear with connected nodes",
+      "icon_pattern": "geometric automation pattern",
+      "checklist_prompt": "Engranaje cerebral con nodos conectados representando automatización inteligente, mecánico-neuronal",
+      "validated": false
+    }
+  ],
+  "quantization_stats": {
+    "v1": {
+      "method": "Original SDXL prompt (170+ words)",
+      "black": "57.20%",
+      "red": "8.59%",
+      "cyan": "5.92%",
+      "white": "28.29%",
+      "contrast": 118.85,
+      "verdict": "Good but unbalanced (too much white)"
+    },
+    "v2": {
+      "method": "Optimized SDXL prompt (77 tokens)",
+      "black": "62.05%",
+      "red": "11.56%",
+      "cyan": "12.63%",
+      "white": "13.76%",
+      "contrast": 106.81,
+      "verdict": "PREFERRED - Better color balance",
+      "advantages": [
+        "113% more cyan than V1",
+        "35% more red than V1",
+        "More balanced distribution",
+        "Stronger brand identity"
+      ]
+    }
+  },
+  "usage_notes": [
+    "Always use exact hex codes with # prefix: '#000000' '#ED2024' '#00D4FF' '#FFFFFF'",
+    "Quantization reduces 50k+ colors to exactly 4",
+    "Expected distribution: Black 60%, Red 12%, Cyan 12%, White 14%",
+    "V2 methodology produces better brand color balance"
+  ]
+}

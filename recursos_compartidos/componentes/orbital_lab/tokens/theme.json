@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sindresorhus/type-fest/main/schema/partial-schema.json",
+  "meta": {
+    "name": "Orbital Lab Design Tokens",
+    "version": "0.1.0",
+    "description": "Paleta, tipografías y métricas base para proyectos Docencia / Orbital Lab",
+    "created": "2025-10-26"
+  },
+  "colors": {
+    "background": {
+      "primary": "#000000",
+      "secondary": "#0B0B0F",
+      "card": "rgba(15,15,22,0.8)"
+    },
+    "brand": {
+      "orbitalRed": "#ED2024",
+      "orbitalRedHighlight": "#FF3B30",
+      "dataCyan": "#00D4FF"
+    },
+    "neutral": {
+      "graphite": "#1F1F28",
+      "silver": "#A2A5B3",
+      "muted": "#9AA0B5"
+    },
+    "support": {
+      "success": "#27AE60",
+      "warning": "#E67E22",
+      "error": "#FF3B30"
+    }
+  },
+  "typography": {
+    "headings": {
+      "fontFamily": "'Rajdhani', 'Overcame', sans-serif",
+      "letterSpacing": "0.12em",
+      "lineHeight": 1.1
+    },
+    "body": {
+      "fontFamily": "'Inter', 'Audiowide', sans-serif",
+      "letterSpacing": "0.04em",
+      "lineHeight": 1.6,
+      "fontSize": "16px"
+    },
+    "code": {
+      "fontFamily": "'Fira Code', monospace",
+      "fontSize": "15px",
+      "lineHeight": 1.5
+    }
+  },
+  "effects": {
+    "glowPrimary": "0 0 30px rgba(237,32,36,0.35)",
+    "borderLuminous": "1px solid rgba(237,32,36,0.35)",
+    "panelGlass": "backdrop-filter: blur(12px)"
+  },
+  "spacing": {
+    "xs": "8px",
+    "sm": "16px",
+    "md": "24px",
+    "lg": "32px",
+    "xl": "48px"
+  },
+  "radius": {
+    "small": "12px",
+    "default": "18px",
+    "large": "24px"
+  }
+}

@@ -1,0 +1,189 @@
+---
+import type { ClassEntry } from "../data/course";
+
+interface Props {
+  classes: ClassEntry[];
+}
+
+const { classes } = Astro.props as Props;
+---
+
+<section class="space-y-10" id="coleccion">
+  <header class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <h2 class="font-rajdhani text-3xl text-white">Colección de Vinilos</h2>
+      <p class="text-sm text-slate-300/70 max-w-2xl">
+        Arrastra la colección, haz hover sobre cada sleeve para liberar el vinilo y abre la pista para ver agenda, métricas y recursos.
+      </p>
+    </div>
+    <a
+      href="#roadmap"
+      class="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.45em] text-slate-200 transition hover:border-red-400/70 hover:text-white"
+    >
+      Roadmap
+    </a>
+  </header>
+
+  <div class="vinyl-rail">
+    {classes.map((entry) => (
+      <article class="vinyl-card" data-status={entry.status}>
+        <div class="vinyl-card__media">
+          <div class="vinyl-card__sleeve">
+            <img src={entry.vinylImage.src} alt={`Portada Clase ${entry.number}`} loading="lazy" />
+            <span class="vinyl-card__mood">{entry.mood}</span>
+          </div>
+          <div class="vinyl-card__record">
+            <div class="vinyl-card__grooves" />
+            <div class="vinyl-card__label">
+              <span>Side {entry.number}</span>
+              <span>{entry.title}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vinyl-card__body">
+          <div class="vinyl-card__meta">
+            <span class="vinyl-card__badge">Clase {entry.number}</span>
+            <span
+              class:list={[
+                "vinyl-card__status",
+                entry.status === "published"
+                  ? "vinyl-card__status--published"
+                  : entry.status === "upcoming"
+                    ? "vinyl-card__status--upcoming"
+                    : "vinyl-card__status--draft",
+              ]}
+            >
+              {entry.status === "published" ? "Disponible" : entry.status === "upcoming" ? "Próxima" : "En producción"}
+            </span>
+          </div>
+
+          <h3 class="vinyl-card__title">{entry.title}</h3>
+          <p class="vinyl-card__synopsis">{entry.synopsis}</p>
+
+          <ul class="vinyl-card__tags">
+            <li>{entry.date}</li>
+            <li>{entry.duration}</li>
+            <li>{entry.modality}</li>
+          </ul>
+
+          <div class="vinyl-card__actions">
+            <button class="vinyl-card__trigger" type="button" data-vinyl-open data-target={`vinyl-${entry.slug}`}>
+              Abrir pista
+            </button>
+            {entry.resources.some((resource) => resource.type === "readme") && (
+              <a
+                class="vinyl-card__trigger vinyl-card__trigger--ghost"
+                href={entry.resources.find((resource) => resource.type === "readme")?.href}
+              >
+                Ver README
+              </a>
+            )}
+          </div>
+        </div>
+
+        <dialog id={`vinyl-${entry.slug}`} class="vinyl-modal">
+          <div class="vinyl-modal__backdrop" />
+          <article class="vinyl-modal__panel">
+            <header class="vinyl-modal__header">
+              <div>
+                <span class="vinyl-card__badge">Clase {entry.number}</span>
+                <h3 class="font-rajdhani text-3xl text-white">{entry.title}</h3>
+                <p class="mt-2 text-sm text-slate-300/80">{entry.synopsis}</p>
+              </div>
+              <button class="vinyl-modal__close" type="button" data-vinyl-close>
+                Cerrar
+              </button>
+            </header>
+
+            <div class="vinyl-modal__content">
+              <div class="vinyl-modal__hero">
+                <img src={entry.haloImage.src} alt="" loading="lazy" role="presentation" />
+                <div class="vinyl-modal__hero-overlay" />
+              </div>
+
+              <section class="vinyl-modal__section">
+                <h4>Stack</h4>
+                <div class="vinyl-modal__chips">
+                  {entry.stack.map((tool) => (
+                    <span>{tool}</span>
+                  ))}
+                </div>
+              </section>
+
+              <section class="vinyl-modal__section">
+                <h4>Lo que lograrás</h4>
+                <ul>
+                  {entry.metrics.map((metric) => (
+                    <li>{metric}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <section class="vinyl-modal__section">
+                <h4>Recursos</h4>
+                <div class="vinyl-modal__buttons">
+                  {entry.resources.length > 0 ? (
+                    entry.resources.map((resource) => (
+                      <a href={resource.href}>
+                        {resource.label}
+                      </a>
+                    ))
+                  ) : (
+                    <span class="vinyl-modal__placeholder">Recursos en producción</span>
+                  )}
+                </div>
+              </section>
+            </div>
+          </article>
+        </dialog>
+      </article>
+    ))}
+  </div>
+</section>
+
+<script>
+  const openButtons = document.querySelectorAll("[data-vinyl-open]");
+  const closeDialogs = (dialog) => {
+    dialog.classList.remove("vinyl-modal--visible");
+    dialog.addEventListener(
+      "transitionend",
+      () => {
+        dialog.close();
+      },
+      { once: true }
+    );
+  };
+
+  openButtons.forEach((buttonElement) => {
+    const button = buttonElement;
+    const targetId = button.getAttribute("data-target");
+    if (!targetId) return;
+    const dialog = document.getElementById(targetId);
+    if (!dialog) return;
+    button.addEventListener("click", () => {
+      if (dialog.open) return;
+      dialog.showModal();
+      requestAnimationFrame(() => dialog.classList.add("vinyl-modal--visible"));
+      const closeBtn = dialog.querySelector("[data-vinyl-close]");
+      closeBtn?.addEventListener("click", () => closeDialogs(dialog));
+      dialog.addEventListener(
+        "cancel",
+        (event) => {
+          event.preventDefault();
+          closeDialogs(dialog);
+        },
+        { once: true }
+      );
+      dialog.addEventListener(
+        "click",
+        (event) => {
+          if (event.target === dialog) {
+            closeDialogs(dialog);
+          }
+        },
+        { once: true }
+      );
+    });
+  });
+</script>

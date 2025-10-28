@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbital Brand Manifesto · Julián Zuluaga</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rajdhani:wght@500;700&family=Fira+Code:wght@400;500&display=swap");
+    :root {
+      --bg: #050507;
+      --bg-alt: #0f0f16;
+      --red: #ed2024;
+      --red-light: #ff3b30;
+      --cyan: #00d4ff;
+      --text: #f3f5ff;
+      --muted: #9aa0b5;
+      --card: rgba(15, 15, 22, 0.8);
+      --glow: 0 0 30px rgba(237, 32, 36, 0.35);
+      font-family: "Rajdhani", "Arial", sans-serif;
+    }
+    @keyframes orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #10101a 0%, var(--bg) 45%, #010103 100%);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: min(1100px, 100%);
+      padding: 72px 32px 40px;
+      position: relative;
+      text-align: center;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 10% 20% auto;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(237,32,36,0.4), rgba(237,32,36,0));
+      filter: blur(50px);
+      z-index: -2;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 8% 35% auto;
+      height: 280px;
+      border: 1px solid rgba(237, 32, 36, 0.3);
+      border-radius: 50%;
+      animation: orbit 22s linear infinite;
+      z-index: -1;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .subhead {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    main {
+      width: min(1100px, 92%);
+      padding-bottom: 120px;
+      display: grid;
+      gap: 48px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--glow);
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+    section::after {
+      content: "";
+      position: absolute;
+      inset: auto -30% -40% auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(0,212,255,0.35), transparent 65%);
+      filter: blur(40px);
+      opacity: 0.7;
+      transform: rotate(35deg);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.95rem;
+      color: var(--cyan);
+      margin-bottom: 0.8rem;
+    }
+    p, li {
+      font-family: "Inter", "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #dde0f0;
+    }
+    ul { padding-left: 20px; }
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+    .grid.two {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .color-palette {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      margin: 24px 0;
+    }
+    .swatch {
+      border-radius: 18px;
+      padding: 18px;
+      color: var(--text);
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 18px rgba(0, 0, 0, 0.35);
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-family: "Inter", sans-serif;
+    }
+    .swatch span {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .swatch small {
+      margin-top: 6px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.75rem;
+    }
+    .typography-showcase {
+      display: grid;
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .type-card {
+      background: rgba(237, 32, 36, 0.08);
+      border: 1px solid rgba(237, 32, 36, 0.25);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .type-card h4 {
+      margin: 0 0 8px;
+      letter-spacing: 0.16em;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .type-overcame {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 2.4rem;
+      letter-spacing: 0.12em;
+    }
+    .type-audiowide {
+      font-family: "Inter", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+    }
+    .type-code {
+      font-family: "Fira Code", monospace;
+      font-size: 0.95rem;
+      background: rgba(15, 15, 22, 0.6);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .pattern-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .pattern-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+      min-height: 160px;
+    }
+    .pattern-card span {
+      position: absolute;
+      bottom: 14px;
+      left: 16px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      background: rgba(5, 5, 7, 0.55);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .pattern-orbit {
+      background: radial-gradient(circle at center, rgba(237, 32, 36, 0.65) 0%, rgba(237, 32, 36, 0.05) 50%, rgba(0, 0, 0, 0) 70%), radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.3), transparent 65%), linear-gradient(120deg, rgba(12, 12, 20, 0.9), #050507 65%);
+    }
+    .pattern-grid {
+      background-image:
+        linear-gradient(90deg, rgba(237, 32, 36, 0.12) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(237, 32, 36, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.06), rgba(5, 5, 7, 0.6));
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+      background-position: center;
+    }
+    .pattern-lines {
+      background: linear-gradient(130deg, rgba(0, 212, 255, 0.4) 0%, rgba(0, 0, 0, 0) 60%), linear-gradient(180deg, rgba(237, 32, 36, 0.8) 0%, rgba(15, 15, 22, 0.95) 70%);
+    }
+    .component-demo {
+      margin-top: 26px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card-preview {
+      background: rgba(15, 16, 32, 0.7);
+      border-radius: 20px;
+      border: 1px solid rgba(237, 32, 36, 0.4);
+      padding: 22px;
+      position: relative;
+      box-shadow: 0 0 25px rgba(237, 32, 36, 0.3);
+    }
+    .card-preview::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+    .card-preview h4 {
+      margin: 0 0 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .card-preview p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #dde2f5;
+    }
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(237,32,36,0.18);
+      border: 1px solid rgba(237,32,36,0.5);
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+    }
+    .timeline {
+      border-left: 2px solid rgba(237, 32, 36, 0.4);
+      margin-left: 12px;
+      padding-left: 24px;
+      display: grid;
+      gap: 20px;
+    }
+    .timeline li {
+      position: relative;
+      list-style: none;
+    }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -36px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 18px rgba(237, 32, 36, 0.5);
+    }
+    .cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    a.button {
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(237,32,36,0.8);
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 0 rgba(237, 32, 36, 0);
+    }
+    a.button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 22px rgba(237, 32, 36, 0.6);
+    }
+    footer {
+      margin: 60px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+    }
+    @media (max-width: 680px) {
+      header { padding: 56px 20px 32px; }
+      section { padding: 24px; }
+      h1 { letter-spacing: 0.08em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Orbital Brand Manifesto</h1>
+    <p class="subhead">Identidad viva de Julián Zuluaga y Orbital Lab. Una constelación donde la IA, el diseño y la docencia se alinean para que ver sea entender.</p>
+    <div class="cta">
+      <a class="button" href="#dna">ADN de marca</a>
+      <a class="button" href="#visual">Sistema Visual</a>
+      <a class="button" href="#roadmap">Roadmap</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="dna">
+      <h2>01 · ADN Y ARQUETIPOS</h2>
+      <div class="grid two">
+        <div>
+          <h3>MANTRA</h3>
+          <p><strong>Desarrollar inteligencia que vea, piense y transforme.</strong></p>
+          <p>Todo proyecto debe superar el filtro: ¿ayuda a que las personas comprendan mejor el mundo que los rodea?</p>
+        </div>
+        <div>
+          <h3>PERSONALIDAD</h3>
+          <p>Visionario · Técnico · Empático · Rebelde Elegante</p>
+          <div class="badge-group">
+            <span class="badge">Creador</span>
+            <span class="badge">Sabio</span>
+            <span class="badge">Storyteller</span>
+            <span class="badge">Ethical AI</span>
+          </div>
+        </div>
+      </div>
+      <p>La marca es una órbita entre la ciencia aplicada, la estética de datos y la narrativa humana. Docencia, laboratorio y producto no son ramas aisladas: son satélites que comparten un mismo núcleo.</p>
+    </section>
+
+    <section>
+      <h2>02 · PILARES</h2>
+      <div class="grid two">
+        <div>
+          <h3>TECNOLOGÍA VISIBLE</h3>
+          <p>Interfaces orbitales, HUDs, mallas de datos y circuitos vibrantes muestran el interior de cada decisión algorítmica.</p>
+        </div>
+        <div>
+          <h3>MINIMALISMO DE PODER</h3>
+          <p>Negro profundo + rojo orbital = foco absoluto. El vacío no es ausencia, es territorio para el contenido.</p>
+        </div>
+        <div>
+          <h3>NARRATIVA HUMANA</h3>
+          <p>Deportistas, analistas, estudiantes y ecosistemas. Siempre existe un rostro que siente los efectos de la IA.</p>
+        </div>
+        <div>
+          <h3>APRENDIZAJE APLICADO</h3>
+          <p>Guías interactivas, notebooks y superagentes listos para ejecutar. Enseñar es abrir el laboratorio.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual">
+      <h2>03 · SISTEMA VISUAL</h2>
+      <h3>PALETA</h3>
+      <div class="color-palette">
+        <div class="swatch" style="background:#000000;">
+          <span>Fondo · #000000</span>
+          <small>Negro profundo para enfatizar contenido.</small>
+        </div>
+        <div class="swatch" style="background:#0B0B0F;">
+          <span>Fondo alterno · #0B0B0F</span>
+          <small>Gradientes suaves y secciones extensas.</small>
+        </div>
+        <div class="swatch" style="background:#ED2024;">
+          <span>Rojo orbital · #ED2024</span>
+          <small>Energía, acción, highlights.</small>
+        </div>
+        <div class="swatch" style="background:#FF3B30;">
+          <span>Resaltado · #FF3B30</span>
+          <small>CTAs, estados activos, hover.</small>
+        </div>
+        <div class="swatch" style="background:#00D4FF;">
+          <span>Acento frío · #00D4FF</span>
+          <small>Datos, gráficas, balance cromático.</small>
+        </div>
+        <div class="swatch" style="background:linear-gradient(145deg,#1F1F28,#101019);">
+          <span>Neutros · #1F1F28 / #A2A5B3</span>
+          <small>Tipografía secundaria, bordes, UI patterns.</small>
+        </div>
+      </div>
+      <h3>TIPOGRAFÍA</h3>
+      <div class="typography-showcase">
+        <div class="type-card">
+          <h4>HEADLINES</h4>
+          <div class="type-overcame">VER ES ENTENDER</div>
+          <p style="margin-top:12px;">Utiliza mayúsculas, tracking generoso y compás rítmico. Ideal para heroes, secciones clave y números de fase.</p>
+        </div>
+        <div class="type-card">
+          <h4>BODY COPY</h4>
+          <div class="type-audiowide">Historias de IA aplicada contadas con claridad y propósito.</div>
+          <p style="margin-top:10px;">El cuerpo debe permanecer legible en dispositivos móviles. Usa peso regular o medium y 160% de line-height.</p>
+        </div>
+        <div class="type-card">
+          <h4>CÓDIGO / DATOS</h4>
+          <code class="type-code"># Orbital Lab<br/>if insight := vision(data):<br/>    deploy(impact)</code>
+          <p style="margin-top:12px;">Fira Code asegura alineación precisa para snippets y comandos CLI.</p>
+        </div>
+      </div>
+      <h3>PATRONES</h3>
+      <div class="pattern-gallery">
+        <div class="pattern-card pattern-orbit"><span>Órbitas</span></div>
+        <div class="pattern-card pattern-grid"><span>Grid de datos</span></div>
+        <div class="pattern-card pattern-lines"><span>Haz de luz</span></div>
+      </div>
+      <div class="component-demo">
+        <div class="card-preview">
+          <h4>Card laboratorio</h4>
+          <p>Strivio · Tracking multijugador<br/><small style="color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;">Precision · Deportes · IA</small></p>
+        </div>
+        <div class="card-preview" style="background:rgba(0,212,255,0.08);border-color:rgba(0,212,255,0.35);">
+          <h4>Borde translúcido</h4>
+          <p>Ideal para dashboards, tablets, modales de datos. Combine con glow rojo para contraste.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>04 · EXPERIENCIA</h2>
+      <div class="grid two">
+        <div>
+          <h3>MACRO SECCIONES</h3>
+          <ul>
+            <li>Home hero 3D · statements + CTA.</li>
+            <li>Laboratorio · Strivio, Lighthouse, Jaguar, AI Systems, Academia.</li>
+            <li>Docencia · clases conectadas al repositorio.</li>
+            <li>Investigación · artículos, demos, experimentos.</li>
+            <li>Recursos · datasets, notebooks, prompts.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>MICRO INTERACCIONES</h3>
+          <ul>
+            <li>Scroll parallax y halos de datos.</li>
+            <li>Filtros por etiquetas (fase CRISP-DM, vertical, skill).</li>
+            <li>Previsualización de guías en modales sin salir del sitio.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>05 · DOCENCIA VIVA</h2>
+      <p>Cada clase nace en este repositorio: <code>materias/&lt;materia&gt;/clases/&lt;fecha&gt;-clase-XX-tema/</code>. El site debe ingerir esa estructura y transformarla en experiencias navegables: timeline, tarjetas, buscador.</p>
+      <div class="grid two">
+        <div>
+          <h3>FORMATOS</h3>
+          <ul>
+            <li>Guías HTML interactivas (Plotly, diseño orbital).</li>
+            <li>Notebooks ejecutables + datasets documentados.</li>
+            <li>Resumenes pedagógicos y checklists.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>VINCULACIÓN</h3>
+          <ul>
+            <li>Sincronizar metadatos con Content Collections de Astro.</li>
+            <li>Indexar recursos para Fuse.js (búsqueda client-side).</li>
+            <li>Generar badges por fase de CRISP-DM, skill y dificultad.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <h2>06 · ROADMAP</h2>
+      <ol class="timeline">
+        <li><strong>Q4 2025:</strong> tokens de diseño (`theme.json`), componentes base, prototipo Figma.</li>
+        <li><strong>Q1 2026:</strong> lanzamiento del site (Home + Lab + Docencia), migración de contenidos previos.</li>
+        <li><strong>Q2 2026:</strong> buscador Fuse.js, biblioteca interactiva y agentes que sugieren clases.</li>
+        <li><strong>Q3 2026:</strong> versión bilingüe, micrositios narrativos para cada vertical.</li>
+        <li><strong>Q4 2026:</strong> experiencia inmersiva WebGL con storytelling de proyectos.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>07 · ÉTICA Y LEGADO</h2>
+      <div class="grid two">
+        <div>
+          <h3>TRANSPARENCIA</h3>
+          <p>Datos, modelos y limitaciones documentados. Protocolos de privacidad y seguridad claros.</p>
+        </div>
+        <div>
+          <h3>INCLUSIÓN</h3>
+          <p>Datasets representativos, ejemplos diversos, lenguaje no sesgado. IA como herramienta para amplificar voces.</p>
+        </div>
+      </div>
+      <p>La misión es permanente: enseñar, crear y desplegar IA responsable desde Latinoamérica para el mundo.</p>
+    </section>
+
+    <section>
+      <h2>08 · MOODBOARD</h2>
+      <p>Referencia visual que guía la paleta, la iluminación y el estilo orbital. Rojo energético, negros profundos, texturas de datos y rostros que conectan la tecnología con las personas.</p>
+      <figure style="margin:24px 0;">
+        <img src="assets/moodboard-orbital.png" alt="Moodboard orbital con referencias rojo y negro" style="width:100%;border-radius:20px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 0 35px rgba(237,32,36,0.35);" />
+        <figcaption style="margin-top:12px;color:var(--muted);font-size:0.9rem;letter-spacing:0.1em;">Paleta y texturas para la identidad Orbital · Referencias 2025</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    EN ÓRBITA DESDE 2025 · JULIÁN ZULUAGA · ORBITAL LAB
+  </footer>
+</body>
+</html>

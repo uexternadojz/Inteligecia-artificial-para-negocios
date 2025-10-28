@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroOrbit from "../components/HeroOrbit.astro";
+import HighlightsBento from "../components/HighlightsBento.astro";
+import VinylGrid from "../components/VinylGrid.astro";
+import ToolkitChips from "../components/ToolkitChips.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import ProfessorSection from "../components/ProfessorSection.astro";
+
+import { classes, highlights, toolkit, faqs } from "../data/course";
+
+const heroCopy = {
+  title: "Inteligencia Artificial para Negocios",
+  tagline: "Ver es entender la IA corporativa.",
+  description:
+    "Un micrositio cinematográfico para explorar cada clase como un vinilo holográfico: héroes inmersivos, cards translúcidas y recursos accionables que viven en GitHub.",
+  ctaPrimary: { label: "Ver syllabus", href: "/docs/syllabus" },
+  ctaSecondary: { label: "Colección completa", href: "#coleccion" },
+};
+---
+
+<BaseLayout title="Orbital Vinyl Collection — Inteligencia Artificial para Negocios">
+  <HeroOrbit {...heroCopy} />
+
+  <div class="page-container">
+    <HighlightsBento items={highlights} />
+  </div>
+
+  <div class="page-container">
+    <VinylGrid classes={classes} />
+  </div>
+
+  <div class="page-container">
+    <ToolkitChips tools={toolkit} />
+  </div>
+
+  <div class="page-container">
+    <ProfessorSection />
+  </div>
+
+  <div class="page-container">
+    <FAQAccordion items={faqs} />
+  </div>
+
+  <footer class="page-container rounded-3xl border border-white/10 bg-[#080812]/80 p-8 text-center">
+    <p class="font-rajdhani text-sm uppercase tracking-[0.35em] text-slate-400/70">¿Ayuda a ver y entender mejor la IA corporativa?</p>
+    <p class="mt-3 text-xs text-slate-500/70">Orbital Lab · Universidad Externado · 2025</p>
+  </footer>
+</BaseLayout>
