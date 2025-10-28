@@ -1,0 +1,333 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClassHero from "../../components/ClassHero.astro";
+import BentoGrid from "../../components/BentoGrid.astro";
+import TimelineHorizontal from "../../components/TimelineHorizontal.astro";
+import ToolCard from "../../components/ToolCard.astro";
+import ComparisonMatrix from "../../components/ComparisonMatrix.astro";
+import WorkflowStepper from "../../components/WorkflowStepper.astro";
+
+import {
+  heroData,
+  fundamentals,
+  timeline,
+  tools,
+  comparisonDimensions
+} from "../../data/clase-02-data";
+
+// Workflow steps data
+const workflowSteps = [
+  {
+    number: "1",
+    title: "IDEACIÓN",
+    description: "Define el problema y el alcance mínimo del proyecto",
+    tips: [
+      "¿Qué problema resuelve?",
+      "¿Quién lo usará?",
+      "¿Cuál es el MVP mínimo?"
+    ]
+  },
+  {
+    number: "2",
+    title: "SELECCIÓN DE PLATAFORMA",
+    description: "Elige la herramienta según tu nivel técnico y necesidades",
+    tips: [
+      "No-code: Lovable, Replit",
+      "Low-code: Bolt, v0.dev",
+      "Code: Cursor, Windsurf"
+    ]
+  },
+  {
+    number: "3",
+    title: "PRIMER PROMPT (CONTEXTO)",
+    description: "Establece el contexto completo en el primer prompt",
+    tips: [
+      'Crea una [tipo de app] que [objetivo]',
+      'Debe tener [funcionalidades clave]',
+      'Estilo visual: [referencias]'
+    ]
+  },
+  {
+    number: "4",
+    title: "ITERACIÓN 1 - ESTRUCTURA",
+    description: "Refina la estructura básica y navegación",
+    tips: [
+      "Revisar output inicial",
+      "Refinar layout y navegación",
+      "Ajustar colores y tipografía"
+    ]
+  },
+  {
+    number: "5",
+    title: "ITERACIÓN 2 - FUNCIONALIDAD",
+    description: "Agrega la lógica de negocio y funcionalidad",
+    tips: [
+      "Agregar lógica interactiva",
+      "Integrar formularios/APIs",
+      "Validaciones y UX"
+    ]
+  },
+  {
+    number: "6",
+    title: "ITERACIÓN 3 - POLISH",
+    description: "Pule los detalles finales y experiencia de usuario",
+    tips: [
+      "Animaciones",
+      "Responsividad",
+      "Detalles finales"
+    ]
+  },
+  {
+    number: "7",
+    title: "DEPLOY",
+    description: "Publica tu aplicación y comparte el resultado",
+    tips: [
+      "Publicar y obtener URL"
+    ]
+  }
+];
+---
+
+<BaseLayout title="Clase 02 · Vibe Coding — IA para Negocios">
+  <!-- Hero Section -->
+  <ClassHero
+    classNumber={heroData.classNumber}
+    title={heroData.title}
+    subtitle={heroData.subtitle}
+    date={heroData.date}
+    duration={heroData.duration}
+    modality={heroData.modality}
+    vinylImage={heroData.vinylImage}
+    haloImage={heroData.haloImage}
+    stack={heroData.stack}
+    metrics={heroData.metrics}
+  />
+
+  <!-- Bento Grid - Key Concepts -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <BentoGrid items={fundamentals} />
+  </section>
+
+  <!-- Timeline - Evolution of AI Coding -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      📊 Evolución del Vibe Coding
+    </h2>
+    <TimelineHorizontal events={timeline} />
+  </section>
+
+  <!-- Tools Grid -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      🛠️ Herramientas de Vibe Coding
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {tools.slice(0, 9).map((tool: any) => (
+        <ToolCard tool={tool} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Comparison Matrix -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      ⚖️ Comparación de Plataformas
+    </h2>
+    <ComparisonMatrix dimensions={comparisonDimensions} />
+  </section>
+
+  <!-- Workflow Example -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      💻 Flujo de Trabajo Recomendado
+    </h2>
+    <WorkflowStepper steps={workflowSteps} />
+  </section>
+
+  <!-- User Profiles -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      👥 Perfiles de Usuario
+    </h2>
+
+    <div class="space-y-6">
+      <!-- No Técnico -->
+      <div class="rounded-2xl border border-cyan-500/30 bg-cyan-500/5 p-6">
+        <h3 class="mb-3 font-rajdhani text-2xl text-cyan-400">
+          1. Usuarios No Técnicos
+        </h3>
+        <p class="mb-2 text-sm text-slate-400">Curva de aprendizaje: MUY BAJA</p>
+        <div class="space-y-3">
+          <div>
+            <p class="font-semibold text-white">Quiénes son:</p>
+            <p class="text-slate-300">Fundadores de startups, marketers, diseñadores, gerentes de producto, educadores, emprendedores creativos.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Herramientas recomendadas:</p>
+            <p class="text-slate-300">Lovable, Replit Agent, Hostinger AI, v0.dev, Claude Artifacts, ChatGPT Canvas, Bolt.new</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Qué pueden crear:</p>
+            <p class="text-slate-300">Landing pages, presentaciones interactivas, MVPs, apps de productividad, prototipos para pitch.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Semi-Técnico -->
+      <div class="rounded-2xl border border-purple-500/30 bg-purple-500/5 p-6">
+        <h3 class="mb-3 font-rajdhani text-2xl text-purple-400">
+          2. Usuarios Semi-Técnicos
+        </h3>
+        <p class="mb-2 text-sm text-slate-400">Curva de aprendizaje: MEDIA-BAJA</p>
+        <div class="space-y-3">
+          <div>
+            <p class="font-semibold text-white">Quiénes son:</p>
+            <p class="text-slate-300">Diseñadores con HTML/CSS, Project Managers técnicos, analistas de datos con Python básico.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Herramientas recomendadas:</p>
+            <p class="text-slate-300">v0.dev, Bolt.new, Claude Artifacts, ChatGPT Canvas, Windsurf</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Casos de uso:</p>
+            <p class="text-slate-300">Micro-sistemas interactivos, dashboards personalizados, herramientas internas, prototipos con lógica compleja.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desarrollador -->
+      <div class="rounded-2xl border border-red-500/30 bg-red-500/5 p-6">
+        <h3 class="mb-3 font-rajdhani text-2xl text-red-400">
+          3. Desarrolladores Profesionales
+        </h3>
+        <p class="mb-2 text-sm text-slate-400">Curva de aprendizaje: BAJA-MEDIA</p>
+        <div class="space-y-3">
+          <div>
+            <p class="font-semibold text-white">Quiénes son:</p>
+            <p class="text-slate-300">Ingenieros de software, full-stack developers, DevOps engineers.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Herramientas recomendadas:</p>
+            <p class="text-slate-300">Cursor, Windsurf, Claude Code (CLI), GitHub Copilot, Replit Ghostwriter</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Impacto:</p>
+            <ul class="list-inside list-disc space-y-1 text-slate-300">
+              <li><strong>Aumento de productividad:</strong> 40-60%</li>
+              <li><strong>Reducción de bugs:</strong> Generación de tests automáticos</li>
+              <li><strong>Documentación:</strong> Generación automática de docs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <div class="rounded-3xl border border-red-500/30 bg-gradient-to-br from-red-500/10 to-transparent p-8">
+      <h2 class="mb-4 font-rajdhani text-3xl text-white">
+        🚀 ¡Es hora de crear!
+      </h2>
+      <p class="mb-6 text-slate-300">
+        Ahora que conoces las herramientas y el proceso, es momento de poner en práctica lo aprendido. Elige una plataforma y comienza a construir tu primera aplicación con Vibe Coding.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="https://lovable.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-red-500/50 bg-red-500/10 px-6 py-3 font-medium text-white transition hover:border-red-400 hover:bg-red-500/20"
+        >
+          Empezar con Lovable →
+        </a>
+        <a
+          href="https://replit.com/ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-cyan-500/50 bg-cyan-500/10 px-6 py-3 font-medium text-white transition hover:border-cyan-400 hover:bg-cyan-500/20"
+        >
+          Probar Replit Agent →
+        </a>
+        <a
+          href="https://v0.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-purple-500/50 bg-purple-500/10 px-6 py-3 font-medium text-white transition hover:border-purple-400 hover:bg-purple-500/20"
+        >
+          Explorar v0.dev →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-8 text-center font-orbitron text-3xl font-bold text-white">
+      🎥 Grabación de la Clase
+    </h2>
+    <div class="mx-auto max-w-4xl">
+      <div class="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-2xl">
+        <iframe
+          src="https://drive.google.com/file/d/1gKtxseYEZvfU4Bn878H47IMgrbTZ0spX/preview"
+          class="absolute inset-0 h-full w-full"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="mt-4 text-center text-sm text-slate-400">
+        Grabación completa de la sesión con todas las demostraciones en vivo.
+        <a
+          href="https://drive.google.com/file/d/1gKtxseYEZvfU4Bn878H47IMgrbTZ0spX/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-2 text-cyan-400 hover:text-cyan-300 transition"
+        >
+          Abrir en Google Drive →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      📚 Recursos Adicionales
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a
+        href="/clases/2025-10-23-clase-02-ia-corporativa"
+        class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-500/50 hover:bg-white/10"
+      >
+        <h3 class="mb-2 font-rajdhani text-xl text-white group-hover:text-cyan-400">
+          📋 Guía Completa
+        </h3>
+        <p class="text-sm text-slate-400">
+          Accede a la guía completa en formato texto con todos los conceptos y recursos.
+        </p>
+      </a>
+      <a
+        href="/transcripts/clase-02.vtt"
+        class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-red-500/50 hover:bg-white/10"
+      >
+        <h3 class="mb-2 font-rajdhani text-xl text-white group-hover:text-red-400">
+          🎥 Transcript
+        </h3>
+        <p class="text-sm text-slate-400">
+          Descarga el transcript de la clase en formato VTT para revisar el contenido.
+        </p>
+      </a>
+      <a
+        href="/docs/syllabus"
+        class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-purple-500/50 hover:bg-white/10"
+      >
+        <h3 class="mb-2 font-rajdhani text-xl text-white group-hover:text-purple-400">
+          📖 Syllabus
+        </h3>
+        <p class="text-sm text-slate-400">
+          Revisa el programa completo del curso y las próximas clases.
+        </p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

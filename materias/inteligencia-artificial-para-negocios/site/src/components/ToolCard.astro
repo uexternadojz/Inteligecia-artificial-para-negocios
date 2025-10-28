@@ -1,0 +1,438 @@
+---
+interface Tool {
+  name: string;
+  category: "no-code" | "low-code" | "ide" | "conversational";
+  url: string;
+  logo: string;
+  description: string;
+  pricing: string;
+  stack: string[];
+  idealFor: string[];
+  limitations: string[];
+  promptExample?: string;
+}
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props as Props;
+
+const categoryLabels = {
+  "no-code": "No-Code",
+  "low-code": "Low-Code",
+  ide: "IDE",
+  conversational: "Conversational",
+};
+
+const categoryColors = {
+  "no-code": "red",
+  "low-code": "cyan",
+  ide: "purple",
+  conversational: "green",
+};
+---
+
+<article
+  class="tool-card panel-orbital group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-red-400/50 hover:shadow-[0_0_45px_rgba(237,32,36,0.3)]"
+  data-category={tool.category}
+>
+  {/* Header with logo */}
+  <div class="tool-header">
+    <div class="tool-logo-wrapper">
+      <img
+        src={tool.logo}
+        alt={`${tool.name} logo`}
+        class="tool-logo"
+        loading="lazy"
+      />
+    </div>
+    <div class="tool-header-content">
+      <h3 class="tool-name">
+        <a
+          href={tool.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tool-link"
+        >
+          {tool.name}
+          <svg class="tool-external-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </h3>
+      <span
+        class:list={[
+          "tool-category-badge",
+          `category-${categoryColors[tool.category]}`,
+        ]}
+      >
+        {categoryLabels[tool.category]}
+      </span>
+    </div>
+  </div>
+
+  {/* Description */}
+  <p class="tool-description">{tool.description}</p>
+
+  {/* Pricing */}
+  <div class="tool-pricing">
+    <svg class="tool-pricing-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="tool-pricing-text">{tool.pricing}</span>
+  </div>
+
+  {/* Stack tags */}
+  <div class="tool-stack">
+    <span class="tool-stack-label">Stack:</span>
+    <div class="tool-stack-tags">
+      {tool.stack.slice(0, 3).map((tech) => (
+        <span class="tool-stack-tag">{tech}</span>
+      ))}
+      {tool.stack.length > 3 && (
+        <span class="tool-stack-tag tool-stack-tag-more">
+          +{tool.stack.length - 3}
+        </span>
+      )}
+    </div>
+  </div>
+
+  {/* Collapsible details */}
+  <details class="tool-details">
+    <summary class="tool-details-toggle">
+      <span>Ver detalles</span>
+      <svg class="tool-details-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+
+    <div class="tool-details-content">
+      {/* Ideal For */}
+      <div class="tool-section">
+        <h4 class="tool-section-title">✅ Ideal para:</h4>
+        <ul class="tool-list">
+          {tool.idealFor.map((item) => (
+            <li class="tool-list-item">{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Limitations */}
+      <div class="tool-section">
+        <h4 class="tool-section-title">⚠️ Limitaciones:</h4>
+        <ul class="tool-list">
+          {tool.limitations.map((item) => (
+            <li class="tool-list-item">{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  {/* Glow effect on hover */}
+  <div class="tool-glow" aria-hidden="true" />
+</article>
+
+<style>
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 300px;
+  }
+
+  .tool-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tool-logo-wrapper {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 8px;
+    transition: all 0.3s;
+  }
+
+  .tool-card:hover .tool-logo-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+
+  .tool-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .tool-header-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .tool-name {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .tool-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .tool-link:hover {
+    color: #ED2024;
+  }
+
+  .tool-external-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    transform: translateY(2px);
+    transition: all 0.2s;
+  }
+
+  .tool-link:hover .tool-external-icon {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tool-category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    border: 1px solid;
+  }
+
+  .category-red {
+    color: #ED2024;
+    border-color: rgba(237, 32, 36, 0.4);
+    background: rgba(237, 32, 36, 0.1);
+  }
+
+  .category-cyan {
+    color: #00BCD4;
+    border-color: rgba(0, 188, 212, 0.4);
+    background: rgba(0, 188, 212, 0.1);
+  }
+
+  .category-purple {
+    color: #A855F7;
+    border-color: rgba(168, 85, 247, 0.4);
+    background: rgba(168, 85, 247, 0.1);
+  }
+
+  .category-green {
+    color: #10B981;
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .tool-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(203, 213, 225, 0.8);
+  }
+
+  .tool-pricing {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .tool-pricing-icon {
+    width: 18px;
+    height: 18px;
+    color: #00BCD4;
+    flex-shrink: 0;
+  }
+
+  .tool-pricing-text {
+    font-size: 0.8125rem;
+    color: rgba(203, 213, 225, 0.9);
+    font-weight: 500;
+  }
+
+  .tool-stack {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .tool-stack-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(203, 213, 225, 0.5);
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+  }
+
+  .tool-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tool-stack-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: rgba(203, 213, 225, 0.8);
+  }
+
+  .tool-stack-tag-more {
+    background: rgba(237, 32, 36, 0.1);
+    border-color: rgba(237, 32, 36, 0.3);
+    color: #ED2024;
+  }
+
+  .tool-details {
+    margin-top: auto;
+  }
+
+  .tool-details-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.875rem;
+    color: rgba(203, 213, 225, 0.9);
+    transition: all 0.2s;
+    user-select: none;
+  }
+
+  .tool-details-toggle:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  .tool-details-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .tool-details-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+  }
+
+  .tool-details[open] .tool-details-icon {
+    transform: rotate(180deg);
+  }
+
+  .tool-details-content {
+    padding: 1rem 0 0;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .tool-section {
+    margin-bottom: 1rem;
+  }
+
+  .tool-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .tool-section-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .tool-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .tool-list-item {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: rgba(203, 213, 225, 0.7);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .tool-list-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ED2024;
+  }
+
+  .tool-glow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: radial-gradient(
+      circle at top right,
+      rgba(237, 32, 36, 0.1),
+      transparent 60%
+    );
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .tool-card:hover .tool-glow {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tool-card:hover {
+      transform: none;
+    }
+
+    .tool-card:hover .tool-logo-wrapper {
+      transform: none;
+    }
+
+    .tool-details-content {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,373 @@
+---
+interface TimelineEvent {
+  era: string;
+  period: string;
+  title: string;
+  description: string;
+  keyEvents: string[];
+  accent: "red" | "cyan";
+}
+
+interface Props {
+  events: TimelineEvent[];
+}
+
+const { events } = Astro.props as Props;
+---
+
+<section class="timeline-horizontal">
+  <div class="timeline-track">
+    {
+      events.map((event, index) => (
+        <article
+          class:list={[
+            "timeline-event",
+            `accent-${event.accent}`,
+          ]}
+          data-index={index}
+        >
+          {/* Era badge */}
+          <div class="timeline-era">
+            <span class="timeline-era-label">{event.era}</span>
+            <span class="timeline-period">{event.period}</span>
+          </div>
+
+          {/* Connector dot */}
+          <div class="timeline-dot" aria-hidden="true" />
+
+          {/* Content card */}
+          <div class="timeline-card panel-orbital">
+            <h3 class="timeline-title">{event.title}</h3>
+            <p class="timeline-description">{event.description}</p>
+
+            {/* Key events list */}
+            <ul class="timeline-events-list">
+              {event.keyEvents.map((keyEvent) => (
+                <li class="timeline-event-item">
+                  <svg class="timeline-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{keyEvent}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Index indicator */}
+            <div class="timeline-index" aria-hidden="true">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  {/* Navigation hint for mobile */}
+  <div class="timeline-hint" role="status" aria-live="polite">
+    <svg class="timeline-hint-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+    <span class="timeline-hint-text">Desliza para ver la evolución</span>
+  </div>
+</section>
+
+<style>
+  .timeline-horizontal {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 2rem 0 3rem;
+    margin: 2rem 0;
+  }
+
+  /* Custom scrollbar */
+  .timeline-horizontal::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .timeline-horizontal::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  .timeline-horizontal::-webkit-scrollbar-thumb {
+    background: rgba(237, 32, 36, 0.4);
+    border-radius: 4px;
+  }
+
+  .timeline-horizontal::-webkit-scrollbar-thumb:hover {
+    background: rgba(237, 32, 36, 0.6);
+  }
+
+  .timeline-track {
+    display: flex;
+    gap: 4rem;
+    padding: 0 2rem;
+    min-width: max-content;
+    position: relative;
+  }
+
+  /* Timeline line */
+  .timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(237, 32, 36, 0.3) 0%,
+      rgba(237, 32, 36, 0.6) 25%,
+      rgba(0, 188, 212, 0.6) 75%,
+      rgba(0, 188, 212, 0.3) 100%
+    );
+  }
+
+  .timeline-event {
+    position: relative;
+    width: 320px;
+    flex-shrink: 0;
+    animation: fadeInUp 0.8s ease-out backwards;
+  }
+
+  .timeline-event:nth-child(1) { animation-delay: 0.1s; }
+  .timeline-event:nth-child(2) { animation-delay: 0.2s; }
+  .timeline-event:nth-child(3) { animation-delay: 0.3s; }
+  .timeline-event:nth-child(4) { animation-delay: 0.4s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .timeline-era {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-era-label {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .accent-red .timeline-era-label {
+    color: #ED2024;
+    text-shadow: 0 0 20px rgba(237, 32, 36, 0.5);
+  }
+
+  .accent-cyan .timeline-era-label {
+    color: #00BCD4;
+    text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+  }
+
+  .timeline-period {
+    font-size: 0.75rem;
+    color: rgba(203, 213, 225, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #050509;
+    z-index: 2;
+    transition: all 0.3s;
+  }
+
+  .accent-red .timeline-dot {
+    background: #ED2024;
+    box-shadow: 0 0 20px rgba(237, 32, 36, 0.6);
+  }
+
+  .accent-cyan .timeline-dot {
+    background: #00BCD4;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.6);
+  }
+
+  .timeline-event:hover .timeline-dot {
+    width: 24px;
+    height: 24px;
+    top: 68px;
+  }
+
+  .accent-red .timeline-event:hover .timeline-dot {
+    box-shadow: 0 0 30px rgba(237, 32, 36, 0.8);
+  }
+
+  .accent-cyan .timeline-event:hover .timeline-dot {
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
+  }
+
+  .timeline-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .timeline-event:hover .timeline-card {
+    transform: translateY(-4px);
+  }
+
+  .accent-red .timeline-event:hover .timeline-card {
+    border-color: rgba(237, 32, 36, 0.5);
+    box-shadow: 0 0 35px rgba(237, 32, 36, 0.25);
+  }
+
+  .accent-cyan .timeline-event:hover .timeline-card {
+    border-color: rgba(0, 188, 212, 0.5);
+    box-shadow: 0 0 35px rgba(0, 188, 212, 0.25);
+  }
+
+  .timeline-title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-description {
+    font-size: 0.875rem;
+    color: rgba(203, 213, 225, 0.75);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: rgba(203, 213, 225, 0.7);
+  }
+
+  .timeline-check-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .accent-red .timeline-check-icon {
+    color: #ED2024;
+  }
+
+  .accent-cyan .timeline-check-icon {
+    color: #00BCD4;
+  }
+
+  .timeline-index {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    opacity: 0.1;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .accent-red .timeline-index {
+    color: #ED2024;
+  }
+
+  .accent-cyan .timeline-index {
+    color: #00BCD4;
+  }
+
+  /* Navigation hint */
+  .timeline-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: rgba(203, 213, 225, 0.5);
+    font-size: 0.875rem;
+  }
+
+  .timeline-hint-icon {
+    width: 20px;
+    height: 20px;
+    animation: slideRight 1.5s ease-in-out infinite;
+  }
+
+  @keyframes slideRight {
+    0%, 100% {
+      transform: translateX(0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateX(8px);
+      opacity: 1;
+    }
+  }
+
+  .timeline-hint-text {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 1024px) {
+    .timeline-hint {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-track {
+      gap: 2rem;
+    }
+
+    .timeline-event {
+      width: 280px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-event {
+      animation: none;
+    }
+
+    .timeline-event:hover .timeline-card,
+    .timeline-event:hover .timeline-dot {
+      transform: none;
+    }
+
+    .timeline-hint-icon {
+      animation: none;
+    }
+  }
+</style>

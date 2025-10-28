@@ -1,0 +1,329 @@
+---
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+  tips: string[];
+}
+
+interface Props {
+  steps: Step[];
+}
+
+const { steps } = Astro.props as Props;
+---
+
+<section class="workflow-stepper">
+  {
+    steps.map((step, index) => (
+      <article class="workflow-step" data-step={index}>
+        {/* Step indicator */}
+        <div class="step-indicator">
+          <div class="step-number-wrapper">
+            <span class="step-number">{step.number}</span>
+          </div>
+          {index < steps.length - 1 && (
+            <div class="step-connector" aria-hidden="true" />
+          )}
+        </div>
+
+        {/* Step content */}
+        <div class="step-content panel-orbital">
+          <h3 class="step-title">{step.title}</h3>
+          <p class="step-description">{step.description}</p>
+
+          {/* Tips */}
+          {step.tips && step.tips.length > 0 && (
+            <div class="step-tips">
+              <span class="step-tips-label">💡 Tips:</span>
+              <ul class="step-tips-list">
+                {step.tips.map((tip) => (
+                  <li class="step-tip-item">{tip}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Progress indicator */}
+          <div class="step-progress">
+            <span class="step-progress-text">
+              Paso {index + 1} de {steps.length}
+            </span>
+            <div class="step-progress-bar">
+              <div
+                class="step-progress-fill"
+                style={`width: ${((index + 1) / steps.length) * 100}%`}
+              />
+            </div>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  .workflow-stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .workflow-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    animation: fadeInUp 0.6s ease-out backwards;
+  }
+
+  .workflow-step[data-step="0"] { animation-delay: 0.1s; }
+  .workflow-step[data-step="1"] { animation-delay: 0.2s; }
+  .workflow-step[data-step="2"] { animation-delay: 0.3s; }
+  .workflow-step[data-step="3"] { animation-delay: 0.4s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .step-number-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      rgba(237, 32, 36, 0.2),
+      rgba(237, 32, 36, 0.05)
+    );
+    border: 2px solid rgba(237, 32, 36, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(237, 32, 36, 0.3);
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+
+  .workflow-step:hover .step-number-wrapper {
+    background: linear-gradient(
+      135deg,
+      rgba(237, 32, 36, 0.3),
+      rgba(237, 32, 36, 0.1)
+    );
+    border-color: rgba(237, 32, 36, 0.6);
+    box-shadow: 0 0 40px rgba(237, 32, 36, 0.5);
+    transform: scale(1.05);
+  }
+
+  .step-number {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ED2024;
+    text-shadow: 0 0 20px rgba(237, 32, 36, 0.5);
+  }
+
+  .step-connector {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 60px);
+    background: linear-gradient(
+      180deg,
+      rgba(237, 32, 36, 0.4),
+      rgba(237, 32, 36, 0.1)
+    );
+    z-index: 1;
+  }
+
+  .step-content {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+  }
+
+  .workflow-step:hover .step-content {
+    border-color: rgba(237, 32, 36, 0.4);
+    box-shadow: 0 0 35px rgba(237, 32, 36, 0.2);
+  }
+
+  .step-title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(203, 213, 225, 0.85);
+    margin-bottom: 1.5rem;
+  }
+
+  .step-tips {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid rgba(237, 32, 36, 0.5);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-tips-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .step-tip-item {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(203, 213, 225, 0.75);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .step-tip-item::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ED2024;
+    font-weight: 700;
+  }
+
+  .step-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .step-progress-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(203, 213, 225, 0.5);
+  }
+
+  .step-progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .step-progress-fill {
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(237, 32, 36, 0.8),
+      rgba(237, 32, 36, 0.4)
+    );
+    border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(237, 32, 36, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .workflow-step {
+      grid-template-columns: 60px 1fr;
+      gap: 1rem;
+    }
+
+    .step-number-wrapper {
+      width: 60px;
+      height: 60px;
+    }
+
+    .step-number {
+      font-size: 1.5rem;
+    }
+
+    .step-connector {
+      top: 60px;
+      height: calc(100% - 40px);
+    }
+
+    .step-content {
+      padding: 1.5rem;
+    }
+
+    .step-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .workflow-step {
+      animation: none;
+    }
+
+    .workflow-step:hover .step-number-wrapper {
+      transform: none;
+    }
+
+    .step-progress-fill {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // Animate progress bars on scroll
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: "0px 0px -100px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target.querySelector(".step-progress-fill");
+        if (progressBar instanceof HTMLElement) {
+          const targetWidth = progressBar.style.width;
+          progressBar.style.width = "0%";
+          setTimeout(() => {
+            progressBar.style.width = targetWidth;
+          }, 200);
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".workflow-step").forEach((step) => {
+    observer.observe(step);
+  });
+</script>
