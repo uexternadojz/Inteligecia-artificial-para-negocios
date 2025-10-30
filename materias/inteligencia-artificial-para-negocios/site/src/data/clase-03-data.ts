@@ -7,6 +7,14 @@
 import vinyl03 from "../../assets/vinyls/clase-03/vinilo.webp";
 import halo03 from "../../assets/halos/clase-03.webp";
 
+// Tool logos
+import canvaLogo from "../../assets/logos/canva.png";
+import chatgptLogo from "../../assets/logos/chatgpt.png";
+import gammaLogo from "../../assets/logos/gamma.png";
+import geminiLogo from "../../assets/logos/gemini.png";
+import nanoBananaLogo from "../../assets/logos/nano-banana.png";
+import perplexityLogo from "../../assets/logos/perplexity.png";
+
 // ============================================
 // INTERFACES (Reutilizadas de Clase 02)
 // ============================================
@@ -163,7 +171,7 @@ export const tools: Tool[] = [
     name: "Perplexity.ai",
     category: "conversational",
     url: "https://www.perplexity.ai",
-    logo: `${import.meta.env.BASE_URL}assets/logos/perplexity.png`,
+    logo: perplexityLogo.src,
     description:
       "Motor de investigación profunda con IA que cita 200+ fuentes automáticamente. Deep Research genera informes completos verificables en 3 minutos vs 10-15 min de ChatGPT.",
     pricing: "Free: 5 búsquedas/día | Pro: $20/mes (Deep Research ilimitado)",
@@ -186,7 +194,7 @@ export const tools: Tool[] = [
     name: "ChatGPT Canvas",
     category: "conversational",
     url: "https://chat.openai.com",
-    logo: `${import.meta.env.BASE_URL}assets/logos/chatgpt.png`,
+    logo: chatgptLogo.src,
     description:
       "Modo de edición colaborativa para documentos y código. Ideal para iterar y estructurar contenido de presentaciones antes de diseñar. Mantiene versiones y permite edición directa.",
     pricing: "Free limitado | Plus: $20/mes (Canvas incluido)",
@@ -209,7 +217,7 @@ export const tools: Tool[] = [
     name: "Gamma.app",
     category: "conversational",
     url: "https://gamma.app",
-    logo: `${import.meta.env.BASE_URL}assets/logos/gamma.png`,
+    logo: gammaLogo.src,
     description:
       "Convierte texto estructurado o documentos en presentaciones editables con narrativas sugeridas. Genera imágenes con IA automáticamente. Sin marca de agua molesta vs competidores.",
     pricing: "Free: 400 créditos | Pro: $10/mes (créditos ilimitados)",
@@ -232,7 +240,7 @@ export const tools: Tool[] = [
     name: "Canva Magic Studio",
     category: "low-code",
     url: "https://www.canva.com/magic/",
-    logo: `${import.meta.env.BASE_URL}assets/logos/canva.png`,
+    logo: canvaLogo.src,
     description:
       "Suite visual con IA integrada: Magic Write (copywriting), Magic Media (imágenes IA), Magic Animate (animaciones). Para infografías y diseño con más control creativo que Gamma.",
     pricing: "Free: limitado | Pro: $12.99/mes | Teams: $14.99/usuario/mes",
@@ -255,7 +263,7 @@ export const tools: Tool[] = [
     name: "Nano Banana",
     category: "conversational",
     url: "https://nanobanana.ai",
-    logo: `${import.meta.env.BASE_URL}assets/logos/nano-banana.png`,
+    logo: nanoBananaLogo.src,
     description:
       "Generador de imágenes IA ultra-creativas con coherencia estilística superior. Ideal para fondos de diapositivas e ilustraciones conceptuales cuando las de Gamma no son suficientes.",
     pricing: "Credits-based: 100 gratis iniciales | ~$0.01 por imagen",
@@ -278,7 +286,7 @@ export const tools: Tool[] = [
     name: "Gemini (Google)",
     category: "conversational",
     url: "https://gemini.google.com",
-    logo: `${import.meta.env.BASE_URL}assets/logos/gemini.png`,
+    logo: geminiLogo.src,
     description:
       "IA integrada nativamente a Google Slides y Docs. Soporta co-creación y edición colaborativa en tiempo real. Ideal si ya trabajas en ecosistema Google Workspace.",
     pricing: "Free con cuenta Google | Workspace: incluido en plan corporativo",

@@ -1,3 +1,5 @@
+import julianPhoto from "../../assets/profile/julian.webp";
+
 export const professor = {
   name: "Julián Zuluaga",
   title: "Fundador & AI Researcher — Orbital Lab",
@@ -9,7 +11,7 @@ export const professor = {
     "Docente en minería de datos e IA aplicada, combinando pedagogía visual con proyectos reales.",
     "En Orbital Lab lidera la narrativa y el diseño de experiencias IA centradas en las personas.",
   ],
-  photo: `${import.meta.env.BASE_URL}assets/profile/julian.webp`,
+  photo: julianPhoto,
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/juli%C3%A1n-david-zuluaga-ospina-563a13179/" },
     { label: "Orbital Lab", href: "https://orbitallab.ai" },

@@ -1,6 +1,13 @@
 ---
 import { hudMetrics, toolkit } from "../data/course";
 
+// Hero assets
+import heroVideoPoster from "../../assets/hero/hero-lab.webp";
+import heroVideoWebm from "../../assets/hero/hero-loop.webm";
+import heroVideoMp4 from "../../assets/hero/hero-loop-original.mp4";
+import externadoLogo from "../../assets/brand/externado-logo.png";
+import orbitalLabLogo from "../../assets/logos/orbital-lab.svg";
+
 interface Props {
   title: string;
   tagline: string;
@@ -13,9 +20,9 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
 ---
 
 <section class="hero-orbit relative overflow-hidden">
-  <video class="hero-orbit__video" autoplay muted loop playsinline poster={`${import.meta.env.BASE_URL}assets/hero/hero-lab.webp`}>
-    <source src={`${import.meta.env.BASE_URL}assets/hero/hero-loop.webm`} type="video/webm" />
-    <source src={`${import.meta.env.BASE_URL}assets/hero/hero-loop-original.mp4`} type="video/mp4" />
+  <video class="hero-orbit__video" autoplay muted loop playsinline poster={heroVideoPoster.src}>
+    <source src={heroVideoWebm.src} type="video/webm" />
+    <source src={heroVideoMp4.src} type="video/mp4" />
   </video>
 
   <div class="hero-orbit__overlay" />
@@ -26,9 +33,9 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
       <div class="hero-orbit__alliances-item">
         <span class="hero-orbit__alliances-label">En alianza</span>
         <div class="hero-orbit__alliances-logos">
-          <img src={`${import.meta.env.BASE_URL}assets/externado-logo.png`} alt="Universidad Externado de Colombia" />
+          <img src={externadoLogo.src} alt="Universidad Externado de Colombia" />
           <span class="hero-orbit__alliances-divider" />
-          <img src={`${import.meta.env.BASE_URL}assets/logos/orbital-lab.svg`} alt="Orbital Lab" class="hero-orbit__alliances-orbital" />
+          <img src={orbitalLabLogo.src} alt="Orbital Lab" class="hero-orbit__alliances-orbital" />
         </div>
       </div>
     </div>
