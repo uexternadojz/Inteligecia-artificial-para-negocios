@@ -100,7 +100,7 @@ export const classes: ClassEntry[] = [
     resources: [
       {
         label: "Guía completa Clase 02",
-        href: "/clases/clase-02-vibe-coding",
+        href: `${import.meta.env.BASE_URL}/clases/clase-02-vibe-coding`,
         type: "readme",
       },
       {
@@ -110,7 +110,7 @@ export const classes: ClassEntry[] = [
       },
       {
         label: "Transcripción .vtt",
-        href: "/transcripts/clase-02.vtt",
+        href: `${import.meta.env.BASE_URL}/transcripts/clase-02.vtt`,
         type: "otros",
       },
     ],
@@ -221,7 +221,7 @@ Features: login/signup, CRUD de tareas, categorías/tags, filtros avanzados y da
     resources: [
       {
         label: "Página interactiva Clase 03",
-        href: "/clases/clase-03-ia-generativa-visual",
+        href: `${import.meta.env.BASE_URL}/clases/clase-03-ia-generativa-visual`,
         type: "readme",
       },
       {
