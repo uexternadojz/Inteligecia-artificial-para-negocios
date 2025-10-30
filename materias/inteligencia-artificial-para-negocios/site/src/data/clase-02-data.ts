@@ -345,7 +345,7 @@ export const tools: Tool[] = [
     name: "Cursor",
     category: "ide",
     url: "https://cursor.sh",
-    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.png`,
+    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.svg`,
     description:
       "IDE completo (fork de VS Code) con Cmd+K para edición inline, chat contextual con codebase y Composer para arquitectura de código.",
     pricing: "$20/mes",
@@ -918,7 +918,7 @@ export const glossary: GlossaryEntry[] = [
       "IDE AI-first (fork de VS Code) con Cmd+K, chat contextual y Composer para arquitectura.",
     url: "https://cursor.sh",
     pricing: "$20/mes",
-    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.png`,
+    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.svg`,
   },
   {
     name: "Firebase",
