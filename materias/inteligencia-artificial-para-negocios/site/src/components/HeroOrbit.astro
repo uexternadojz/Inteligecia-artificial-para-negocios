@@ -3,10 +3,12 @@ import { hudMetrics, toolkit } from "../data/course";
 
 // Hero assets
 import heroVideoPoster from "../../assets/hero/hero-lab.webp";
-import heroVideoWebm from "../../assets/hero/hero-loop.webm";
-import heroVideoMp4 from "../../assets/hero/hero-loop-original.mp4";
 import externadoLogo from "../../assets/brand/externado-logo.png";
 import orbitalLabLogo from "../../assets/logos/orbital-lab.svg";
+
+// Video paths (served from public/)
+const heroVideoWebm = `${import.meta.env.BASE_URL}/videos/hero-loop.webm`.replace('//', '/');
+const heroVideoMp4 = `${import.meta.env.BASE_URL}/videos/hero-loop-original.mp4`.replace('//', '/');
 
 interface Props {
   title: string;
@@ -21,8 +23,8 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
 
 <section class="hero-orbit relative overflow-hidden">
   <video class="hero-orbit__video" autoplay muted loop playsinline poster={heroVideoPoster.src}>
-    <source src={heroVideoWebm.src} type="video/webm" />
-    <source src={heroVideoMp4.src} type="video/mp4" />
+    <source src={heroVideoWebm} type="video/webm" />
+    <source src={heroVideoMp4} type="video/mp4" />
   </video>
 
   <div class="hero-orbit__overlay" />
