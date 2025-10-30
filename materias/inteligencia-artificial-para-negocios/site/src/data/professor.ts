@@ -1,4 +1,4 @@
-import julianPhoto from "../../assets/profile/julian.webp";
+import julianPhoto from "../../assets/profile/julian.jpg";
 
 export const professor = {
   name: "Julián Zuluaga",
