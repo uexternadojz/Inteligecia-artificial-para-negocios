@@ -88,6 +88,10 @@ site/public/generated/
 *.mkv
 *.flv
 
+# EXCEPCIÓN: Permitir videos de hero en sites (assets de producción)
+!materias/*/site/public/videos/*.mp4
+!materias/*/site/public/videos/*.webm
+
 # Archivos de imagen pesados originales (mantener solo optimizados)
 *-original.png
 *-original.jpg
