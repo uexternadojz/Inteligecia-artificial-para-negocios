@@ -1,6 +1,6 @@
-## Clase 02 — Placeholder
+## Clase 02 — Arte Vibe Coding
 
-- Generado automáticamente con Pillow (`2025-10-28`) para desbloquear el diseño del sitio.
-- Archivo principal: `vinilo.webp` (1600×2000). Copia editable: `vinilo-placeholder.png`.
-- Reemplazar por ilustración IA definitiva (concepto: estudio Vibe Coding, DJ tech, tonos rojo/cian).
-- Al actualizar, conservar naming (`vinilo.webp`) y mover la versión previa a `vinilo-placeholder.png` si se desea mantener historial.
+- Ilustración generada con Gemini (`2025-10-28`). Refiere a cabina DJ orbital mezclando prompts con halos rojo/cian.
+- Versiones optimizadas: `vinilo.webp` (1600×2000) + `vinilo.png` (backup). Fuente original en `original/gemini-vibe-coding.png`.
+- El placeholder previo se conserva como `vinilo-placeholder.png` si se requiere historial.
+- Mantener nombre `vinilo.webp` para compatibilidad con el front.

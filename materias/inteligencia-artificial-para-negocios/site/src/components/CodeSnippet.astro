@@ -1,0 +1,206 @@
+---
+interface Props {
+  title: string;
+  badExample: string;
+  goodExample: string;
+  explanation: string;
+  language?: string;
+}
+
+const { title, badExample, goodExample, explanation, language = "plaintext" } = Astro.props as Props;
+---
+
+<article class="code-snippet panel-orbital">
+  <header class="code-snippet-header">
+    <h4 class="code-snippet-title">{title}</h4>
+  </header>
+
+  <div class="code-snippet-grid">
+    {/* Bad Example */}
+    <div class="code-example code-example-bad">
+      <div class="code-example-label">
+        <svg class="code-example-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        <span>❌ Evita esto</span>
+      </div>
+      <pre class="code-block"><code>{badExample}</code></pre>
+    </div>
+
+    {/* Good Example */}
+    <div class="code-example code-example-good">
+      <div class="code-example-label">
+        <svg class="code-example-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>✅ Haz esto</span>
+      </div>
+      <pre class="code-block"><code>{goodExample}</code></pre>
+    </div>
+  </div>
+
+  {/* Explanation */}
+  <div class="code-snippet-explanation">
+    <svg class="explanation-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <p class="explanation-text">{explanation}</p>
+  </div>
+</article>
+
+<style>
+  .code-snippet {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .code-snippet-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .code-snippet-title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .code-snippet-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .code-snippet-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .code-example {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .code-example-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+  }
+
+  .code-example-bad .code-example-label {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .code-example-good .code-example-label {
+    color: #10B981;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  .code-example-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .code-block {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: rgba(203, 213, 225, 0.9);
+    position: relative;
+  }
+
+  .code-example-bad .code-block {
+    border-left: 3px solid rgba(239, 68, 68, 0.5);
+  }
+
+  .code-example-good .code-block {
+    border-left: 3px solid rgba(16, 185, 129, 0.5);
+  }
+
+  .code-block code {
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Custom scrollbar for code blocks */
+  .code-block::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .code-block::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  .code-block::-webkit-scrollbar-thumb {
+    background: rgba(237, 32, 36, 0.4);
+    border-radius: 4px;
+  }
+
+  .code-block::-webkit-scrollbar-thumb:hover {
+    background: rgba(237, 32, 36, 0.6);
+  }
+
+  .code-snippet-explanation {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(0, 188, 212, 0.05);
+    border-left: 3px solid rgba(0, 188, 212, 0.5);
+    border-radius: 8px;
+  }
+
+  .explanation-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #00BCD4;
+    margin-top: 2px;
+  }
+
+  .explanation-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: rgba(203, 213, 225, 0.85);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .code-snippet {
+      padding: 1.5rem;
+    }
+
+    .code-snippet-title {
+      font-size: 1.25rem;
+    }
+
+    .code-block {
+      padding: 1rem;
+      font-size: 0.8125rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>

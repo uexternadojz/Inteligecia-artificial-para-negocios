@@ -54,7 +54,11 @@ const { classes } = Astro.props as Props;
                     : "vinyl-card__status--draft",
               ]}
             >
-              {entry.status === "published" ? "Disponible" : entry.status === "upcoming" ? "Próxima" : "En producción"}
+              {entry.status === "published"
+                ? "Disponible"
+                : entry.status === "upcoming"
+                  ? "Próxima"
+                  : "En progreso"}
             </span>
           </div>
 
@@ -102,6 +106,10 @@ const { classes } = Astro.props as Props;
                 <div class="vinyl-modal__hero-overlay" />
               </div>
 
+              {entry.detail?.overview && (
+                <p class="vinyl-modal__overview">{entry.detail.overview}</p>
+              )}
+
               <section class="vinyl-modal__section">
                 <h4>Stack</h4>
                 <div class="vinyl-modal__chips">
@@ -119,6 +127,56 @@ const { classes } = Astro.props as Props;
                   ))}
                 </ul>
               </section>
+
+              {entry.detail?.sections && (
+                <section class="vinyl-modal__section">
+                  <h4>Focus de la clase</h4>
+                  <div class="vinyl-modal__grid">
+                    {entry.detail.sections.map((section) => (
+                      <article class="vinyl-modal__card">
+                        <h5>{section.title}</h5>
+                        <ul>
+                          {section.items.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {entry.detail?.cases && (
+                <section class="vinyl-modal__section">
+                  <h4>Casos de uso</h4>
+                  <div class="vinyl-modal__grid vinyl-modal__grid--cases">
+                    {entry.detail.cases.map((c) => (
+                      <article class="vinyl-modal__case">
+                        <header>
+                          <span>{c.title}</span>
+                          <h5>{c.context}</h5>
+                        </header>
+                        <p class="vinyl-modal__case-tools">{c.tool}</p>
+                        <p class="vinyl-modal__case-output">{c.output}</p>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {entry.detail?.prompts && (
+                <section class="vinyl-modal__section">
+                  <h4>Prompts de ejemplo</h4>
+                  <div class="vinyl-modal__prompts">
+                    {entry.detail.prompts.map((prompt) => (
+                      <article>
+                        <header>{prompt.label}</header>
+                        <pre>{prompt.content}</pre>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <section class="vinyl-modal__section">
                 <h4>Recursos</h4>

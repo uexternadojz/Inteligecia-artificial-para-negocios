@@ -1,0 +1,499 @@
+---
+interface GlossaryEntry {
+  name: string;
+  category: string;
+  description: string;
+  url: string;
+  pricing: string;
+  logo: string;
+}
+
+interface Props {
+  entries: GlossaryEntry[];
+}
+
+const { entries } = Astro.props as Props;
+
+// Group entries alphabetically
+const grouped = entries.reduce((acc, entry) => {
+  const firstLetter = entry.name[0].toUpperCase();
+  if (!acc[firstLetter]) {
+    acc[firstLetter] = [];
+  }
+  acc[firstLetter].push(entry);
+  return acc;
+}, {} as Record<string, GlossaryEntry[]>);
+
+const letters = Object.keys(grouped).sort();
+---
+
+<section class="glossary-list">
+  {/* Search and filters */}
+  <div class="glossary-controls">
+    <div class="search-wrapper">
+      <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="text"
+        placeholder="Buscar herramienta..."
+        class="search-input"
+        data-search
+      />
+    </div>
+
+    {/* Category filters */}
+    <div class="category-filters">
+      <button class="category-filter active" data-category="all">
+        Todas
+      </button>
+      <button class="category-filter" data-category="No-Code">
+        No-Code
+      </button>
+      <button class="category-filter" data-category="Low-Code">
+        Low-Code
+      </button>
+      <button class="category-filter" data-category="IDE">
+        IDE
+      </button>
+      <button class="category-filter" data-category="Conversational">
+        Conversational
+      </button>
+      <button class="category-filter" data-category="Backend">
+        Backend
+      </button>
+    </div>
+  </div>
+
+  {/* Letter navigation */}
+  <nav class="letter-navigation" aria-label="Navegación alfabética">
+    {
+      letters.map((letter) => (
+        <a href={`#letter-${letter}`} class="letter-link">
+          {letter}
+        </a>
+      ))
+    }
+  </nav>
+
+  {/* Glossary entries */}
+  <div class="glossary-entries">
+    {
+      letters.map((letter) => (
+        <div class="letter-section" id={`letter-${letter}`}>
+          <h3 class="letter-heading">{letter}</h3>
+          <div class="entries-grid">
+            {grouped[letter].map((entry) => (
+              <article
+                class="entry-card panel-orbital"
+                data-name={entry.name.toLowerCase()}
+                data-category={entry.category}
+              >
+                <div class="entry-header">
+                  <div class="entry-logo-wrapper">
+                    <img
+                      src={entry.logo}
+                      alt={`${entry.name} logo`}
+                      class="entry-logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="entry-header-content">
+                    <h4 class="entry-name">
+                      <a
+                        href={entry.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="entry-link"
+                      >
+                        {entry.name}
+                        <svg class="external-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </h4>
+                    <span class="entry-category">{entry.category}</span>
+                  </div>
+                </div>
+
+                <p class="entry-description">{entry.description}</p>
+
+                <div class="entry-pricing">
+                  <svg class="pricing-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{entry.pricing}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* Empty state */}
+  <div class="empty-state hidden" data-empty>
+    <svg class="empty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <p class="empty-text">No se encontraron herramientas con ese criterio</p>
+  </div>
+</section>
+
+<style>
+  .glossary-list {
+    margin: 2rem 0;
+  }
+
+  .glossary-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .glossary-controls {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  .search-wrapper {
+    position: relative;
+    flex: 1;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: rgba(203, 213, 225, 0.5);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    color: white;
+    transition: all 0.2s;
+  }
+
+  .search-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(237, 32, 36, 0.5);
+    box-shadow: 0 0 20px rgba(237, 32, 36, 0.2);
+  }
+
+  .search-input::placeholder {
+    color: rgba(203, 213, 225, 0.4);
+  }
+
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .category-filter {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: rgba(203, 213, 225, 0.75);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .category-filter:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(237, 32, 36, 0.4);
+    color: white;
+  }
+
+  .category-filter.active {
+    background: rgba(237, 32, 36, 0.2);
+    border-color: rgba(237, 32, 36, 0.5);
+    color: #ED2024;
+  }
+
+  .letter-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .letter-link {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: rgba(203, 213, 225, 0.6);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .letter-link:hover {
+    background: rgba(237, 32, 36, 0.1);
+    color: #ED2024;
+  }
+
+  .letter-section {
+    margin-bottom: 3rem;
+  }
+
+  .letter-heading {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(237, 32, 36, 0.3);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(237, 32, 36, 0.2);
+  }
+
+  .entries-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .entries-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .entries-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .entry-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .entry-card:hover {
+    border-color: rgba(237, 32, 36, 0.4);
+    box-shadow: 0 0 35px rgba(237, 32, 36, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .entry-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .entry-logo-wrapper {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .entry-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .entry-header-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .entry-name {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .entry-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .entry-link:hover {
+    color: #ED2024;
+  }
+
+  .external-icon {
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  .entry-link:hover .external-icon {
+    opacity: 1;
+  }
+
+  .entry-category {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background: rgba(0, 188, 212, 0.1);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #00BCD4;
+  }
+
+  .entry-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(203, 213, 225, 0.75);
+    margin: 0;
+  }
+
+  .entry-pricing {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    color: rgba(203, 213, 225, 0.8);
+  }
+
+  .pricing-icon {
+    width: 18px;
+    height: 18px;
+    color: #00BCD4;
+    flex-shrink: 0;
+  }
+
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .empty-state.hidden {
+    display: none;
+  }
+
+  .empty-icon {
+    width: 64px;
+    height: 64px;
+    color: rgba(203, 213, 225, 0.3);
+  }
+
+  .empty-text {
+    font-size: 1.125rem;
+    color: rgba(203, 213, 225, 0.5);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .entry-card:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  // Search functionality
+  const searchInput = document.querySelector("[data-search]") as HTMLInputElement;
+  const categoryButtons = document.querySelectorAll(".category-filter");
+  const entryCards = document.querySelectorAll(".entry-card");
+  const letterSections = document.querySelectorAll(".letter-section");
+  const emptyState = document.querySelector("[data-empty]") as HTMLElement;
+
+  let activeCategory = "all";
+
+  function filterEntries() {
+    const searchTerm = searchInput?.value.toLowerCase() || "";
+    let visibleCount = 0;
+    const visibleLetters = new Set<string>();
+
+    entryCards.forEach((card) => {
+      const name = card.getAttribute("data-name") || "";
+      const category = card.getAttribute("data-category") || "";
+
+      const matchesSearch = name.includes(searchTerm);
+      const matchesCategory =
+        activeCategory === "all" || category === activeCategory;
+
+      if (matchesSearch && matchesCategory) {
+        (card as HTMLElement).style.display = "flex";
+        visibleCount++;
+        const letter = card.closest(".letter-section")?.id.replace("letter-", "");
+        if (letter) visibleLetters.add(letter);
+      } else {
+        (card as HTMLElement).style.display = "none";
+      }
+    });
+
+    // Show/hide letter sections
+    letterSections.forEach((section) => {
+      const letter = section.id.replace("letter-", "");
+      (section as HTMLElement).style.display = visibleLetters.has(letter)
+        ? "block"
+        : "none";
+    });
+
+    // Show/hide empty state
+    if (emptyState) {
+      emptyState.classList.toggle("hidden", visibleCount > 0);
+    }
+  }
+
+  // Search input handler
+  if (searchInput) {
+    searchInput.addEventListener("input", filterEntries);
+  }
+
+  // Category filter handlers
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      categoryButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      activeCategory = button.getAttribute("data-category") || "all";
+      filterEntries();
+    });
+  });
+</script>

@@ -1,0 +1,421 @@
+---
+interface Chapter {
+  time: string;
+  title: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  duration: string;
+  date: string;
+  thumbnail: string;
+  driveUrl: string;
+  chapters?: Chapter[];
+}
+
+const { title, description, duration, date, thumbnail, driveUrl, chapters = [] } = Astro.props as Props;
+---
+
+<article class="video-card panel-orbital">
+  <div class="video-grid">
+    {/* Thumbnail with play button */}
+    <div class="video-thumbnail-wrapper">
+      <img src={thumbnail} alt={title} class="video-thumbnail" loading="lazy" />
+      <a
+        href={driveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="video-play-button"
+        aria-label="Ver grabación en Google Drive"
+      >
+        <svg class="play-icon" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </a>
+      <div class="video-duration-badge">{duration}</div>
+    </div>
+
+    {/* Content */}
+    <div class="video-content">
+      <header class="video-header">
+        <h3 class="video-title">{title}</h3>
+        <time class="video-date" datetime={date}>{date}</time>
+      </header>
+
+      <p class="video-description">{description}</p>
+
+      {/* CTA */}
+      <div class="video-actions">
+        <a
+          href={driveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-button video-button-primary"
+        >
+          <svg class="button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Ver en Google Drive
+        </a>
+        <button class="video-button video-button-secondary" data-toggle="chapters">
+          <svg class="button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          Ver Capítulos
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Chapters (collapsible) */}
+  {
+    chapters.length > 0 && (
+      <details class="video-chapters" data-chapters>
+        <summary class="video-chapters-toggle">
+          <span class="chapters-toggle-text">Índice de Contenido ({chapters.length} capítulos)</span>
+          <svg class="chapters-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="chapters-content">
+          <ul class="chapters-list">
+            {chapters.map((chapter, index) => (
+              <li class="chapter-item">
+                <span class="chapter-time">{chapter.time}</span>
+                <span class="chapter-title">{chapter.title}</span>
+                <span class="chapter-index">{String(index + 1).padStart(2, "0")}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+    )
+  }
+</article>
+
+<style>
+  .video-card {
+    padding: 0;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .video-grid {
+    display: grid;
+    gap: 0;
+  }
+
+  @media (min-width: 768px) {
+    .video-grid {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+
+  .video-thumbnail-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .video-thumbnail-wrapper {
+      aspect-ratio: auto;
+      height: 100%;
+    }
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .video-card:hover .video-thumbnail {
+    transform: scale(1.05);
+  }
+
+  .video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(237, 32, 36, 0.9);
+    border-radius: 50%;
+    transition: all 0.3s;
+    box-shadow: 0 0 40px rgba(237, 32, 36, 0.6);
+    z-index: 2;
+  }
+
+  .video-play-button:hover {
+    background: rgba(237, 32, 36, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 60px rgba(237, 32, 36, 0.8);
+  }
+
+  .play-icon {
+    width: 36px;
+    height: 36px;
+    color: white;
+    margin-left: 4px;
+  }
+
+  .video-duration-badge {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 6px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  .video-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .video-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .video-title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .video-date {
+    font-size: 0.875rem;
+    color: rgba(203, 213, 225, 0.6);
+  }
+
+  .video-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(203, 213, 225, 0.85);
+  }
+
+  .video-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .video-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .video-button-primary {
+    background: linear-gradient(135deg, #ED2024, #b31619);
+    color: white;
+    box-shadow: 0 0 30px rgba(237, 32, 36, 0.4);
+  }
+
+  .video-button-primary:hover {
+    background: linear-gradient(135deg, #ff2428, #ED2024);
+    box-shadow: 0 0 45px rgba(237, 32, 36, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .video-button-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .video-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 188, 212, 0.5);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .button-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .video-chapters {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .video-chapters-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .video-chapters-toggle:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .video-chapters-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .chapters-toggle-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  .chapters-toggle-icon {
+    width: 24px;
+    height: 24px;
+    color: rgba(203, 213, 225, 0.6);
+    transition: transform 0.3s;
+  }
+
+  .video-chapters[open] .chapters-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .chapters-content {
+    padding: 0 2rem 2rem;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .chapters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .chapter-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+  }
+
+  .chapter-item:hover {
+    background: rgba(237, 32, 36, 0.05);
+  }
+
+  .chapter-item:last-child {
+    border-bottom: none;
+  }
+
+  .chapter-time {
+    font-family: "Fira Code", monospace;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ED2024;
+  }
+
+  .chapter-title {
+    font-size: 0.9375rem;
+    color: rgba(203, 213, 225, 0.85);
+  }
+
+  .chapter-index {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgba(203, 213, 225, 0.2);
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .video-content {
+      padding: 1.5rem;
+    }
+
+    .video-title {
+      font-size: 1.5rem;
+    }
+
+    .video-actions {
+      flex-direction: column;
+    }
+
+    .video-button {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .chapter-item {
+      grid-template-columns: 70px 1fr;
+      gap: 0.75rem;
+    }
+
+    .chapter-index {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .video-card:hover .video-thumbnail,
+    .video-play-button:hover,
+    .video-button:hover {
+      transform: none;
+    }
+
+    .chapters-content {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  // Open chapters when button is clicked
+  document.querySelectorAll('[data-toggle="chapters"]').forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = document.querySelector("[data-chapters]");
+      if (details instanceof HTMLDetailsElement) {
+        details.open = !details.open;
+      }
+    });
+  });
+</script>

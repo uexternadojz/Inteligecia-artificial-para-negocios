@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClassHero from "../../components/ClassHero.astro";
+import BentoGrid from "../../components/BentoGrid.astro";
+import TimelineHorizontal from "../../components/TimelineHorizontal.astro";
+import ToolCard from "../../components/ToolCard.astro";
+import ComparisonMatrix from "../../components/ComparisonMatrix.astro";
+import WorkflowStepper from "../../components/WorkflowStepper.astro";
+import CodeSnippet from "../../components/CodeSnippet.astro";
+import VideoCard from "../../components/VideoCard.astro";
+import ChallengeCard from "../../components/ChallengeCard.astro";
+import GlossaryList from "../../components/GlossaryList.astro";
+
+import {
+  classMetadata,
+  fundamentals,
+  timeline,
+  tools,
+  comparisonData,
+  workflow,
+  promptExamples,
+  useCases,
+  troubleshooting,
+  roadmap,
+  glossary,
+  challenge,
+} from "../../data/clase-02-data";
+
+const pageTitle = "Clase 02: Vibe Coding - IA que Programa";
+const pageDescription =
+  "Guía pedagógica completa de Vibe Coding: desarrollo asistido por IA. 15+ herramientas, casos de uso, metodología y mejores prácticas.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero de Clase con vinilo de fondo -->
+  <ClassHero {...classMetadata} />
+
+  <!-- Breadcrumb -->
+  <div class="page-container">
+    <nav class="flex items-center gap-2 text-sm text-slate-400">
+      <a href="/" class="hover:text-red-400 transition">Inicio</a>
+      <span>/</span>
+      <a href="/#coleccion" class="hover:text-red-400 transition">Colección</a>
+      <span>/</span>
+      <span class="text-slate-200">Clase 02</span>
+    </nav>
+  </div>
+
+  <!-- 1. Fundamentos Conceptuales -->
+  <section id="fundamentos" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-red-200">
+        01 · Fundamentos
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Fundamentos Conceptuales</h2>
+      <p class="mt-2 text-slate-300/80">
+        ¿Qué es Vibe Coding y por qué está cambiando el desarrollo de software?
+      </p>
+    </header>
+    <BentoGrid items={fundamentals} />
+  </section>
+
+  <!-- 2. Historia y Contexto -->
+  <section id="historia" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200">
+        02 · Historia
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">De código manual a Vibe Coding</h2>
+      <p class="mt-2 text-slate-300/80">
+        70 años de evolución en programación resumidos en 4 eras
+      </p>
+    </header>
+    <TimelineHorizontal items={timeline} />
+  </section>
+
+  <!-- 3. Ecosistema de Herramientas -->
+  <section id="herramientas" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-red-200">
+        03 · Ecosistema
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">15+ Herramientas de Vibe Coding</h2>
+      <p class="mt-2 text-slate-300/80">
+        El toolkit completo para desarrollo asistido por IA en 2025
+      </p>
+    </header>
+
+    <!-- Filtros de categoría -->
+    <div class="mb-6 flex flex-wrap gap-3">
+      <button data-filter="all" class="filter-btn active">Todas</button>
+      <button data-filter="no-code" class="filter-btn">No-Code</button>
+      <button data-filter="low-code" class="filter-btn">Low-Code</button>
+      <button data-filter="ide" class="filter-btn">IDEs</button>
+      <button data-filter="conversational" class="filter-btn">Conversacionales</button>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {tools.map((tool) => (
+        <ToolCard {...tool} />
+      ))}
+    </div>
+  </section>
+
+  <!-- 4. Análisis Comparativo -->
+  <section id="comparacion" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200">
+        04 · Comparación
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">¿Cuál herramienta usar?</h2>
+      <p class="mt-2 text-slate-300/80">
+        Matriz de decisión por facilidad, control y velocidad
+      </p>
+    </header>
+    <ComparisonMatrix data={comparisonData} />
+  </section>
+
+  <!-- 5. Metodología y Mejores Prácticas -->
+  <section id="metodologia" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-red-200">
+        05 · Metodología
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Workflow de 7 Etapas</h2>
+      <p class="mt-2 text-slate-300/80">
+        De la idea al deploy: cómo construir con Vibe Coding
+      </p>
+    </header>
+    <WorkflowStepper steps={workflow.steps} />
+
+    <!-- Principios clave -->
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <div class="panel-orbital rounded-2xl p-6">
+        <h3 class="font-rajdhani text-xl text-white">✅ Principios Clave</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          {workflow.principles.map((principle) => (
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">•</span>
+              <span>{principle}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="panel-orbital rounded-2xl border-red-500/30 bg-red-500/10 p-6">
+        <h3 class="font-rajdhani text-xl text-red-200">❌ Anti-Patterns</h3>
+        <ul class="mt-4 space-y-2 text-sm text-red-100/80">
+          {workflow.antiPatterns.map((antiPattern) => (
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">•</span>
+              <span>{antiPattern}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Casos de Uso por Industria -->
+  <section id="casos-de-uso" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200">
+        06 · Casos de Uso
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Aplicaciones por Industria</h2>
+      <p class="mt-2 text-slate-300/80">
+        Ejemplos reales de Healthcare, E-Commerce, Education, Finance y HR
+      </p>
+    </header>
+
+    <!-- Tabs de industrias -->
+    <div class="use-cases-tabs">
+      <div class="tabs-header flex flex-wrap gap-2 border-b border-white/10 pb-4">
+        {Object.keys(useCases).map((industry, index) => (
+          <button
+            data-tab={industry}
+            class:list={["tab-btn", index === 0 && "active"]}
+          >
+            {useCases[industry].label}
+          </button>
+        ))}
+      </div>
+
+      <div class="tabs-content mt-6">
+        {Object.entries(useCases).map(([industry, data], index) => (
+          <div
+            data-tab-content={industry}
+            class:list={["tab-content", index !== 0 && "hidden"]}
+          >
+            <div class="grid gap-6 md:grid-cols-2">
+              {data.cases.map((useCase) => (
+                <article class="panel-orbital rounded-2xl p-6">
+                  <h3 class="font-rajdhani text-lg text-white">{useCase.title}</h3>
+                  <p class="mt-2 text-sm text-slate-300/80">{useCase.description}</p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {useCase.tools.map((tool) => (
+                      <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-slate-200">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Patrones de Prompting Avanzados -->
+  <section id="prompting" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-red-200">
+        07 · Prompting
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Patrones de Prompting</h2>
+      <p class="mt-2 text-slate-300/80">
+        Aprende a comunicarte efectivamente con la IA
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      {promptExamples.map((example) => (
+        <div class="panel-orbital rounded-2xl p-6">
+          <h3 class="font-rajdhani text-xl text-white">{example.title}</h3>
+          <p class="mt-2 text-sm text-slate-300/80">{example.description}</p>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            {example.bad && (
+              <div>
+                <span class="text-xs uppercase tracking-wider text-red-400">❌ Mal ejemplo</span>
+                <CodeSnippet code={example.bad} lang="text" />
+              </div>
+            )}
+            <div>
+              <span class="text-xs uppercase tracking-wider text-green-400">✅ Buen ejemplo</span>
+              <CodeSnippet code={example.good} lang="text" />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- 8. Grabación de la Clase -->
+  <section id="grabacion" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200">
+        08 · Grabación
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Ver Clase Completa</h2>
+      <p class="mt-2 text-slate-300/80">
+        Grabación de 2 horas con demos en vivo y ejercicios prácticos
+      </p>
+    </header>
+    <VideoCard
+      thumbnail="/assets/clase-02-thumbnail.webp"
+      duration="2h 15min"
+      driveUrl="[INSERTAR_URL_GOOGLE_DRIVE]"
+      transcriptUrl="/transcripts/clase-02.vtt"
+    />
+  </section>
+
+  <!-- 9. Glosario de Herramientas -->
+  <section id="glosario" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-red-200">
+        09 · Glosario
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Glosario de Herramientas A-Z</h2>
+      <p class="mt-2 text-slate-300/80">
+        Referencia rápida de todas las plataformas mencionadas
+      </p>
+    </header>
+    <GlossaryList items={glossary} />
+  </section>
+
+  <!-- 10. Ejercicio Final Individual -->
+  <section id="ejercicio" class="page-container scroll-mt-24">
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200">
+        10 · Ejercicio
+      </span>
+      <h2 class="mt-4 font-rajdhani text-4xl text-white">Desafío Final: Tu Primer MVP</h2>
+      <p class="mt-2 text-slate-300/80">
+        Pon en práctica todo lo aprendido construyendo una app en 60 minutos
+      </p>
+    </header>
+    <ChallengeCard {...challenge} />
+  </section>
+
+  <!-- Footer con navegación -->
+  <footer class="page-container mt-24">
+    <div class="panel-orbital flex flex-col items-center gap-6 rounded-3xl p-8 text-center md:flex-row md:justify-between md:text-left">
+      <div>
+        <p class="font-rajdhani text-sm uppercase tracking-[0.35em] text-slate-400/70">
+          ¿Ayuda a ver y entender mejor la IA corporativa?
+        </p>
+        <p class="mt-2 text-xs text-slate-500/70">Orbital Lab · Universidad Externado · 2025</p>
+      </div>
+      <div class="flex gap-4">
+        <a
+          href="/#coleccion"
+          class="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm uppercase tracking-[0.3em] text-slate-200 transition hover:border-red-400/70 hover:bg-red-500/20"
+        >
+          ← Volver a colección
+        </a>
+        <a
+          href="/clases/clase-03-ia-generativa-visual"
+          class="rounded-full border border-red-400/60 bg-red-500/20 px-6 py-3 text-sm uppercase tracking-[0.3em] text-red-200 transition hover:bg-red-500/30"
+        >
+          Clase 03 →
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button
+    id="scroll-to-top"
+    class="fixed bottom-8 right-8 hidden rounded-full border border-red-400/60 bg-red-500/90 p-4 shadow-lg transition hover:bg-red-500 hover:scale-110"
+    aria-label="Volver arriba"
+  >
+    <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+</BaseLayout>
+
+<style>
+  .filter-btn {
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: rgba(226, 232, 240, 0.75);
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: rgba(237, 32, 36, 0.6);
+    background: rgba(237, 32, 36, 0.2);
+    color: rgba(248, 250, 252, 0.85);
+  }
+
+  .filter-btn.active {
+    border-color: rgba(237, 32, 36, 0.75);
+    background: rgba(237, 32, 36, 0.28);
+    color: rgba(255, 229, 229, 0.92);
+  }
+
+  .tab-btn {
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+    color: rgba(226, 232, 240, 0.75);
+    transition: all 0.2s ease;
+  }
+
+  .tab-btn:hover {
+    border-color: rgba(0, 188, 212, 0.6);
+    background: rgba(0, 188, 212, 0.2);
+    color: rgba(224, 255, 255, 0.85);
+  }
+
+  .tab-btn.active {
+    border-color: rgba(0, 188, 212, 0.75);
+    background: rgba(0, 188, 212, 0.28);
+    color: rgba(224, 255, 255, 0.92);
+  }
+
+  .tab-content.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  // Filtros de herramientas
+  const filterButtons = document.querySelectorAll("[data-filter]");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      // Update active state
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Filter tool cards
+      const toolCards = document.querySelectorAll("[data-category]");
+      toolCards.forEach((card) => {
+        if (filter === "all" || card.getAttribute("data-category") === filter) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Tabs de casos de uso
+  const tabButtons = document.querySelectorAll("[data-tab]");
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tab = button.getAttribute("data-tab");
+
+      // Update active state
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Show corresponding content
+      const tabContents = document.querySelectorAll("[data-tab-content]");
+      tabContents.forEach((content) => {
+        if (content.getAttribute("data-tab-content") === tab) {
+          content.classList.remove("hidden");
+        } else {
+          content.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Scroll to top button
+  const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      scrollToTopBtn?.classList.remove("hidden");
+    } else {
+      scrollToTopBtn?.classList.add("hidden");
+    }
+  });
+
+  scrollToTopBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      if (href === "#") return;
+
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+</script>

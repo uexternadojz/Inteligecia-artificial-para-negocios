@@ -106,8 +106,11 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 yarn.lock
+
+# IMPORTANTE: NO ignorar package-lock.json en sites de producción
+# Necesario para builds reproducibles en GitHub Actions
+# package-lock.json se debe versionar
 
 # ============================================================
 # Archivos de sistema

@@ -46,7 +46,12 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
       <p class="max-w-2xl text-lg text-slate-100/85">{tagline}</p>
       <p class="max-w-2xl text-base text-slate-200/75">{description}</p>
       <div class="flex flex-wrap gap-4 pt-4">
-        <a href={ctaPrimary.href} class="hero-orbit__cta hero-orbit__cta--primary">
+        <a
+          href={ctaPrimary.disabled ? undefined : ctaPrimary.href}
+          class:list={["hero-orbit__cta", "hero-orbit__cta--primary", ctaPrimary.disabled && "hero-orbit__cta--disabled"]}
+          aria-disabled={ctaPrimary.disabled ? "true" : undefined}
+          role={ctaPrimary.disabled ? "button" : undefined}
+        >
           {ctaPrimary.label}
         </a>
         {ctaSecondary && (
