@@ -9,7 +9,7 @@ export const professor = {
     "Docente en minería de datos e IA aplicada, combinando pedagogía visual con proyectos reales.",
     "En Orbital Lab lidera la narrativa y el diseño de experiencias IA centradas en las personas.",
   ],
-  photo: "/assets/profile/julian.webp",
+  photo: `${import.meta.env.BASE_URL}assets/profile/julian.webp`,
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/juli%C3%A1n-david-zuluaga-ospina-563a13179/" },
     { label: "Orbital Lab", href: "https://orbitallab.ai" },

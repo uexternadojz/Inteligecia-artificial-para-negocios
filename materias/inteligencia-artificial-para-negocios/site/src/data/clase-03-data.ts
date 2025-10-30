@@ -163,7 +163,7 @@ export const tools: Tool[] = [
     name: "Perplexity.ai",
     category: "conversational",
     url: "https://www.perplexity.ai",
-    logo: "/assets/logos/perplexity.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/perplexity.png\`,
     description:
       "Motor de investigación profunda con IA que cita 200+ fuentes automáticamente. Deep Research genera informes completos verificables en 3 minutos vs 10-15 min de ChatGPT.",
     pricing: "Free: 5 búsquedas/día | Pro: $20/mes (Deep Research ilimitado)",
@@ -186,7 +186,7 @@ export const tools: Tool[] = [
     name: "ChatGPT Canvas",
     category: "conversational",
     url: "https://chat.openai.com",
-    logo: "/assets/logos/chatgpt.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/chatgpt.png\`,
     description:
       "Modo de edición colaborativa para documentos y código. Ideal para iterar y estructurar contenido de presentaciones antes de diseñar. Mantiene versiones y permite edición directa.",
     pricing: "Free limitado | Plus: $20/mes (Canvas incluido)",
@@ -209,7 +209,7 @@ export const tools: Tool[] = [
     name: "Gamma.app",
     category: "conversational",
     url: "https://gamma.app",
-    logo: "/assets/logos/gamma.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/gamma.png\`,
     description:
       "Convierte texto estructurado o documentos en presentaciones editables con narrativas sugeridas. Genera imágenes con IA automáticamente. Sin marca de agua molesta vs competidores.",
     pricing: "Free: 400 créditos | Pro: $10/mes (créditos ilimitados)",
@@ -232,7 +232,7 @@ export const tools: Tool[] = [
     name: "Canva Magic Studio",
     category: "low-code",
     url: "https://www.canva.com/magic/",
-    logo: "/assets/logos/canva.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/canva.png\`,
     description:
       "Suite visual con IA integrada: Magic Write (copywriting), Magic Media (imágenes IA), Magic Animate (animaciones). Para infografías y diseño con más control creativo que Gamma.",
     pricing: "Free: limitado | Pro: $12.99/mes | Teams: $14.99/usuario/mes",
@@ -255,7 +255,7 @@ export const tools: Tool[] = [
     name: "Nano Banana",
     category: "conversational",
     url: "https://nanobanana.ai",
-    logo: "/assets/logos/nano-banana.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/nano-banana.png\`,
     description:
       "Generador de imágenes IA ultra-creativas con coherencia estilística superior. Ideal para fondos de diapositivas e ilustraciones conceptuales cuando las de Gamma no son suficientes.",
     pricing: "Credits-based: 100 gratis iniciales | ~$0.01 por imagen",
@@ -278,7 +278,7 @@ export const tools: Tool[] = [
     name: "Gemini (Google)",
     category: "conversational",
     url: "https://gemini.google.com",
-    logo: "/assets/logos/gemini.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/gemini.png\`,
     description:
       "IA integrada nativamente a Google Slides y Docs. Soporta co-creación y edición colaborativa en tiempo real. Ideal si ya trabajas en ecosistema Google Workspace.",
     pricing: "Free con cuenta Google | Workspace: incluido en plan corporativo",
@@ -589,7 +589,7 @@ export const videoData = {
     "Demostración en vivo del workflow completo: Perplexity Deep Research (Tendencias Digitales 2025) → ChatGPT Canvas (estructura 7 slides) → Gamma.app (generación con template Bubble Gum). Incluye troubleshooting y buenas prácticas.",
   duration: "2h",
   date: "28 Oct 2025",
-  thumbnail: "/assets/clase-03/video-thumbnail.jpg",
+  thumbnail: `${import.meta.env.BASE_URL}assets/clase-03/video-thumbnail.jpg\`,
   driveUrl: "https://drive.google.com/file/d/1k-eIwhFWTwoX2L9Y4nSB7trj8jQr_Glc/preview",
   available: true,
   chapters: [

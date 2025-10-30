@@ -260,7 +260,7 @@ export const tools: Tool[] = [
     name: "Lovable",
     category: "no-code",
     url: "https://lovable.dev",
-    logo: "/assets/logos/lovable.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/lovable.png\`,
     description:
       "Chat conversacional puro para generar apps fullstack completas (frontend + backend + DB) sin código expuesto. Preview en tiempo real y deploy automático.",
     pricing: "Free: 100 tokens/mes | Pro: $20/mes",
@@ -282,7 +282,7 @@ export const tools: Tool[] = [
     name: "Replit Agent",
     category: "no-code",
     url: "https://replit.com/ai",
-    logo: "/assets/logos/replit.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/replit.png\`,
     description:
       "IDE completo en la nube con Agent mode conversacional y Ghostwriter para autocompletado. Soporta 50+ lenguajes con deploy con un click.",
     pricing: "Free limitado | Hacker: $7/mes | Pro: $20/mes",
@@ -303,7 +303,7 @@ export const tools: Tool[] = [
     name: "v0.dev",
     category: "low-code",
     url: "https://v0.dev",
-    logo: "/assets/logos/v0.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/v0.png\`,
     description:
       "Genera componentes React individuales con Next.js + TailwindCSS + shadcn/ui. Código visible, editable y exportable desde el inicio.",
     pricing: "Free: 200 créditos/mes | Pro: $20/mes (Vercel)",
@@ -324,7 +324,7 @@ export const tools: Tool[] = [
     name: "Claude Artifacts",
     category: "conversational",
     url: "https://claude.ai",
-    logo: "/assets/logos/claude.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/claude.png\`,
     description:
       "Genera HTML/React/SVG/Mermaid en 'artifacts' con preview inmediato. Edición iterativa conversacional y share vía URL pública.",
     pricing: "Free limitado | Pro: $20/mes",
@@ -345,7 +345,7 @@ export const tools: Tool[] = [
     name: "Cursor",
     category: "ide",
     url: "https://cursor.sh",
-    logo: "/assets/logos/cursor.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.png\`,
     description:
       "IDE completo (fork de VS Code) con Cmd+K para edición inline, chat contextual con codebase y Composer para arquitectura de código.",
     pricing: "$20/mes",
@@ -366,7 +366,7 @@ export const tools: Tool[] = [
     name: "ChatGPT Canvas",
     category: "conversational",
     url: "https://chat.openai.com",
-    logo: "/assets/logos/chatgpt.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/chatgpt.png\`,
     description:
       "Edición colaborativa de código y documentos con preview lateral. Iteración conversacional para refinar código Python, JavaScript, HTML, CSS.",
     pricing: "Free limitado | Plus: $20/mes",
@@ -387,7 +387,7 @@ export const tools: Tool[] = [
     name: "Windsurf",
     category: "ide",
     url: "https://codeium.com/windsurf",
-    logo: "/assets/logos/windsurf.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/windsurf.png\`,
     description:
       "IDE AI-first con Flow mode para edición multi-archivo y Cascade para chat contextual. Alternative open-source a Cursor con modelos propios.",
     pricing: "Free (ilimitado) | Pro: $15/mes",
@@ -408,7 +408,7 @@ export const tools: Tool[] = [
     name: "GitHub Copilot",
     category: "ide",
     url: "https://github.com/features/copilot",
-    logo: "/assets/logos/copilot.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/copilot.png\`,
     description:
       "Autocompletado inteligente en VS Code, JetBrains, Neovim. Sugiere líneas completas o funciones basadas en contexto y comentarios.",
     pricing: "Free (estudiantes) | $10/mes | $19/mes (Business)",
@@ -429,7 +429,7 @@ export const tools: Tool[] = [
     name: "Bolt.new",
     category: "low-code",
     url: "https://bolt.new",
-    logo: "/assets/logos/bolt.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/bolt.png\`,
     description:
       "Apps fullstack editables con preview en tiempo real. Código visible y modificable con deploy integrado a Netlify/Vercel.",
     pricing: "Free limitado | Pro: información no pública",
@@ -449,7 +449,7 @@ export const tools: Tool[] = [
     name: "Supabase",
     category: "low-code",
     url: "https://supabase.com",
-    logo: "/assets/logos/supabase.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/supabase.png\`,
     description:
       "Backend as a Service (BaaS) con PostgreSQL, autenticación, storage y APIs en tiempo real. Alternative open-source a Firebase.",
     pricing: "Free: 500MB DB | Pro: $25/mes",
@@ -858,7 +858,7 @@ export const videoData = {
     "Sesión de 2 horas donde construimos MVPs en vivo con Lovable, Replit Agent y v0.dev. Incluye demostraciones prácticas, troubleshooting en tiempo real y casos de éxito de estudiantes.",
   duration: "2h 15min",
   date: "23 Oct 2025",
-  thumbnail: "/assets/clase-02/video-thumbnail.jpg",
+  thumbnail: `${import.meta.env.BASE_URL}assets/clase-02/video-thumbnail.jpg\`,
   driveUrl: "https://drive.google.com/file/d/EXAMPLE_ID/view", // Replace with actual URL
   chapters: [
     { time: "00:00", title: "Introducción: ¿Qué es Vibe Coding?" },
@@ -882,7 +882,7 @@ export const glossary: GlossaryEntry[] = [
       "Apps fullstack editables con preview en tiempo real. Código visible y modificable con deploy integrado.",
     url: "https://bolt.new",
     pricing: "Free limitado | Pro: TBD",
-    logo: "/assets/logos/bolt.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/bolt.png\`,
   },
   {
     name: "ChatGPT Canvas",
@@ -891,7 +891,7 @@ export const glossary: GlossaryEntry[] = [
       "Edición colaborativa de código y documentos con preview lateral. Iteración conversacional para Python, JS, HTML, CSS.",
     url: "https://chat.openai.com",
     pricing: "Free limitado | Plus: $20/mes",
-    logo: "/assets/logos/chatgpt.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/chatgpt.png\`,
   },
   {
     name: "Claude Artifacts",
@@ -900,7 +900,7 @@ export const glossary: GlossaryEntry[] = [
       "Genera HTML/React/SVG/Mermaid con preview inmediato. Share vía URL pública.",
     url: "https://claude.ai",
     pricing: "Free limitado | Pro: $20/mes",
-    logo: "/assets/logos/claude.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/claude.png\`,
   },
   {
     name: "Codeium",
@@ -909,7 +909,7 @@ export const glossary: GlossaryEntry[] = [
       "Alternative open-source a GitHub Copilot. Autocompletado inteligente gratis e ilimitado.",
     url: "https://codeium.com",
     pricing: "Free (ilimitado) | Teams: $12/usuario/mes",
-    logo: "/assets/logos/codeium.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/codeium.png\`,
   },
   {
     name: "Cursor",
@@ -918,7 +918,7 @@ export const glossary: GlossaryEntry[] = [
       "IDE AI-first (fork de VS Code) con Cmd+K, chat contextual y Composer para arquitectura.",
     url: "https://cursor.sh",
     pricing: "$20/mes",
-    logo: "/assets/logos/cursor.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/cursor.png\`,
   },
   {
     name: "Firebase",
@@ -927,7 +927,7 @@ export const glossary: GlossaryEntry[] = [
       "Backend as a Service de Google: Firestore, Auth, Storage, Hosting, Functions.",
     url: "https://firebase.google.com",
     pricing: "Free tier generoso | Blaze: pay-as-you-go",
-    logo: "/assets/logos/firebase.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/firebase.png\`,
   },
   {
     name: "GitHub Copilot",
@@ -936,7 +936,7 @@ export const glossary: GlossaryEntry[] = [
       "Autocompletado inteligente en VS Code, JetBrains, Neovim. Powered by OpenAI Codex.",
     url: "https://github.com/features/copilot",
     pricing: "Free (estudiantes) | $10/mes | $19/mes (Business)",
-    logo: "/assets/logos/copilot.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/copilot.png\`,
   },
   {
     name: "Lovable",
@@ -945,7 +945,7 @@ export const glossary: GlossaryEntry[] = [
       "Chat conversacional puro para apps fullstack. Preview en tiempo real y deploy automático.",
     url: "https://lovable.dev",
     pricing: "Free: 100 tokens/mes | Pro: $20/mes",
-    logo: "/assets/logos/lovable.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/lovable.png\`,
   },
   {
     name: "Replit Agent",
@@ -954,7 +954,7 @@ export const glossary: GlossaryEntry[] = [
       "IDE en la nube con Agent mode conversacional. Soporta 50+ lenguajes con deploy 1-click.",
     url: "https://replit.com/ai",
     pricing: "Free limitado | Hacker: $7/mes | Pro: $20/mes",
-    logo: "/assets/logos/replit.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/replit.png\`,
   },
   {
     name: "Supabase",
@@ -963,7 +963,7 @@ export const glossary: GlossaryEntry[] = [
       "Backend as a Service open-source: PostgreSQL, Auth, Storage, Realtime. Alternative a Firebase.",
     url: "https://supabase.com",
     pricing: "Free: 500MB DB | Pro: $25/mes",
-    logo: "/assets/logos/supabase.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/supabase.png\`,
   },
   {
     name: "v0.dev",
@@ -972,7 +972,7 @@ export const glossary: GlossaryEntry[] = [
       "Genera componentes React con Next.js + TailwindCSS + shadcn/ui. Código exportable.",
     url: "https://v0.dev",
     pricing: "Free: 200 créditos/mes | Pro: $20/mes",
-    logo: "/assets/logos/v0.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/v0.png\`,
   },
   {
     name: "Vercel AI SDK",
@@ -981,7 +981,7 @@ export const glossary: GlossaryEntry[] = [
       "SDK para building AI apps con streaming, tool calling y multi-provider support.",
     url: "https://sdk.vercel.ai",
     pricing: "Open-source (free)",
-    logo: "/assets/logos/vercel.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/vercel.png\`,
   },
   {
     name: "Windsurf",
@@ -990,7 +990,7 @@ export const glossary: GlossaryEntry[] = [
       "IDE AI-first de Codeium con Flow mode y Cascade. Alternative open-source a Cursor.",
     url: "https://codeium.com/windsurf",
     pricing: "Free (ilimitado) | Pro: $15/mes",
-    logo: "/assets/logos/windsurf.png",
+    logo: `${import.meta.env.BASE_URL}assets/logos/windsurf.png\`,
   },
 ];
 

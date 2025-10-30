@@ -13,9 +13,9 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
 ---
 
 <section class="hero-orbit relative overflow-hidden">
-  <video class="hero-orbit__video" autoplay muted loop playsinline poster="/assets/hero/hero-lab.webp">
-    <source src="/assets/hero/hero-loop.webm" type="video/webm" />
-    <source src="/assets/hero/hero-loop-original.mp4" type="video/mp4" />
+  <video class="hero-orbit__video" autoplay muted loop playsinline poster={`${import.meta.env.BASE_URL}assets/hero/hero-lab.webp`}>
+    <source src={`${import.meta.env.BASE_URL}assets/hero/hero-loop.webm`} type="video/webm" />
+    <source src={`${import.meta.env.BASE_URL}assets/hero/hero-loop-original.mp4`} type="video/mp4" />
   </video>
 
   <div class="hero-orbit__overlay" />
@@ -26,7 +26,7 @@ const { title, tagline, description, ctaPrimary, ctaSecondary } = Astro.props as
       <div class="hero-orbit__alliances-item">
         <span class="hero-orbit__alliances-label">En alianza</span>
         <div class="hero-orbit__alliances-logos">
-          <img src="/assets/externado-logo.png" alt="Universidad Externado de Colombia" />
+          <img src={`${import.meta.env.BASE_URL}assets/externado-logo.png`} alt="Universidad Externado de Colombia" />
           <span class="hero-orbit__alliances-divider" />
           <span class="hero-orbit__alliances-orbital">Orbital Lab</span>
         </div>
