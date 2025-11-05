@@ -228,6 +228,16 @@ table {
     html += "<div class='card'><h3>Rotación vs. Ingreso Mensual</h3>"
     html += f"<div class='plot-container'><img src='data:image/png;base64,{plot_income}'></div>"
     html += "<p>Los empleados que rotan tienden a tener ingresos mensuales más bajos.</p></div>"
+
+    # Attrition vs BusinessTravel
+    fig, ax = plt.subplots(figsize=(10, 7))
+    sns.countplot(x='BusinessTravel', hue='Attrition', data=df, palette=['#1d8c44', '#c8102e'])
+    ax.set_title('Rotación vs. Frecuencia de Viaje', fontsize=16)
+    plot_travel = fig_to_base64(fig)
+    plt.close(fig)
+    html += "<div class='card'><h3>Rotación vs. Frecuencia de Viaje</h3>"
+    html += f"<div class='plot-container'><img src='data:image/png;base64,{plot_travel}'></div>"
+    html += "<p>Los empleados que viajan frecuentemente ('Travel_Frequently') tienen una proporción de rotación más alta en comparación con los que viajan raramente o no viajan.</p></div>"
     
     # --- 4. Correlaciones ---
     numeric_df = df.select_dtypes(include=np.number)
