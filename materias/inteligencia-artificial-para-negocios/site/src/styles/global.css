@@ -909,7 +909,7 @@
       overflow-x: visible;
     }
     .vinyl-card {
-      flex: 1 1 calc(33.333% - 1.75rem);
+      flex: 1 1 calc(25% - 1.75rem);
       min-width: 0;
     }
     .vinyl-card__record {
