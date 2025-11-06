@@ -390,23 +390,23 @@ A minimalist flat illustration featuring a fintech startup logo with golden coin
     ],
     resources: [
       {
-        label: "README pedagógico completo",
-        href: "https://github.com/jzuluaga/education-research/tree/main/externado/docencia/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm",
+        label: "Página interactiva Clase 04",
+        href: `${import.meta.env.BASE_URL}/clases/clase-04-notebook-llm`,
         type: "readme",
       },
       {
-        label: "Video completo de clase",
-        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/MicrosoftTeams-video%20(3)%20(1).mp4",
-        type: "otros",
+        label: "README pedagógico",
+        href: "https://github.com/uexternadojz/Inteligecia-artificial-para-negocios/tree/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm",
+        type: "readme",
       },
       {
         label: "Transcripción completa",
-        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/transcript%20(2)%20(1).docx",
+        href: "https://github.com/uexternadojz/Inteligecia-artificial-para-negocios/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/transcript%20(2)%20(1).docx",
         type: "otros",
       },
       {
         label: "Plan de clase (PDF)",
-        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/Clase%20Notebooklm%20Negocios.pdf",
+        href: "https://github.com/uexternadojz/Inteligecia-artificial-para-negocios/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/Clase%20Notebooklm%20Negocios.pdf",
         type: "otros",
       },
       {

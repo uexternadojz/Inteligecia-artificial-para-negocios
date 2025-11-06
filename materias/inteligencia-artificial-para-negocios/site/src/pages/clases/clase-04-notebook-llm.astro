@@ -1,0 +1,273 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClassHero from "../../components/ClassHero.astro";
+import BentoGrid from "../../components/BentoGrid.astro";
+import ToolCard from "../../components/ToolCard.astro";
+import WorkflowStepper from "../../components/WorkflowStepper.astro";
+
+import {
+  heroData,
+  fundamentals,
+  tools,
+  workflow,
+  useCases,
+  promptExamples,
+  bestPractices,
+  videoData,
+  resources,
+} from "../../data/clase-04-data";
+---
+
+<BaseLayout title="Clase 04 · NotebookLM en Acción — IA para Negocios">
+  <!-- Hero Section -->
+  <ClassHero
+    classNumber={heroData.number}
+    title={heroData.title}
+    subtitle={heroData.subtitle}
+    date={heroData.date}
+    duration={heroData.duration}
+    modality={heroData.modality}
+    vinylImage={heroData.vinylImage}
+    haloImage={heroData.haloImage}
+    metrics={heroData.metrics}
+  />
+
+  <!-- Bento Grid - Key Concepts -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <BentoGrid items={fundamentals} />
+  </section>
+
+  <!-- Workflow Steps -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      🔄 Workflow: De Fuentes a Conocimiento
+    </h2>
+    <WorkflowStepper steps={workflow} />
+  </section>
+
+  <!-- Tools Grid -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      🛠️ Herramientas de Investigación con IA
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
+      {tools.map((tool: any) => (
+        <ToolCard tool={tool} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      💼 Casos Prácticos de la Clase
+    </h2>
+    <div class="space-y-6">
+      {useCases.map((useCase: any, index: number) => (
+        <div class="rounded-2xl border border-cyan-500/30 bg-cyan-500/5 p-6">
+          <h3 class="mb-3 font-rajdhani text-2xl text-cyan-400">
+            Caso {index + 1}: {useCase.title}
+          </h3>
+          <div class="space-y-3">
+            <div>
+              <p class="font-semibold text-white">Contexto:</p>
+              <p class="text-slate-300">{useCase.context}</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Herramientas utilizadas:</p>
+              <p class="text-slate-300">{useCase.tool}</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Outputs generados:</p>
+              <p class="text-slate-300">{useCase.output}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Prompt Examples -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      💬 Biblioteca de Prompts para NotebookLM
+    </h2>
+    <div class="space-y-4">
+      {promptExamples.map((prompt: any) => (
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-3 flex items-center justify-between">
+            <h3 class="font-rajdhani text-xl text-white">{prompt.label}</h3>
+            <span class="rounded-full border border-purple-500/50 bg-purple-500/10 px-3 py-1 text-xs text-purple-400">
+              {prompt.category}
+            </span>
+          </div>
+          <pre class="overflow-x-auto rounded-lg bg-black/50 p-4 text-sm text-slate-300"><code>{prompt.content}</code></pre>
+          <button
+            onclick={`navigator.clipboard.writeText(\`${prompt.content.replace(/`/g, '\\`')}\`)`}
+            class="mt-3 inline-flex items-center gap-2 rounded-full border border-cyan-500/50 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400 transition hover:border-cyan-400 hover:bg-cyan-500/20"
+          >
+            📋 Copiar prompt
+          </button>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      ⚡ Buenas Prácticas y Errores Comunes
+    </h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- DO Column -->
+      <div>
+        <h3 class="mb-4 font-rajdhani text-2xl text-green-400">✅ SÍ HACER</h3>
+        <div class="space-y-4">
+          {bestPractices.filter((bp: any) => bp.type === "do").map((practice: any) => (
+            <div class="rounded-2xl border border-green-500/30 bg-green-500/5 p-4">
+              <h4 class="mb-2 font-semibold text-white">{practice.title}</h4>
+              <p class="text-sm text-slate-300">{practice.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- DON'T Column -->
+      <div>
+        <h3 class="mb-4 font-rajdhani text-2xl text-red-400">⚠️ NO HACER</h3>
+        <div class="space-y-4">
+          {bestPractices.filter((bp: any) => bp.type === "dont").map((practice: any) => (
+            <div class="rounded-2xl border border-red-500/30 bg-red-500/5 p-4">
+              <h4 class="mb-2 font-semibold text-white">{practice.title}</h4>
+              <p class="text-sm text-slate-300">{practice.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <h2 class="mb-8 text-center font-orbitron text-3xl font-bold text-white">
+      🎥 Grabación de la Clase
+    </h2>
+    <div class="mx-auto max-w-4xl">
+      {videoData.embedUrl ? (
+        <>
+          <div class="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-2xl">
+            <iframe
+              src={videoData.embedUrl}
+              class="absolute inset-0 h-full w-full"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="mt-4 text-center text-sm text-slate-400">
+            {videoData.description}
+            <a
+              href={videoData.embedUrl.replace('/preview', '/view?usp=drive_link')}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ml-2 text-cyan-400 hover:text-cyan-300 transition"
+            >
+              Abrir en Google Drive →
+            </a>
+          </p>
+          <!-- Chapters -->
+          <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 class="mb-4 font-rajdhani text-xl text-white">📑 Capítulos</h3>
+            <div class="space-y-2">
+              {videoData.chapters.map((chapter: any) => (
+                <div class="flex items-start gap-3 text-sm">
+                  <span class="font-mono text-cyan-400">{chapter.time}</span>
+                  <span class="text-slate-300">{chapter.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <div class="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/20 to-black/50 shadow-2xl">
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+            <div class="mb-4 text-6xl">🎬</div>
+            <h3 class="mb-2 font-rajdhani text-2xl text-white">Video Disponible en GitHub</h3>
+            <p class="text-slate-400">{videoData.description}</p>
+            <p class="mt-4 text-sm text-slate-500">Duración: {videoData.duration}</p>
+            <a
+              href="https://github.com/uexternadojz/Inteligecia-artificial-para-negocios/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/MicrosoftTeams-video%20(3)%20(1).mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/50 bg-cyan-500/10 px-6 py-3 font-medium text-white transition hover:border-cyan-400 hover:bg-cyan-500/20"
+            >
+              Ver en GitHub →
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16">
+    <div class="rounded-3xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-transparent p-8">
+      <h2 class="mb-4 font-rajdhani text-3xl text-white">
+        🚀 ¡Empieza a Investigar!
+      </h2>
+      <p class="mb-6 text-slate-300">
+        Ahora que conoces NotebookLM, es momento de aplicarlo a tus propios proyectos de investigación.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="https://notebooklm.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-purple-500/50 bg-purple-500/10 px-6 py-3 font-medium text-white transition hover:border-purple-400 hover:bg-purple-500/20"
+        >
+          Abrir NotebookLM →
+        </a>
+        <a
+          href="https://ai.google.dev/gemini-api"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-cyan-500/50 bg-cyan-500/10 px-6 py-3 font-medium text-white transition hover:border-cyan-400 hover:bg-cyan-500/20"
+        >
+          Explorar Gemini API →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="mt-16 px-6 md:px-12 lg:px-16 pb-16">
+    <h2 class="mb-6 font-rajdhani text-3xl text-white">
+      📚 Recursos Adicionales
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {resources.map((resource: any) => (
+        <a
+          href={resource.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-500/50 hover:bg-white/10"
+        >
+          <h3 class="mb-2 font-rajdhani text-xl text-white group-hover:text-cyan-400">
+            {resource.type === "tool" && "🔧 "}
+            {resource.type === "documentation" && "📋 "}
+            {resource.type === "transcript" && "📝 "}
+            {resource.type === "slides" && "📊 "}
+            {resource.type === "external" && "🌐 "}
+            {resource.title}
+          </h3>
+          <p class="text-sm text-slate-400">
+            {resource.type === "tool" && "Herramienta principal de la clase"}
+            {resource.type === "documentation" && "Guía pedagógica completa con objetivos y metodología"}
+            {resource.type === "transcript" && "Transcript completo de la sesión práctica"}
+            {resource.type === "slides" && "Material de presentación usado en clase"}
+            {resource.type === "external" && "Documentación técnica oficial"}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
