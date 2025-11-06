@@ -1,14 +1,17 @@
 import vinyl01 from "../../assets/vinyls/clase-01/vinilo.webp";
 import vinyl02 from "../../assets/vinyls/clase-02/vinilo.webp";
 import vinyl03 from "../../assets/vinyls/clase-03/vinilo.webp";
+import vinyl04 from "../../assets/vinyls/clase-04/vinilo.webp";
 
 import halo01 from "../../assets/halos/clase-01.webp";
 import halo02 from "../../assets/halos/clase-02.webp";
 import halo03 from "../../assets/halos/clase-03.webp";
+import halo04 from "../../assets/halos/clase-04.webp";
 
 import spine01 from "../../assets/spines/clase-01.png";
 import spine02 from "../../assets/spines/clase-02.png";
 import spine03 from "../../assets/spines/clase-03.png";
+import spine04 from "../../assets/spines/clase-04.png";
 
 export type ClassStatus = "draft" | "upcoming" | "published";
 
@@ -368,6 +371,161 @@ A minimalist flat illustration featuring a fintech startup logo with golden coin
       ],
     },
   },
+  {
+    slug: "clase-04-notebooklm",
+    number: "04",
+    title: "NotebookLM en Acción",
+    mood: "Notebooks inteligentes flotando, cerebro conectado a fuentes",
+    synopsis:
+      "Investigación y aprendizaje con IA: dos casos prácticos usando NotebookLM para analizar modelos de negocio (Tesla) y generar materiales de estudio sobre IA en Retail.",
+    status: "published",
+    date: "30 Oct 2025",
+    duration: "2h",
+    modality: "Práctica guiada por casos 80/20",
+    stack: ["NotebookLM", "Gemini 2.0", "Audio Overview", "Study Guides", "FAQs", "Timeline"],
+    metrics: [
+      "2 casos prácticos: Tesla + IA en Retail",
+      "Podcasts educativos generados automáticamente",
+      "Herramientas: Guías, FAQs, Mapas mentales, Cronologías",
+    ],
+    resources: [
+      {
+        label: "README pedagógico completo",
+        href: "https://github.com/jzuluaga/education-research/tree/main/externado/docencia/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm",
+        type: "readme",
+      },
+      {
+        label: "Video completo de clase",
+        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/MicrosoftTeams-video%20(3)%20(1).mp4",
+        type: "otros",
+      },
+      {
+        label: "Transcripción completa",
+        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/transcript%20(2)%20(1).docx",
+        type: "otros",
+      },
+      {
+        label: "Plan de clase (PDF)",
+        href: "https://github.com/jzuluaga/education-research/blob/main/materias/inteligencia-artificial-para-negocios/clases/2025-10-30-clase-04-notebook-llm/Clase%20Notebooklm%20Negocios.pdf",
+        type: "otros",
+      },
+      {
+        label: "NotebookLM (herramienta)",
+        href: "https://notebooklm.google.com",
+        type: "tools",
+      },
+    ],
+    vinylImage: vinyl04,
+    haloImage: halo04,
+    spineImage: spine04,
+    detail: {
+      overview:
+        "Sesión práctica con dos casos reales: análisis del modelo de negocio de Tesla (¿empresa automotriz o tecnológica?) y generación de materiales de estudio sobre IA en Retail. NotebookLM como asistente de investigación que procesa múltiples fuentes y genera podcasts, guías, FAQs y cronologías automáticamente.",
+      sections: [
+        {
+          title: "Estructura de la Sesión",
+          items: [
+            "15 min · Introducción a NotebookLM y sus capacidades con Gemini 2.0",
+            "45 min · CASO 1: Tesla - Análisis de modelo de negocio con múltiples fuentes",
+            "45 min · CASO 2: IA en Retail - Generación de materiales de estudio completos",
+            "15 min · Reflexión sobre aprendizaje adaptativo y usos creativos",
+          ],
+        },
+        {
+          title: "Herramientas de NotebookLM Exploradas",
+          items: [
+            "Audio Overview: Genera podcasts educativos de 8-12 minutos automáticamente",
+            "Study Guide: Crea guías de estudio estructuradas con conceptos clave",
+            "FAQ: Genera preguntas frecuentes con respuestas basadas en las fuentes",
+            "Timeline: Construye cronologías de eventos históricos o empresariales",
+            "Briefing Doc: Resumen ejecutivo de todas las fuentes cargadas",
+          ],
+        },
+        {
+          title: "Lecciones Clave",
+          items: [
+            "NotebookLM cita fuentes específicas - ideal para investigación académica y empresarial",
+            "Límite de 50 fuentes por notebook (Google Docs, PDFs, URLs, YouTube)",
+            "Audio Overview genera conversaciones naturales entre 2 'hosts' - perfecto para aprender",
+            "La clave está en formular buenas preguntas de investigación al inicio",
+          ],
+        },
+      ],
+      cases: [
+        {
+          title: "Caso Tesla: ¿Empresa Automotriz o Tecnológica?",
+          context: "Debate sobre la naturaleza real del negocio de Tesla - análisis crítico del modelo de ingresos, estructura organizacional y estrategia competitiva",
+          tool: "NotebookLM + múltiples fuentes (reportes financieros, artículos analíticos, videos)",
+          output: "Podcast de 10 minutos, guía de estudio con conclusiones, FAQ sobre Tesla como empresa tech, cronología de hitos clave desde 2003",
+        },
+        {
+          title: "Caso IA en Retail: Generación de Materiales Educativos",
+          context: "Crear contenido educativo completo sobre aplicaciones de IA en la industria del retail (recomendaciones, inventario, precios dinámicos)",
+          tool: "NotebookLM + casos de uso, papers académicos, reportes de McKinsey/Gartner",
+          output: "Suite completa de estudio: podcast educativo, guía estructurada con ejemplos, FAQ para estudiantes, línea de tiempo de adopción",
+        },
+      ],
+      prompts: [
+        {
+          label: "Investigación inicial (Tesla)",
+          content: `Analiza el modelo de negocio de Tesla con estas preguntas clave:
+
+1. ¿Cuál es la distribución real de ingresos entre automóviles vs. software/servicios?
+2. ¿Cómo se compara su estructura de costos con GM, Ford y empresas tech como Apple?
+3. ¿Qué métricas financieras usa Wall Street para valorar a Tesla?
+4. ¿Cuál es el rol de Full Self-Driving (FSD) en el modelo de negocio futuro?
+
+Genera:
+- Audio Overview conversacional (8-12 min)
+- Study Guide con conclusiones por sección
+- FAQ respondiendo las 4 preguntas principales
+- Timeline de hitos clave desde 2003 hasta hoy`,
+        },
+        {
+          label: "Generación de materiales (IA en Retail)",
+          content: `Crea contenido educativo completo sobre IA en la Industria del Retail:
+
+**Temas a cubrir:**
+1. Sistemas de recomendación personalizados (ej: Amazon, Netflix)
+2. Optimización de inventario con machine learning
+3. Precios dinámicos en tiempo real
+4. Automatización de tiendas (Amazon Go, checkout-free)
+5. Análisis predictivo de demanda
+
+**Formato deseado:**
+- Audio Overview: Conversación educativa clara y accesible (10-12 min)
+- Study Guide: Estructurada por tema con ejemplos empresariales reales
+- FAQ: 8-10 preguntas frecuentes con respuestas profundas
+- Timeline: Evolución de la IA en retail desde 2010 hasta 2025
+
+Audiencia: Estudiantes de negocios sin background técnico`,
+        },
+        {
+          label: "Investigación comparativa",
+          content: `Compara [EMPRESA A] vs [EMPRESA B] en [DIMENSIÓN ESPECÍFICA]:
+
+**Dimensiones de análisis:**
+- Modelo de negocio y flujos de ingresos
+- Estructura de costos y márgenes
+- Estrategia competitiva y diferenciación
+- Adopción de tecnología e innovación
+- Métricas financieras clave (P/E, EV/EBITDA, growth rate)
+
+**Fuentes sugeridas:**
+- Reportes anuales (10-K) de ambas empresas
+- Análisis de analistas (Morgan Stanley, Goldman Sachs)
+- Cobertura de prensa especializada (WSJ, Bloomberg)
+- Papers académicos sobre el sector
+
+**Outputs:**
+1. Briefing Doc ejecutivo (2-3 páginas)
+2. Audio Overview con debate comparativo (12-15 min)
+3. Study Guide con cuadro comparativo visual
+4. FAQ respondiendo "¿Por qué X tiene mejor valuación que Y?"`,
+        },
+      ],
+    },
+  },
 ];
 
 export const highlights = [
@@ -416,8 +574,8 @@ export const faqs = [
 ] as const;
 
 export const hudMetrics = [
-  { label: "Clases activas", value: "03", accent: "red" },
-  { label: "Horas en vivo", value: "06h", accent: "cyan" },
+  { label: "Clases activas", value: "04", accent: "red" },
+  { label: "Horas en vivo", value: "08h", accent: "cyan" },
   { label: "% práctica", value: "80%", accent: "red" },
   { label: "Herramientas", value: "15+", accent: "cyan" },
 ] as const;
